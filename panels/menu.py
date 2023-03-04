@@ -76,7 +76,7 @@ class MenuPanel(ScreenPanel):
             width = height = 1
             if expand_last is True and i + 1 == length and length % 2 == 1:
                 width = 2
-            logging.info("col:" + toString(col) + ", row:" + toString(row) + ", width:" + toString(width) +", height:" + toString(height))
+            logging.info("col:" + str(col) + ", row:" + str(row) + ", width:" + str(width) +", height:" + str(height))
             self.grid.attach(self.labels[key], col, row, width, height)
             i += 1
         """  
