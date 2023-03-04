@@ -22,8 +22,10 @@ class MenuPanel(ScreenPanel):
     def __init__(self, screen, title):
         super().__init__(screen, title)
         self.items = None
-        self.grid = self._gtk.HomogeneousGrid()
-
+        if self._screen.vertical_mode:
+            self.grid = self._gtk.HomogeneousGrid(height = 100)
+        else
+            self.grid = self._gtk.HomogeneousGrid()
     def initialize(self, items):
         self.items = items
         self.create_menu_items()
@@ -59,7 +61,7 @@ class MenuPanel(ScreenPanel):
                     columns = 3
 
             col = i % columns
-            row = int(i / columns)+1
+            row = int(i / columns)
 
             width = height = 1
             if expand_last is True and i + 1 == length and length % 2 == 1:
