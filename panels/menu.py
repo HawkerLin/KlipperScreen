@@ -58,8 +58,8 @@ class MenuPanel(ScreenPanel):
                     # Arrange 3 x 2
                     columns = 3
 
-            col = i % columns + 1
-            row = int(i / columns)
+            col = i % columns
+            row = int(i / columns)+1
 
             width = height = 1
             if expand_last is True and i + 1 == length and length % 2 == 1:

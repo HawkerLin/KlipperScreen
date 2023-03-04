@@ -58,7 +58,7 @@ class MenuPanel(ScreenPanel):
                     # Arrange 3 x 2
                     columns = 3
 
-            col = i % columns
+            col = i % columns + 1
             row = int(i / columns)
 
             width = height = 1
