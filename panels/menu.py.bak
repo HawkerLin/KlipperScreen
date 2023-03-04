@@ -24,7 +24,7 @@ class MenuPanel(ScreenPanel):
         self.items = None
         if self._screen.vertical_mode:
             self.grid = self._gtk.HomogeneousGrid(height = 100)
-        else
+        else:
             self.grid = self._gtk.HomogeneousGrid()
     def initialize(self, items):
         self.items = items
