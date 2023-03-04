@@ -81,7 +81,7 @@ class MenuPanel(ScreenPanel):
             i += 1
           
         self.grid.attach(bt3, 2, 0, 1, 1)
-        self.grid.attach(bt4", 2, 1, 1, 1)
+        self.grid.attach(bt4, 2, 1, 1, 1)
         self.grid.attach(bt5, 2, 2, 1, 1)
 
         return self.grid

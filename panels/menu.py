@@ -44,7 +44,7 @@ class MenuPanel(ScreenPanel):
 
         length = len(items)
         i = 0
-        
+        """
         bt0  = self._gtk.Button.new_with_label("bt0")
         bt1  = self._gtk.Button.new_with_label("bt0")
         bt2  = self._gtk.Button.new_with_label("bt0")
@@ -55,7 +55,7 @@ class MenuPanel(ScreenPanel):
         self.grid.attach(bt0, 0, 0, 1, 1)
         self.grid.attach(bt1, 0, 1, 1, 1)
         self.grid.attach(bt2, 0, 2, 1, 1)
-        
+        """
         for item in items:
             key = list(item)[0]
             if not self.evaluate_enable(item[key]['enable']):
@@ -76,14 +76,14 @@ class MenuPanel(ScreenPanel):
             width = height = 1
             if expand_last is True and i + 1 == length and length % 2 == 1:
                 width = 2
-            
+            logging.info("col:" + toString(col) + ", row:" + toString(row) + ", width:" + toString(width) +", height:" + toString(height))
             self.grid.attach(self.labels[key], col, row, width, height)
             i += 1
-          
+        """  
         self.grid.attach(bt3, 2, 0, 1, 1)
         self.grid.attach(bt4, 2, 1, 1, 1)
         self.grid.attach(bt5, 2, 2, 1, 1)
-
+"""
         return self.grid
 
     def create_menu_items(self):
