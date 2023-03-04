@@ -53,8 +53,8 @@ class MenuPanel(ScreenPanel):
         bt5  = self._gtk.Button(label="bt5")
         
         self.grid.attach(bt0, 0, 0, 1, 1)
-        self.grid.attach(bt1, 0, 1, 1, 1)
-      #  self.grid.attach(bt2, 0, 2, 1, 1)
+        self.grid.attach(bt1, 1, 0, 1, 1)
+        self.grid.attach(bt2, 2, 0, 1, 1)
         
         for item in items:
             key = list(item)[0]
@@ -80,9 +80,9 @@ class MenuPanel(ScreenPanel):
             self.grid.attach(self.labels[key], col, row, width, height)
             i += 1
           
-        self.grid.attach(bt3, 2, 0, 1, 1)
-        self.grid.attach(bt4, 2, 1, 1, 1)
-       # self.grid.attach(bt5, 2, 2, 1, 1)
+        self.grid.attach(bt3, 0, 2, 1, 1)
+        self.grid.attach(bt4, 1, 2, 1, 1)
+        self.grid.attach(bt5, 2, 2, 1, 1)
 
         return self.grid
 

@@ -52,6 +52,13 @@ class MenuPanel(ScreenPanel):
         bt4  = self._gtk.Button(label="bt4")
         bt5  = self._gtk.Button(label="bt5")
         
+        bt0.set_visible(False)
+        bt1.set_visible(False)
+        bt2.set_visible(False)
+        bt3.set_visible(False)
+        bt4.set_visible(False)
+        bt5.set_visible(False)
+        
         self.grid.attach(bt0, 0, 0, 1, 1)
         self.grid.attach(bt1, 1, 0, 1, 1)
         self.grid.attach(bt2, 2, 0, 1, 1)
