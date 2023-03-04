@@ -46,15 +46,15 @@ class MenuPanel(ScreenPanel):
         i = 0
         
         bt0  = self._gtk.Button(label="bt0")
-        bt1  = self._gtk.Button(label="bt0")
-        bt2  = self._gtk.Button(label="bt0")
-        bt3  = self._gtk.Button(label="bt0")
-        bt4  = self._gtk.Button(label="bt0")
-        bt5  = self._gtk.Button(label="bt0")
+        bt1  = self._gtk.Button(label="bt1")
+        bt2  = self._gtk.Button(label="bt2")
+        bt3  = self._gtk.Button(label="bt3")
+        bt4  = self._gtk.Button(label="bt4")
+        bt5  = self._gtk.Button(label="bt5")
         
         self.grid.attach(bt0, 0, 0, 1, 1)
         self.grid.attach(bt1, 0, 1, 1, 1)
-        self.grid.attach(bt2, 0, 2, 1, 1)
+      #  self.grid.attach(bt2, 0, 2, 1, 1)
         
         for item in items:
             key = list(item)[0]
@@ -82,7 +82,7 @@ class MenuPanel(ScreenPanel):
           
         self.grid.attach(bt3, 2, 0, 1, 1)
         self.grid.attach(bt4, 2, 1, 1, 1)
-        self.grid.attach(bt5, 2, 2, 1, 1)
+       # self.grid.attach(bt5, 2, 2, 1, 1)
 
         return self.grid
 

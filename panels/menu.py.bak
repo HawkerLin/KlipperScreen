@@ -79,11 +79,11 @@ class MenuPanel(ScreenPanel):
             logging.info("col:" + str(col) + ", row:" + str(row) + ", width:" + str(width) +", height:" + str(height))
             self.grid.attach(self.labels[key], col, row, width, height)
             i += 1
-        """  
+          
         self.grid.attach(bt3, 2, 0, 1, 1)
         self.grid.attach(bt4, 2, 1, 1, 1)
         self.grid.attach(bt5, 2, 2, 1, 1)
-"""
+
         return self.grid
 
     def create_menu_items(self):
