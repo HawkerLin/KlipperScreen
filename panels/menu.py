@@ -53,7 +53,7 @@ class MenuPanel(ScreenPanel):
         bt5  = self._gtk.Button.new_with_label("bt0")
         
         self.grid.attach(bt0, 0, 0, 1, 1)
-        self.grid.attach(bt1", 0, 1, 1, 1)
+        self.grid.attach(bt1, 0, 1, 1, 1)
         self.grid.attach(bt2, 0, 2, 1, 1)
         
         for item in items:
