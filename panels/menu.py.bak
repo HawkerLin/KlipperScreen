@@ -44,7 +44,7 @@ class MenuPanel(ScreenPanel):
 
         length = len(items)
         i = 0
-        
+        '''
         bt0  = self._gtk.Button()
         bt1  = self._gtk.Button()
         bt2  = self._gtk.Button()
@@ -65,6 +65,20 @@ class MenuPanel(ScreenPanel):
         bt3.set_focus_on_click(False)
         bt4.set_focus_on_click(False)
         bt5.set_focus_on_click(False)
+        '''
+        bt0  = self._gtk.TextView()
+        bt1  = self._gtk.TextView()
+        bt2  = self._gtk.TextView()
+        bt3  = self._gtk.TextView()
+        bt4  = self._gtk.TextView()
+        bt5  = self._gtk.TextView()
+        
+        bt0.hide()
+        bt1.hide()
+        bt2.hide()
+        bt3.hide()
+        bt4.hide()
+        bt5.hide()
         
         
         self.grid.attach(bt0, 0, 0, 1, 1)
