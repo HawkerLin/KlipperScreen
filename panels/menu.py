@@ -45,7 +45,7 @@ class MenuPanel(ScreenPanel):
         length = len(items)
         i = 0
         
-        bt0  = self._gtk.Button(label="bt0")
+        bt0  = self._gtk.Button()
         bt1  = self._gtk.Button(label="bt1")
         bt2  = self._gtk.Button(label="bt2")
         bt3  = self._gtk.Button(label="bt3")
