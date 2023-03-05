@@ -269,8 +269,10 @@ class KlipperScreen(Gtk.Window):
             self.load_panel[panel] = getattr(module, "create_panel")
 
         try:
-            #logging.info("_load_panel4:"+ str(*args))
-            return self.load_panel[panel](*args)
+            
+            ret=self.load_panel[panel](*args)
+            logging.info("_load_panel4"))
+            return ret
         except Exception as e:
             logging.exception(e)
             raise RuntimeError(f"Unable to create panel: {panel}\n{e}") from e
