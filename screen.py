@@ -289,7 +289,7 @@ class KlipperScreen(Gtk.Window):
                     logging.info("show_panel2, initial:" + str(self.panels[panel_name]))
                     if hasattr(self.panels[panel_name], "initialize"):
                         self.panels[panel_name].initialize(**kwargs)
-                        logging.info("show_panel3"
+                        logging.info("show_panel3")
                 except Exception as e:
                     if panel_name in self.panels:
                         del self.panels[panel_name]
