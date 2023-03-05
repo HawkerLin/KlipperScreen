@@ -59,6 +59,14 @@ class MenuPanel(ScreenPanel):
         bt4.hide()
         bt5.hide()
         
+        bt0.set_focus_on_click(False)
+        bt1.set_focus_on_click(False)
+        bt2.set_focus_on_click(False)
+        bt3.set_focus_on_click(False)
+        bt4.set_focus_on_click(False)
+        bt5.set_focus_on_click(False)
+        
+        
         self.grid.attach(bt0, 0, 0, 1, 1)
         self.grid.attach(bt1, 1, 0, 1, 1)
         self.grid.attach(bt2, 2, 0, 1, 1)
