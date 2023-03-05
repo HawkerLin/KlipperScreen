@@ -104,7 +104,7 @@ class MenuPanel(ScreenPanel):
         bt5.set_buffer(tb5)
         bt5.set_editable(False)
         bt5.set_cursor_visible(False)
-       ''' 
+        ''' 
         bt0.hide()
         bt1.hide()
         bt2.hide()
