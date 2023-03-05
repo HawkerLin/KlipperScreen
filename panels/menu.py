@@ -45,27 +45,6 @@ class MenuPanel(ScreenPanel):
         length = len(items)
         logging.info("How many items:" + str(length) + "\n");
         i = 0
-        '''
-        bt0  = self._gtk.Button()
-        bt1  = self._gtk.Button()
-        bt2  = self._gtk.Button()
-        bt3  = self._gtk.Button()
-        bt4  = self._gtk.Button()
-        bt5  = self._gtk.Button()
-        
-        bt0.hide()
-        bt1.hide()
-        bt2.hide()
-        bt3.hide()
-        bt4.hide()
-        bt5.hide()
-        
-        bt0.set_focus_on_click(False)
-        bt1.set_focus_on_click(False)
-        bt2.set_focus_on_click(False)
-        bt3.set_focus_on_click(False)
-        bt4.set_focus_on_click(False)
-        bt5.set_focus_on_click(False)
         
         bt0  = self._gtk.Button()
         bt1  = self._gtk.Button()
@@ -82,10 +61,11 @@ class MenuPanel(ScreenPanel):
         bt5.hide()
         
         
-        self.grid.attach(bt0, 0, 0, 1, 1)
-        self.grid.attach(bt1, 1, 0, 1, 1)
-        self.grid.attach(bt2, 2, 0, 1, 1)
-        '''
+        if self._screen.vertical_mode and length <= 7:
+            self.grid.attach(bt0, 0, 0, 1, 1)
+            self.grid.attach(bt1, 1, 0, 1, 1)
+            self.grid.attach(bt2, 2, 0, 1, 1)
+        
         for item in items:
             key = list(item)[0]
             if not self.evaluate_enable(item[key]['enable']):
@@ -109,11 +89,11 @@ class MenuPanel(ScreenPanel):
             logging.info("col:" + str(col) + ", row:" + str(row) + ", width:" + str(width) +", height:" + str(height))
             self.grid.attach(self.labels[key], col, row, width, height)
             i += 1
-        '''  
-        self.grid.attach(bt3, 0, 2, 1, 1)
-        self.grid.attach(bt4, 1, 2, 1, 1)
-        self.grid.attach(bt5, 2, 2, 1, 1)
-        '''
+        if self._screen.vertical_mode and length <= 7:
+            self.grid.attach(bt3, 0, 2, 1, 1)
+            self.grid.attach(bt4, 1, 2, 1, 1)
+            self.grid.attach(bt5, 2, 2, 1, 1)
+        
 
         return self.grid
 

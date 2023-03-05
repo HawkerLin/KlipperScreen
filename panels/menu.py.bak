@@ -22,7 +22,7 @@ class MenuPanel(ScreenPanel):
     def __init__(self, screen, title):
         super().__init__(screen, title)
         self.items = None
-        self.grid = self._gtk.HomogeneousGrid(height = 100)
+        self.grid = self._gtk.HomogeneousGrid()
 
     def initialize(self, items):
         self.items = items
@@ -43,6 +43,7 @@ class MenuPanel(ScreenPanel):
             self.grid.remove(child)
 
         length = len(items)
+        logging.info("How many items:" + str(length) + "\n");
         i = 0
         '''
         bt0  = self._gtk.Button()
