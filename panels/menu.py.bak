@@ -45,12 +45,12 @@ class MenuPanel(ScreenPanel):
         length = len(items)
         i = 0
         
-        bt0  = self._gtk.Button(label="bt0")
-        bt1  = self._gtk.Button(label="bt1")
-        bt2  = self._gtk.Button(label="bt2")
-        bt3  = self._gtk.Button(label="bt3")
-        bt4  = self._gtk.Button(label="bt4")
-        bt5  = self._gtk.Button(label="bt5")
+        bt0  = self._gtk.Button()
+        bt1  = self._gtk.Button()
+        bt2  = self._gtk.Button()
+        bt3  = self._gtk.Button()
+        bt4  = self._gtk.Button()
+        bt5  = self._gtk.Button()
         
         bt0.hide()
         bt1.hide()

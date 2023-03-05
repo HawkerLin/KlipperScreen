@@ -46,11 +46,11 @@ class MenuPanel(ScreenPanel):
         i = 0
         
         bt0  = self._gtk.Button()
-        bt1  = self._gtk.Button(label="bt1")
-        bt2  = self._gtk.Button(label="bt2")
-        bt3  = self._gtk.Button(label="bt3")
-        bt4  = self._gtk.Button(label="bt4")
-        bt5  = self._gtk.Button(label="bt5")
+        bt1  = self._gtk.Button()
+        bt2  = self._gtk.Button()
+        bt3  = self._gtk.Button()
+        bt4  = self._gtk.Button()
+        bt5  = self._gtk.Button()
         
         bt0.hide()
         bt1.hide()
@@ -58,6 +58,14 @@ class MenuPanel(ScreenPanel):
         bt3.hide()
         bt4.hide()
         bt5.hide()
+        
+        bt0.set_focus_on_click(False)
+        bt1.set_focus_on_click(False)
+        bt2.set_focus_on_click(False)
+        bt3.set_focus_on_click(False)
+        bt4.set_focus_on_click(False)
+        bt5.set_focus_on_click(False)
+        
         
         self.grid.attach(bt0, 0, 0, 1, 1)
         self.grid.attach(bt1, 1, 0, 1, 1)
