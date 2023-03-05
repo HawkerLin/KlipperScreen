@@ -260,12 +260,12 @@ class KlipperScreen(Gtk.Window):
             if not os.path.exists(panel_path):
                 logging.error(f"Panel {panel} does not exist")
                 raise FileNotFoundError(os.strerror(2), "\n" + panel_path)
-            logging.info("_load_panel1")
+            #logging.info("_load_panel1")
             module = import_module(f"panels.{panel}")
-            logging.info("_load_panel2")
+            #logging.info("_load_panel2")
             if not hasattr(module, "create_panel"):
                 raise ImportError(f"Cannot locate create_panel function for {panel}")
-            logging.info("_load_panel3")
+            #logging.info("_load_panel3")
             self.load_panel[panel] = getattr(module, "create_panel")
 
         try:
@@ -284,9 +284,9 @@ class KlipperScreen(Gtk.Window):
 
             if panel_name not in self.panels:
                 try:
-                    logging.info("show_panel1, title:" + str(title))
+                    #logging.info("show_panel1, title:" + str(title))
                     self.panels[panel_name] = self._load_panel(panel_type, self, title)
-                    logging.info("show_panel2, initial:" + str(self.panels[panel_name]))
+                    #logging.info("show_panel2, initial:" + str(self.panels[panel_name]))
                     if hasattr(self.panels[panel_name], "initialize"):
                         self.panels[panel_name].initialize(**kwargs)
                         logging.info("show_panel3")

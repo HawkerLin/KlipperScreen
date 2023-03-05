@@ -269,7 +269,7 @@ class KlipperScreen(Gtk.Window):
             self.load_panel[panel] = getattr(module, "create_panel")
 
         try:
-            logging.info("_load_panel4:"+ str(*args))
+            #logging.info("_load_panel4:"+ str(*args))
             return self.load_panel[panel](*args)
         except Exception as e:
             logging.exception(e)
