@@ -104,14 +104,14 @@ class MenuPanel(ScreenPanel):
         bt5.set_buffer(tb5)
         bt5.set_editable(False)
         bt5.set_cursor_visible(False)
-        
+       ''' 
         bt0.hide()
         bt1.hide()
         bt2.hide()
         bt3.hide()
         bt4.hide()
         bt5.hide()
-        
+        '''
         
         self.grid.attach(bt0, 0, 0, 1, 1)
         self.grid.attach(bt1, 1, 0, 1, 1)

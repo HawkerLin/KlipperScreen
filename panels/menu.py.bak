@@ -66,12 +66,44 @@ class MenuPanel(ScreenPanel):
         bt4.set_focus_on_click(False)
         bt5.set_focus_on_click(False)
         '''
+       
+        
         bt0  = self._gtk.TextView()
         bt1  = self._gtk.TextView()
         bt2  = self._gtk.TextView()
         bt3  = self._gtk.TextView()
         bt4  = self._gtk.TextView()
         bt5  = self._gtk.TextView()
+        
+        tb0 = self._gtk.TextBuffer()
+        bt0.set_buffer(tb0)
+        bt0.set_editable(False)
+        bt0.set_cursor_visible(False)
+        
+        tb1 = self._gtk.TextBuffer()
+        bt1.set_buffer(tb1)
+        bt1.set_editable(False)
+        bt1.set_cursor_visible(False)
+        
+        tb2 = self._gtk.TextBuffer()
+        bt2.set_buffer(tb2)
+        bt2.set_editable(False)
+        bt2.set_cursor_visible(False)
+        
+        tb3 = self._gtk.TextBuffer()
+        bt3.set_buffer(tb4)
+        bt3.set_editable(False)
+        bt3.set_cursor_visible(False)
+        
+        tb4 = self._gtk.TextBuffer()
+        bt4.set_buffer(tb4)
+        bt4.set_editable(False)
+        bt4.set_cursor_visible(False)
+        
+        tb5 = self._gtk.TextBuffer()
+        bt5.set_buffer(tb5)
+        bt5.set_editable(False)
+        bt5.set_cursor_visible(False)
         
         bt0.hide()
         bt1.hide()
