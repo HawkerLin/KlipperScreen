@@ -269,10 +269,8 @@ class KlipperScreen(Gtk.Window):
             self.load_panel[panel] = getattr(module, "create_panel")
 
         try:
-            
-            ret=self.load_panel[panel](*args)
-            logging.info("_load_panel4"))
-            return ret
+            #logging.info("_load_panel4:"+ str(*args))
+            return self.load_panel[panel](*args)
         except Exception as e:
             logging.exception(e)
             raise RuntimeError(f"Unable to create panel: {panel}\n{e}") from e
@@ -290,8 +288,9 @@ class KlipperScreen(Gtk.Window):
                     self.panels[panel_name] = self._load_panel(panel_type, self, title)
                     logging.info("show_panel2, initial:" + str(self.panels[panel_name]))
                     if hasattr(self.panels[panel_name], "initialize"):
-                        self.panels[panel_name].initialize(**kwargs)
                         logging.info("show_panel3")
+                        self.panels[panel_name].initialize(**kwargs)
+                        logging.info("show_panel4")
                 except Exception as e:
                     if panel_name in self.panels:
                         del self.panels[panel_name]
@@ -471,6 +470,7 @@ class KlipperScreen(Gtk.Window):
         logging.info(f"#### Menu {menu}")
         disname = self._config.get_menu_name(menu, name)
         menuitems = self._config.get_menu_items(menu, name)
+        logging.info("menuitems:" + str(menuitems))
         if len(menuitems) != 0:
             self.show_panel(name, "menu", disname, 1, False, items=menuitems)
         else:
