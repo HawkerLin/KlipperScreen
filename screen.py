@@ -288,7 +288,7 @@ class KlipperScreen(Gtk.Window):
                     self.panels[panel_name] = self._load_panel(panel_type, self, title)
                     logging.info("show_panel2, initial:" + str(self.panels[panel_name]))
                     if hasattr(self.panels[panel_name], "initialize"):
-                        logging.info("show_panel3" + str(**kwargs))
+                        logging.info("show_panel3" + str(*kwargs))
                         
                         self.panels[panel_name].initialize(**kwargs)
                         logging.info("show_panel4")
