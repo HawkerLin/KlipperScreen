@@ -43,8 +43,7 @@ class WifiManager:
         try:
             self.soc = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
             self.soc.bind(ks_socket_file)
-            #self.soc.connect(f"/var/run/wpa_supplicant/{interface}")
-            self.soc.connect(f"/etc/wpa_supplicant/wpa_supplicant-{interface}.conf")
+            self.soc.connect(f"/var/run/wpa_supplicant/{interface}")
         except Exception as e:
             logging.critical(e, exc_info=True)
             logging.error(f"Error connecting to wifi socket: {interface}")
