@@ -26,8 +26,8 @@ class NetworkPanel(ScreenPanel):
         self.network_interfaces = netifaces.interfaces()
         self.wireless_interfaces = [iface for iface in self.network_interfaces if iface.startswith('w')]
         self.wifi = None
-        #self.use_network_manager = os.system('systemctl is-active --quiet NetworkManager.service') == 0
-        self.use_network_manager = False
+        self.use_network_manager = os.system('systemctl is-active --quiet NetworkManager.service') == 0
+        #self.use_network_manager = False
         if len(self.wireless_interfaces) > 0:
             logging.info(f"Found wireless interfaces: {self.wireless_interfaces}")
             if self.use_network_manager:
