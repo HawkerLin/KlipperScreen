@@ -6,7 +6,10 @@ import threading
 from threading import Thread
 from queue import Queue
 
+
 import gi
+
+import subprocess
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import GLib
@@ -78,6 +81,21 @@ class WifiManager:
         ]
 
         self.wpa_cli_batch(commands)
+        
+        process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        logging.info("ifconfig down:" + self.interface)
+        logging.info(process)
+        
+        # wait result
+        stdout, stderr = process.communicate()
+        
+        process = subprocess.Popen(["ifconfig", self.interface, "up"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        logging.info("ifconfig up:" + self.interface)
+        logging.info(process)
+        
+        # wait result
+        stdout, stderr = process.communicate()
+
 
         self.read_wpa_supplicant()
         netid = None
