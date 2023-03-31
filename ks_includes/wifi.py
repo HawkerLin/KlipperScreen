@@ -278,7 +278,7 @@ class WifiManager:
                 else:
                     net['encryption'] = "off"
                     
-                logging.info("ssid:" + net['ssid'])
+                net['ssid'] = net['ssid'].decode('UTF-8')
 
                 aps.append(net)
 
