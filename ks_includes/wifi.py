@@ -277,8 +277,10 @@ class WifiManager:
                     net['encryption'] = "WEP"
                 else:
                     net['encryption'] = "off"
-                    
-                net['ssid'] = net['ssid'].decode('UTF-8')
+                
+                if net['ssid'][0] != '\0':                
+                    net['ssid'] = net['ssid'].decode('UTF-8')
+                    logging.info("ssid:" + net['ssid'])
 
                 aps.append(net)
 
