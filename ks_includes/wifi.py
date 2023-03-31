@@ -277,6 +277,8 @@ class WifiManager:
                     net['encryption'] = "WEP"
                 else:
                     net['encryption'] = "off"
+                    
+                logging.info("ssid:" + net['ssid'])
 
                 aps.append(net)
 

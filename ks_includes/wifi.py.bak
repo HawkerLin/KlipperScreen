@@ -126,6 +126,17 @@ class WifiManager:
         if netid is None:
             logging.info("Wifi network is not defined in wpa_supplicant")
             return False
+            
+        process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        logging.info("ifconfig down:" + self.interface)
+        logging.info(process)
+        # wait result
+        stdout, stderr = process.communicate()
+        process = subprocess.Popen(["ifconfig", self.interface, "up"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        logging.info("ifconfig up:" + self.interface)
+        logging.info(process)
+        # wait result
+        stdout, stderr = process.communicate()
 
         logging.info(f"Attempting to connect to wifi: {netid}")
         self.callback("connecting_status", f"Attempting to connect to {ssid}")
@@ -330,19 +341,7 @@ class WpaSocket(Thread):
                                 break
                 elif "Trying to associate" in msg or "CTRL-EVENT-REGDOM-CHANGE" in msg:
                     self.callback("connecting_status", msg)
-                    process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                    logging.info("ifconfig down:" + self.interface)
-                    logging.info(process)
-        
-                    # wait result
-                    stdout, stderr = process.communicate()
-        
-                    process = subprocess.Popen(["ifconfig", self.interface, "up"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                    logging.info("ifconfig up:" + self.interface)
-                    logging.info(process)
-        
-                    # wait result
-                    stdout, stderr = process.communicate()
+                    
                 elif "CTRL-EVENT-CONNECTED" in msg:
                     GLib.idle_add(self.wm.get_current_wifi_idle_add)
                     self.callback("connecting_status", msg)
