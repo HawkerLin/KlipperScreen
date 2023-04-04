@@ -61,8 +61,8 @@ class BasePanel(ScreenPanel):
             self.action_bar.set_vexpand(True)
         self.action_bar.get_style_context().add_class('action_bar')
         self.action_bar.set_size_request(self._gtk.action_bar_width, self._gtk.action_bar_height)
-        self.action_bar.add(self.control['back'])
         self.action_bar.add(self.control['home'])
+        self.action_bar.add(self.control['back'])
         self.show_back(False)
         if self.buttons_showing['printer_select']:
             self.action_bar.add(self.control['printer_select'])
