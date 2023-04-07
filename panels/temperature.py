@@ -95,7 +95,13 @@ class TemperaturePanel(ScreenPanel):
         i = 0
         for option in self.preheat_options:
             if option != "cooldown":
-                self.labels[option] = self._gtk.Button(label=option, style=f"color{(i % 4) + 1}")
+                self.labels[option] = self._gtk.Button(style=f"color{(i % 4) + 1}")
+                if option == "PLA":
+                    preheat_config = "bed:40℃ extruder:195℃"
+                elif option == "ABS":
+                    preheat_config = "bed:90℃ extruder:220℃"
+                preheat_button_label = self._gtk.Label(label=option+'\n'+preheat_config)
+                self.labels[option].add(preheat_button_label)
                 self.labels[option].connect("clicked", self.set_temperature, option)
                 self.labels['preheat_grid'].attach(self.labels[option], (i % 2), int(i / 2), 1, 1)
                 i += 1
