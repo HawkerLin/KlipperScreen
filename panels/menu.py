@@ -45,27 +45,29 @@ class MenuPanel(ScreenPanel):
         length = len(items)
         logging.info("How many items:" + str(length) + "\n");
         i = 0
-        
+        '''
         bt0  = self._gtk.Button()
         bt1  = self._gtk.Button()
         bt2  = self._gtk.Button()
+        '''
         bt3  = self._gtk.Button()
         bt4  = self._gtk.Button()
         bt5  = self._gtk.Button()
-        
+        '''
         bt0.hide()
         bt1.hide()
         bt2.hide()
+        '''
         bt3.hide()
         bt4.hide()
         bt5.hide()
         
-        
+        '''
         if self._screen.vertical_mode and length <= 7:
             self.grid.attach(bt0, 0, 0, 1, 1)
             self.grid.attach(bt1, 1, 0, 1, 1)
             self.grid.attach(bt2, 2, 0, 1, 1)
-        
+        '''
         for item in items:
             key = list(item)[0]
             if not self.evaluate_enable(item[key]['enable']):
@@ -81,7 +83,8 @@ class MenuPanel(ScreenPanel):
                     columns = 3
 
             col = i % columns
-            row = int(i / columns)+1
+            row = int(i / columns)
+            #row = int(i / columns)+1
 
             width = height = 1
             if expand_last is True and i + 1 == length and length % 2 == 1:
