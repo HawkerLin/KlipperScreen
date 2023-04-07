@@ -278,11 +278,13 @@ class WifiManager:
                 else:
                     net['encryption'] = "off"
                 
-                if net['ssid'][0] != '\0':                
-                    net['ssid'] = net['ssid'].decode('UTF-8')
+                
+                if net['ssid']:
                     logging.info("ssid:" + net['ssid'])
-
-                aps.append(net)
+                    if not net['ssid'].startswith("\x00"):  
+                        aps.append(net)
+                    else:
+                        logging.info("don't add hidden wifi:" + net['ssid'])
 
         cur_info = self.get_current_wifi()
         self.networks = {}
