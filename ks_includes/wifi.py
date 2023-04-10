@@ -311,7 +311,7 @@ class WifiManager:
         if wait is False:
             self.wpa_thread.skip_command()
         
-        if ssid.isascii():
+        if command.isascii():
             self.soc.send(command.encode())
         else:
             # 将中文SSID转换为字节串
