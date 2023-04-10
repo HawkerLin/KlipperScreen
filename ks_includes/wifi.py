@@ -311,7 +311,12 @@ class WifiManager:
         if wait is False:
             self.wpa_thread.skip_command()
         #self.soc.send(command.encode())
-        self.soc.send(bytes(command).encode('utf-8'))
+        
+        # 将中文SSID转换为字节串
+        cmd_bytes = command.encode('utf-8')
+        # 构造WPA可用的SSID字节串
+        ssid_wpa = b'\x00\x0c' + bytes([len(cmd_bytes)]) + cmd_bytes
+        
         if wait is True:
             return self.queue.get()
 
