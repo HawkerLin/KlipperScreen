@@ -132,8 +132,8 @@ class NetworkPanel(ScreenPanel):
                 network_id = net
 
         #display_name = _("Hidden") if ssid.startswith("\x00") else f"{ssid}"
-        ssid_unicode = bytes(ssid.encode('utf-8')).decode('unicode_escape').encode('latin1').decode('utf-8')
-        display_name = ssid_unicode
+        #ssid_unicode = bytes(ssid.encode('utf-8')).decode('unicode_escape').encode('latin1').decode('utf-8')
+        #display_name = ssid_unicode
         netinfo = self.wifi.get_network_info(ssid)
         connected_ssid = self.wifi.get_connected_ssid()
         if netinfo is None:
