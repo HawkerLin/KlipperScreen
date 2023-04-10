@@ -4,11 +4,13 @@ import gi
 
 import json
 
+
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 from jinja2 import Environment, Template
 
 from ks_includes.screen_panel import ScreenPanel
+
 
 
 def create_panel(*args):
@@ -22,6 +24,7 @@ class MenuPanel(ScreenPanel):
     def __init__(self, screen, title):
         super().__init__(screen, title)
         self.items = None
+        self._cur_panels = screen._cur_panels
         self.grid = self._gtk.HomogeneousGrid()
 
     def initialize(self, items):
@@ -41,33 +44,32 @@ class MenuPanel(ScreenPanel):
     def arrangeMenuItems(self, items, columns, expand_last=False):
         for child in self.grid.get_children():
             self.grid.remove(child)
+        #judge the state of panel
+        self._cur_panels = self._screen._cur_panels
+        logging.info(self._cur_panels)
+        cipher = False
+        if self._cur_panels:
+            if self._cur_panels[0] == "splash_screen":
+                cipher = True
+            else:
+                cipher = False
 
         length = len(items)
         logging.info("How many items:" + str(length) + "\n");
         i = 0
-        '''
-        bt0  = self._gtk.Button()
-        bt1  = self._gtk.Button()
-        bt2  = self._gtk.Button()
-        '''
-        bt3  = self._gtk.Button()
-        bt4  = self._gtk.Button()
-        bt5  = self._gtk.Button()
-        '''
-        bt0.hide()
-        bt1.hide()
-        bt2.hide()
-        '''
-        bt3.hide()
-        bt4.hide()
-        bt5.hide()
+        #judge whether to arrange first line of hided widget
+        if cipher:
+            bt0  = self._gtk.Button()
+            bt1  = self._gtk.Button()
+            bt2  = self._gtk.Button()
+            bt0.hide()
+            bt1.hide()
+            bt2.hide()
+            if self._screen.vertical_mode and length <= 7:
+                self.grid.attach(bt0, 0, 0, 1, 1)
+                self.grid.attach(bt1, 1, 0, 1, 1)
+                self.grid.attach(bt2, 2, 0, 1, 1)
         
-        '''
-        if self._screen.vertical_mode and length <= 7:
-            self.grid.attach(bt0, 0, 0, 1, 1)
-            self.grid.attach(bt1, 1, 0, 1, 1)
-            self.grid.attach(bt2, 2, 0, 1, 1)
-        '''
         for item in items:
             key = list(item)[0]
             if not self.evaluate_enable(item[key]['enable']):
@@ -83,8 +85,10 @@ class MenuPanel(ScreenPanel):
                     columns = 3
 
             col = i % columns
-            row = int(i / columns)
-            #row = int(i / columns)+1
+            if cipher:
+                row = int(i / columns)+1
+            else:
+                row = int(i / columns)
 
             width = height = 1
             if expand_last is True and i + 1 == length and length % 2 == 1:
@@ -92,6 +96,13 @@ class MenuPanel(ScreenPanel):
             logging.info("col:" + str(col) + ", row:" + str(row) + ", width:" + str(width) +", height:" + str(height))
             self.grid.attach(self.labels[key], col, row, width, height)
             i += 1
+        #hided widget for ui arrange
+        bt3  = self._gtk.Button()
+        bt4  = self._gtk.Button()
+        bt5  = self._gtk.Button()
+        bt3.hide()
+        bt4.hide()
+        bt5.hide()
         if self._screen.vertical_mode and length <= 7:
             self.grid.attach(bt3, 0, 2, 1, 1)
             self.grid.attach(bt4, 1, 2, 1, 1)
