@@ -310,7 +310,8 @@ class WifiManager:
     def wpa_cli(self, command, wait=True):
         if wait is False:
             self.wpa_thread.skip_command()
-        self.soc.send(command.encode())
+        #self.soc.send(command.encode())
+        self.soc.send(command)
         if wait is True:
             return self.queue.get()
 

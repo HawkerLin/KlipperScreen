@@ -79,6 +79,8 @@ class WifiManager:
             'SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')),
             'SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"'))
         ]
+        
+        logging.info("add_network,SSID:" + ssid.replace('"', '\"'))
 
         self.wpa_cli_batch(commands)
         
@@ -278,7 +280,9 @@ class WifiManager:
                 else:
                     net['encryption'] = "off"
                 
-                
+                if net['ssid']:                
+                    net['ssid'] = bytes(net['ssid'].encode('utf-8')).decode('unicode_escape').encode('latin1').decode('utf-8')
+                    #logging.info("ssid:" + net['ssid'])
                 if net['ssid']:
                     logging.info("ssid:" + net['ssid'])
                     if not net['ssid'].startswith("\x00"):  
