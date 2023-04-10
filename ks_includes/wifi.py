@@ -72,8 +72,25 @@ class WifiManager:
                 # Modify network
                 return
 
+
         # TODO: Add wpa_cli error checking
         network_id = self.wpa_cli("ADD_NETWORK")
+        network_id = self.wpa_cli(f'ENABLE_NETWORK {network_id}')
+        
+        if ssid.isascii():
+            self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
+        else:
+            # 将中文SSID转换为字节串
+            cmd_bytes = ssid.encode('utf-8')
+            # 构造WPA可用的SSID字节串
+            ssid_to_send = b'\x00\x0c' + bytes([len(cmd_bytes)]) + cmd_bytes   
+
+            self.soc.send(ssid_to_send)
+        
+            self.queue.get()  
+
+        self.wpa_cli('SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"')))
+'''        
         commands = [
             f'ENABLE_NETWORK {network_id}',
             'SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')),
@@ -83,7 +100,7 @@ class WifiManager:
         logging.info("add_network,SSID:" + ssid.replace('"', '\"'))
 
         self.wpa_cli_batch(commands)
-        
+'''      
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logging.info("ifconfig down:" + self.interface)
         logging.info(process)
@@ -311,13 +328,8 @@ class WifiManager:
         if wait is False:
             self.wpa_thread.skip_command()
         
-        if command.isascii():
-            self.soc.send(command.encode())
-        else:
-            # 将中文SSID转换为字节串
-            cmd_bytes = command.encode('utf-8')
-            # 构造WPA可用的SSID字节串
-            self.soc.send(b'\x00\x0c' + bytes([len(cmd_bytes)]) + cmd_bytes)
+        self.soc.send(command.encode())
+        
         
         if wait is True:
             return self.queue.get()
