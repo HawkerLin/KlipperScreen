@@ -311,7 +311,7 @@ class WifiManager:
         if wait is False:
             self.wpa_thread.skip_command()
         #self.soc.send(command.encode())
-        self.soc.send(command)
+        self.soc.send(bytes(command))
         if wait is True:
             return self.queue.get()
 
