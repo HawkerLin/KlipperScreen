@@ -79,6 +79,8 @@ class WifiManager:
             'SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')),
             'SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"'))
         ]
+        
+        logging.info("add_network,SSID:" + ssid.replace('"', '\"'))
 
         self.wpa_cli_batch(commands)
         
