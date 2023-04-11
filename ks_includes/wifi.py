@@ -77,21 +77,9 @@ class WifiManager:
         network_id = self.wpa_cli("ADD_NETWORK")
         self.wpa_cli(f'ENABLE_NETWORK {network_id}')
         
-        if ssid.isascii():
-            logging.info("Is ascii")
-            self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
-        else:  
-            logging.info("not ascii")
-            
-            ssid_bytes = ssid.replace('"', '\"').encode('utf-8')
-            #set_network_cmd = b"SET_NETWORK %s ssid " % network_id + "\"%s\"" % ssid_bytes
-            #self.soc.send(b"SET_NETWORK " +  network_id.encode('utf-8') + b" ssid \"" + ssid_bytes + b"\"\n")
-            self.soc.send(("SET_NETWORK {} ssid \"{}\"\n".format(network_id, ssid.encode("utf-8"))).encode())
-
-            
-            #logging.info("set_network_cmd:" + str(set_network_cmd))
-            
-            
+       
+        self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
+        
         self.wpa_cli('SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"')))
         '''
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
