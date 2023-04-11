@@ -78,8 +78,10 @@ class WifiManager:
         self.wpa_cli(f'ENABLE_NETWORK {network_id}')
         
         if ssid.isascii():
+            logging.info("Is ascii")
             self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
         else:  
+            logging.info("not ascii")
             '''
             ssid = "创客基地"
             set_network_cmd = "SET_NETWORK {} ssid \"{}\"\n".format(network_id, ssid)
