@@ -113,7 +113,8 @@ class WifiManager:
         netid = None
         for i in list(self.supplicant_networks):
             logging.info("check ssid:" + self.supplicant_networks[i]['ssid'])
-            logging.info("ssid.encode():" + ssid.encode('utf-8'))
+            logging.info("ssid.encode():")
+            logging.info(ssid.encode('utf-8'))
             if self.supplicant_networks[i]['ssid'] == ssid.encode('utf-8'):
                 netid = i
                 break
