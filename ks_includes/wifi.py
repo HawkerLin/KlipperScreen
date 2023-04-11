@@ -82,7 +82,6 @@ class WifiManager:
         else:  
 
             ssid = "创客基地"
-            ssid_bytes = ssid.encode('utf-8')
             set_network_cmd = "SET_NETWORK {} ssid \"{}\"\n".format(network_id, ssid)
             set_network_cmd_bytes = set_network_cmd.encode('utf-8')
             self.soc.send(set_network_cmd_bytes)
