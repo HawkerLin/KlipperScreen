@@ -79,18 +79,23 @@ class WifiManager:
         
         if ssid.isascii():
             self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
-        else:
+        else:        
+            ssid_bytes = ssid.replace('"', '\"').encode('utf-8')
+            set_network_cmd = "SET_NETWORK %s ssid " % network_id + "\"%s\"" % ssid_bytes.decode('unicode-escape')
+            self.soc.send(set_network_cmd.encode()
+        
+        '''
             # 将中文SSID转换为字节串
             cmd_bytes = ssid.encode('utf-8')
             # 构造WPA可用的SSID字节串
             ssid_to_send = b'\x00\x0c' + bytes([len(cmd_bytes)]) + cmd_bytes   
-#b'SET_NETWORK 5 ssid \"\x00\x0c\x0c\xe5\x88\x9b\xe5\xae\xa2\xe5\x9f\xba\xe5\x9c\xb0\"'
+
             self.soc.send(ssid_to_send)
         
             self.queue.get()  
 
         self.wpa_cli('SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"')))
-        '''
+        
         commands = [
             f'ENABLE_NETWORK {network_id}',
             'SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')),
