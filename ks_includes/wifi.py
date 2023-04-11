@@ -77,7 +77,7 @@ class WifiManager:
         network_id = self.wpa_cli("ADD_NETWORK")
         self.wpa_cli(f'ENABLE_NETWORK {network_id}')
         
-       self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
+        self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
             
         self.wpa_cli('SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"')))
         
