@@ -82,7 +82,7 @@ class WifiManager:
         else:        
             ssid_bytes = ssid.replace('"', '\"').encode('utf-8')
             #set_network_cmd = b"SET_NETWORK %s ssid " % network_id + "\"%s\"" % ssid_bytes
-            set_network_cmd = b"SET_NETWORK " +  network_id.encode('utf-8') + b" ssid " + ssid_bytes + b"\n"
+            set_network_cmd = b"SET_NETWORK " +  network_id.encode('utf-8') + b" ssid \"" + ssid_bytes + b"\"\n"
             self.soc.send(set_network_cmd)
             logging.info("set_network_cmd:" + str(set_network_cmd))
             
