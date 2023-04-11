@@ -84,7 +84,7 @@ class WifiManager:
             #set_network_cmd = b"SET_NETWORK %s ssid " % network_id + "\"%s\"" % ssid_bytes
             set_network_cmd = b"SET_NETWORK " +  network_id.encode('utf-8') + b" ssid " + ssid_bytes
             self.soc.send(set_network_cmd)
-            logging.info("set_network_cmd:" + set_network_cmd)
+            logging.info("set_network_cmd:" + str(set_network_cmd))
             
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logging.info("ifconfig down:" + self.interface)

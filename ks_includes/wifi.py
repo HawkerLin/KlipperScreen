@@ -75,7 +75,7 @@ class WifiManager:
 
         # TODO: Add wpa_cli error checking
         network_id = self.wpa_cli("ADD_NETWORK")
-        network_id = self.wpa_cli(f'ENABLE_NETWORK {network_id}')
+        self.wpa_cli(f'ENABLE_NETWORK {network_id}')
         
         if ssid.isascii():
             self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
