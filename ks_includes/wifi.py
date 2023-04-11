@@ -81,8 +81,8 @@ class WifiManager:
             self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
         else:        
             ssid_bytes = ssid.replace('"', '\"').encode('utf-8')
-            set_network_cmd = "SET_NETWORK %s ssid " % network_id + "\"%s\"" % ssid_bytes.decode('unicode-escape')
-            self.soc.send(set_network_cmd.encode())
+            set_network_cmd = b"SET_NETWORK %s ssid " % network_id + "\"%s\"" % ssid_bytes
+            self.soc.send(set_network_cmd)
             
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logging.info("ifconfig down:" + self.interface)
