@@ -113,9 +113,9 @@ class WifiManager:
         netid = None
         for i in list(self.supplicant_networks):
             logging.info("check ssid:" + self.supplicant_networks[i]['ssid'])
-            logging.info("ssid.encode():"
+            logging.info("ssid.encode():")
             logging.info(ssid.encode('utf-8'))
-            if self.supplicant_networks[i]['ssid'] == ssid.encode('utf-8'):
+            if self.supplicant_networks[i]['ssid'] == ssid:
                 netid = i
                 break
 
@@ -253,6 +253,7 @@ class WifiManager:
                 "bssid": net[2],
                 "flags": net[3] if len(net) == 4 else ""
             }
+            self.supplicant_networks[net[0]]['ssid'] = bytes(self.supplicant_networks[net[0]]['ssid'].encode('utf-8')).decode('unicode_escape').encode('latin1').decode('utf-8')
             logging.info("read_wpa:" + net[1])
             self.networks_in_supplicant.append(self.supplicant_networks[net[0]])
 
