@@ -82,7 +82,7 @@ class WifiManager:
         else:        
             ssid_bytes = ssid.replace('"', '\"').encode('utf-8')
             #set_network_cmd = b"SET_NETWORK %s ssid " % network_id + "\"%s\"" % ssid_bytes
-            set_network_cmd = b("SET_NETWORK %s ssid " % network_id) + ssid_bytes
+            set_network_cmd = b"SET_NETWORK %s ssid " % network_id + ssid_bytes
             self.soc.send(set_network_cmd)
             
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
