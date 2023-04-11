@@ -93,6 +93,8 @@ class WifiManager:
             self.soc.send(set_network_cmd)
             logging.info("set_network_cmd:" + str(set_network_cmd))
             '''
+        self.wpa_cli('SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"')))
+        
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logging.info("ifconfig down:" + self.interface)
         logging.info(process)
