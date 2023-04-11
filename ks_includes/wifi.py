@@ -84,13 +84,13 @@ class WifiManager:
             cmd_bytes = ssid.encode('utf-8')
             # 构造WPA可用的SSID字节串
             ssid_to_send = b'\x00\x0c' + bytes([len(cmd_bytes)]) + cmd_bytes   
-
+#b'SET_NETWORK 5 ssid \"\x00\x0c\x0c\xe5\x88\x9b\xe5\xae\xa2\xe5\x9f\xba\xe5\x9c\xb0\"'
             self.soc.send(ssid_to_send)
         
             self.queue.get()  
 
         self.wpa_cli('SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"')))
-'''        
+        '''
         commands = [
             f'ENABLE_NETWORK {network_id}',
             'SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')),
@@ -100,7 +100,7 @@ class WifiManager:
         logging.info("add_network,SSID:" + ssid.replace('"', '\"'))
 
         self.wpa_cli_batch(commands)
-'''      
+        '''      
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logging.info("ifconfig down:" + self.interface)
         logging.info(process)
