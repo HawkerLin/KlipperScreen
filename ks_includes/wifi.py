@@ -79,13 +79,21 @@ class WifiManager:
         
         if ssid.isascii():
             self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
-        else:        
+        else:  
+
+            ssid = "创客基地"
+            ssid_bytes = ssid.encode('utf-8')
+            set_network_cmd = "SET_NETWORK {} ssid \"{}\"\n".format(network_id, ssid)
+            set_network_cmd_bytes = set_network_cmd.encode('utf-8')
+            self.soc.send(set_network_cmd_bytes)
+
+            '''
             ssid_bytes = ssid.replace('"', '\"').encode('utf-8')
             #set_network_cmd = b"SET_NETWORK %s ssid " % network_id + "\"%s\"" % ssid_bytes
             set_network_cmd = b"SET_NETWORK " +  network_id.encode('utf-8') + b" ssid \"" + ssid_bytes + b"\"\n"
             self.soc.send(set_network_cmd)
             logging.info("set_network_cmd:" + str(set_network_cmd))
-            
+            '''
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logging.info("ifconfig down:" + self.interface)
         logging.info(process)
