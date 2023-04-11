@@ -250,6 +250,7 @@ class WifiManager:
                 "bssid": net[2],
                 "flags": net[3] if len(net) == 4 else ""
             }
+            logging.info("read_wpa:" + net[1])
             self.networks_in_supplicant.append(self.supplicant_networks[net[0]])
 
     def rescan(self):

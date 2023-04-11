@@ -89,7 +89,7 @@ class WifiManager:
             self.soc.send(("SET_NETWORK {} ssid \"{}\"\n".format(network_id, ssid.encode("utf-8"))).encode())
 
             
-            logging.info("set_network_cmd:" + str(set_network_cmd))
+            #logging.info("set_network_cmd:" + str(set_network_cmd))
             
             
         self.wpa_cli('SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"')))
