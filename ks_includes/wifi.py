@@ -75,13 +75,11 @@ class WifiManager:
 
         # TODO: Add wpa_cli error checking
         network_id = self.wpa_cli("ADD_NETWORK")
-        commands = [
-            f'ENABLE_NETWORK {network_id}',
-            'SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')),
-            'SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"'))
-        ]
-
-        self.wpa_cli_batch(commands)
+        self.wpa_cli(f'ENABLE_NETWORK {network_id}')
+        
+       self.wpa_cli('SET_NETWORK %s ssid "%s"' % (network_id, ssid.replace('"', '\"')))
+            
+        self.wpa_cli('SET_NETWORK %s psk "%s"' % (network_id, psk.replace('"', '\"')))
         
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logging.info("ifconfig down:" + self.interface)
