@@ -112,7 +112,7 @@ class WifiManager:
         self.read_wpa_supplicant()
         netid = None
         for i in list(self.supplicant_networks):
-            if self.supplicant_networks[i]['ssid'] == ssid:
+            if self.supplicant_networks[i]['ssid'] == ssid.encode('utf-8'):
                 netid = i
                 break
 
