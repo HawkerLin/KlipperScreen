@@ -40,6 +40,8 @@ class NetworkPanel(ScreenPanel):
 
         # Get IP Address
         gws = netifaces.gateways()
+        logging.info("init:gws:" + str(gws))
+        logging.info("init:netifaces.AF_INET:" + str(netifaces.AF_INET))
         if "default" in gws and netifaces.AF_INET in gws["default"]:
             self.interface = gws["default"][netifaces.AF_INET][1]
         else:
