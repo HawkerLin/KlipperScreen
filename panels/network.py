@@ -50,7 +50,7 @@ class NetworkPanel(ScreenPanel):
                 self.interface = ints[0]
             else:
                 self.interface = 'lo'
-
+        logging.info("init:self.interface:" + str(self.interface))
         res = netifaces.ifaddresses(self.interface)
         if netifaces.AF_INET in res and len(res[netifaces.AF_INET]) > 0:
             ip = res[netifaces.AF_INET][0]['addr']
