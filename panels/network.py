@@ -390,8 +390,8 @@ class NetworkPanel(ScreenPanel):
             stream = os.popen('hostname -f')
             hostname = stream.read().strip()
             ifadd = netifaces.ifaddresses(self.interface)
-            logging.info("update_network_info3")
-            logging.info("ifadd:" + ifadd)
+            logging.info("self.interface:" + str(self.interface))
+            logging.info("ifadd:" + str(ifadd))
             if netifaces.AF_INET in ifadd and len(ifadd[netifaces.AF_INET]) > 0:
                 ipv4 = f"<b>IPv4:</b> {ifadd[netifaces.AF_INET][0]['addr']} "
                 self.labels['ip'].set_text(f"IP: {ifadd[netifaces.AF_INET][0]['addr']}  ")
