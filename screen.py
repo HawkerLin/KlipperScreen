@@ -259,13 +259,10 @@ class KlipperScreen(Gtk.Window):
             logging.info(f"Panel path: {panel_path}")
             if not os.path.exists(panel_path):
                 logging.error(f"Panel {panel} does not exist")
-                raise FileNotFoundError(os.strerror(2), "\n" + panel_path)
-            logging.info("_load_panel1")
-            module = import_module(f"panels.{panel}")
-            logging.info("_load_panel2")
+                raise FileNotFoundError(os.strerror(2), "\n" + panel_path)            
+            module = import_module(f"panels.{panel}")            
             if not hasattr(module, "create_panel"):
                 raise ImportError(f"Cannot locate create_panel function for {panel}")
-            logging.info("_load_panel3")
             self.load_panel[panel] = getattr(module, "create_panel")
 
         try:
@@ -286,12 +283,8 @@ class KlipperScreen(Gtk.Window):
                 try:
                     logging.info("show_panel1, title:" + str(title))
                     self.panels[panel_name] = self._load_panel(panel_type, self, title)
-                    logging.info("show_panel2, initial:" + str(self.panels[panel_name]))
-                    if hasattr(self.panels[panel_name], "initialize"):
-                        logging.info("show_panel3:" + str(*kwargs))
-                        
+                    if hasattr(self.panels[panel_name], "initialize"):                        
                         self.panels[panel_name].initialize(**kwargs)
-                        logging.info("show_panel4")
                 except Exception as e:
                     if panel_name in self.panels:
                         del self.panels[panel_name]
@@ -304,7 +297,6 @@ class KlipperScreen(Gtk.Window):
 
     def attach_panel(self, panel_name):
         self.base_panel.add_content(self.panels[panel_name])
-        logging.debug(f"Current panel hierarchy: {' > '.join(self._cur_panels)}")
         self.base_panel.show_back(len(self._cur_panels) > 1)
         if hasattr(self.panels[panel_name], "process_update"):
             self.add_subscription(panel_name)
