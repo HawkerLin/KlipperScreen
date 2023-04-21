@@ -289,7 +289,7 @@ class WifiManager:
                     net['ssid'] = bytes(net['ssid'].encode('utf-8')).decode('unicode_escape').encode('latin1').decode('utf-8')
                     #logging.info("ssid:" + net['ssid'])
                 if net['ssid']:
-                    logging.info("ssid:" + net['ssid'])
+                    #logging.info("ssid:" + net['ssid'])
                     if not net['ssid'].startswith("\x00"):  
                         aps.append(net)
                     else:

@@ -131,7 +131,7 @@ class WifiManager:
         if netid is None:
             logging.info("Wifi network is not defined in wpa_supplicant")
             return False
-            
+        '''    
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logging.info("ifconfig down:" + self.interface)
         logging.info(process)
@@ -142,7 +142,7 @@ class WifiManager:
         logging.info(process)
         # wait result
         stdout, stderr = process.communicate()
-
+        '''
         logging.info(f"Attempting to connect to wifi: {netid}")
         self.callback("connecting_status", f"Attempting to connect to {ssid}")
         self.wpa_cli(f"SELECT_NETWORK {netid}")
