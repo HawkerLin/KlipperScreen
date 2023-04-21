@@ -48,6 +48,7 @@ class NetworkPanel(ScreenPanel):
             ints = netifaces.interfaces()
             if 'lo' in ints:
                 ints.pop(ints.index('lo'))
+                ints.pop(ints.index('eth0'))
             if len(ints) > 0:
                 self.interface = ints[0]
             else:

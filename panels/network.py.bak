@@ -375,13 +375,13 @@ class NetworkPanel(ScreenPanel):
         return True
 
     def update_network_info(self, ssid):
-        logging.info("update_network_info1")
+        
         info = freq = encr = chan = lvl = ipv4 = ipv6 = ""
 
         if ssid not in list(self.networks) or ssid not in self.labels['networks']:
             logging.info(f"Unknown SSID {ssid}")
             return
-        logging.info("update_network_info2")
+        
         netinfo = self.wifi.get_network_info(ssid)
         if "connected" in netinfo:
             connected = netinfo['connected']
