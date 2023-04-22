@@ -26,8 +26,8 @@ class NetworkPanel(ScreenPanel):
         self.network_interfaces = netifaces.interfaces()
         self.wireless_interfaces = [iface for iface in self.network_interfaces if iface.startswith('w')]
         self.wifi = None
-        #self.use_network_manager = os.system('systemctl is-active --quiet NetworkManager.service') == 0
-        self.use_network_manager = False
+        self.use_network_manager = os.system('systemctl is-active --quiet NetworkManager.service') == 0
+        #self.use_network_manager = False
         if len(self.wireless_interfaces) > 0:
             logging.info(f"Found wireless interfaces: {self.wireless_interfaces}")
             if self.use_network_manager:
@@ -40,6 +40,8 @@ class NetworkPanel(ScreenPanel):
 
         # Get IP Address
         gws = netifaces.gateways()
+        logging.info("init:gws:" + str(gws))
+        logging.info("init:netifaces.AF_INET:" + str(netifaces.AF_INET))
         if "default" in gws and netifaces.AF_INET in gws["default"]:
             self.interface = gws["default"][netifaces.AF_INET][1]
         else:
@@ -50,7 +52,7 @@ class NetworkPanel(ScreenPanel):
                 self.interface = ints[0]
             else:
                 self.interface = 'lo'
-
+        logging.info("init:self.interface:" + str(self.interface))
         res = netifaces.ifaddresses(self.interface)
         if netifaces.AF_INET in res and len(res[netifaces.AF_INET]) > 0:
             ip = res[netifaces.AF_INET][0]['addr']
@@ -132,6 +134,8 @@ class NetworkPanel(ScreenPanel):
                 network_id = net
 
         display_name = _("Hidden") if ssid.startswith("\x00") else f"{ssid}"
+        #ssid_unicode = bytes(ssid.encode('utf-8')).decode('unicode_escape').encode('latin1').decode('utf-8')
+        
         netinfo = self.wifi.get_network_info(ssid)
         connected_ssid = self.wifi.get_connected_ssid()
         if netinfo is None:
@@ -212,6 +216,7 @@ class NetworkPanel(ScreenPanel):
     def add_new_network(self, widget, ssid, connect=False):
         self._screen.remove_keyboard()
         psk = self.labels['network_psk'].get_text()
+        logging.info("add new network:" + ssid)
         result = self.wifi.add_network(ssid, psk)
 
         self.close_add_network()
@@ -370,12 +375,13 @@ class NetworkPanel(ScreenPanel):
         return True
 
     def update_network_info(self, ssid):
-
+        
         info = freq = encr = chan = lvl = ipv4 = ipv6 = ""
 
         if ssid not in list(self.networks) or ssid not in self.labels['networks']:
             logging.info(f"Unknown SSID {ssid}")
             return
+        
         netinfo = self.wifi.get_network_info(ssid)
         if "connected" in netinfo:
             connected = netinfo['connected']
@@ -386,6 +392,8 @@ class NetworkPanel(ScreenPanel):
             stream = os.popen('hostname -f')
             hostname = stream.read().strip()
             ifadd = netifaces.ifaddresses(self.interface)
+            logging.info("self.interface:" + str(self.interface))
+            logging.info("ifadd:" + str(ifadd))
             if netifaces.AF_INET in ifadd and len(ifadd[netifaces.AF_INET]) > 0:
                 ipv4 = f"<b>IPv4:</b> {ifadd[netifaces.AF_INET][0]['addr']} "
                 self.labels['ip'].set_text(f"IP: {ifadd[netifaces.AF_INET][0]['addr']}  ")

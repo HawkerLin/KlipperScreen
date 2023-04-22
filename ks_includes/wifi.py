@@ -72,6 +72,7 @@ class WifiManager:
                 # Modify network
                 return
 
+
         # TODO: Add wpa_cli error checking
         network_id = self.wpa_cli("ADD_NETWORK")
         commands = [
@@ -82,6 +83,8 @@ class WifiManager:
 
         self.wpa_cli_batch(commands)
         
+        
+        '''
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logging.info("ifconfig down:" + self.interface)
         logging.info(process)
@@ -95,11 +98,13 @@ class WifiManager:
         
         # wait result
         stdout, stderr = process.communicate()
-
+        '''
 
         self.read_wpa_supplicant()
         netid = None
         for i in list(self.supplicant_networks):
+            #logging.info("check ssid:" + self.supplicant_networks[i]['ssid'])
+
             if self.supplicant_networks[i]['ssid'] == ssid:
                 netid = i
                 break
@@ -126,7 +131,7 @@ class WifiManager:
         if netid is None:
             logging.info("Wifi network is not defined in wpa_supplicant")
             return False
-            
+        '''    
         process = subprocess.Popen(["ifconfig", self.interface, "down"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         logging.info("ifconfig down:" + self.interface)
         logging.info(process)
@@ -137,7 +142,7 @@ class WifiManager:
         logging.info(process)
         # wait result
         stdout, stderr = process.communicate()
-
+        '''
         logging.info(f"Attempting to connect to wifi: {netid}")
         self.callback("connecting_status", f"Attempting to connect to {ssid}")
         self.wpa_cli(f"SELECT_NETWORK {netid}")
@@ -238,6 +243,8 @@ class WifiManager:
                 "bssid": net[2],
                 "flags": net[3] if len(net) == 4 else ""
             }
+            self.supplicant_networks[net[0]]['ssid'] = bytes(self.supplicant_networks[net[0]]['ssid'].encode('utf-8')).decode('unicode_escape').encode('latin1').decode('utf-8')
+            #logging.info("read_wpa:" + net[1])
             self.networks_in_supplicant.append(self.supplicant_networks[net[0]])
 
     def rescan(self):
@@ -278,11 +285,15 @@ class WifiManager:
                 else:
                     net['encryption'] = "off"
                 
-                if net['ssid'][0] != '\0':                
-                    net['ssid'] = net['ssid'].decode('UTF-8')
-                    logging.info("ssid:" + net['ssid'])
-
-                aps.append(net)
+                if net['ssid']:                
+                    net['ssid'] = bytes(net['ssid'].encode('utf-8')).decode('unicode_escape').encode('latin1').decode('utf-8')
+                    #logging.info("ssid:" + net['ssid'])
+                if net['ssid']:
+                    #logging.info("ssid:" + net['ssid'])
+                    if not net['ssid'].startswith("\x00"):  
+                        aps.append(net)
+                    else:
+                        logging.info("don't add hidden wifi:" + net['ssid'])
 
         cur_info = self.get_current_wifi()
         self.networks = {}
@@ -304,7 +315,10 @@ class WifiManager:
     def wpa_cli(self, command, wait=True):
         if wait is False:
             self.wpa_thread.skip_command()
+        
         self.soc.send(command.encode())
+        
+        
         if wait is True:
             return self.queue.get()
 
