@@ -26,6 +26,7 @@ from ks_includes.printer import Printer
 from ks_includes.widgets.keyboard import Keyboard
 from ks_includes.config import KlipperScreenConfig
 from panels.base_panel import BasePanel
+from panels.wizard import WizardPanel
 
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 
@@ -129,6 +130,10 @@ class KlipperScreen(Gtk.Window):
         self.gtk = KlippyGtk(self)
         self.init_style()
         self.set_icon_from_file(os.path.join(klipperscreendir, "styles", "icon.svg"))
+
+        self.wizard = WizardPanel(self, title="wizard")
+        self.add(self.wizard.wizard_page)
+        self.show_all()
 
         self.base_panel = BasePanel(self, title="Base Panel")
         self.add(self.base_panel.main_grid)
