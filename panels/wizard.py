@@ -6,6 +6,7 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import GLib, Gtk, Pango
 
 from ks_includes.screen_panel import ScreenPanel
+# from base_panel import BasePanel
 
 
 class WizardPanel(ScreenPanel):
@@ -29,16 +30,15 @@ class WizardPanel(ScreenPanel):
         self.wizard_click.get_style_context().add_class('wizard')
         self.wizard_click.set_size_request(100, 200)
         self.wizard_click.add(self.button)
+        #self.wizard_click.pack_end(self.button, False, False, 0)
 
         self.wizard_page = Gtk.Grid()
         self.wizard_page.attach(self.wizardtitle, 0, 0, 1, 1)
         self.wizard_page.attach(self.wizard_click, 0, 1, 1, 1)
 
     def on_button_clicked(self, widget):
-        self.wizard_page.remove(self.wizard.wizard_page)
-'''
-    def activate(self):
-        if self.time_update is None:
-            self.time_update = GLib.timeout_add_seconds(1, self.update_time)
-'''
+        # self.base_panel = BasePanel(self, title="Base Panel")
+        self._screen.wizard.remove(self.wizard_page)
+        self._screen.get_toplevel().base_panel.show_all()
+        # self._screen.base_panel.activate()
 

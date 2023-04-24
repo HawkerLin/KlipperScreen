@@ -133,7 +133,7 @@ class KlipperScreen(Gtk.Window):
 
         self.wizard = WizardPanel(self, title="wizard")
         self.add(self.wizard.wizard_page)
-        self.show_all()
+        #self.show_all()
 
         self.base_panel = BasePanel(self, title="Base Panel")
         self.add(self.base_panel.main_grid)
