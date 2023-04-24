@@ -38,7 +38,7 @@ class WizardPanel(ScreenPanel):
 
     def on_button_clicked(self, widget):
         # self.base_panel = BasePanel(self, title="Base Panel")
-        self._screen.wizard.remove(self.wizard_page)
+        self._screen.wizard.hide(self.wizard_page)
         self._screen.get_toplevel().base_panel.show_all()
         # self._screen.base_panel.activate()
 
