@@ -136,7 +136,7 @@ class KlipperScreen(Gtk.Window):
         #self.show_all()
 
         self.base_panel = BasePanel(self, title="Base Panel")
-        self.add(self.base_panel.main_grid)
+        #self.add(self.base_panel.main_grid)
         self.show_all()
         if self.show_cursor:
             self.get_window().set_cursor(
