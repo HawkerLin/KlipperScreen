@@ -41,7 +41,7 @@ class WizardPanel(ScreenPanel):
         #self._screen.remove(self.wizard_page)#黑屏
         #self._screen.get_toplevel().base_panel.show_all()
         # self._screen.base_panel.activate()
-        self.get_parent().remove(self)
+        self.get_parent().remove(self.wizard_page)
         self.get_parent().add(self.get_parent().base_panel.main_grid)
         self.get_parent().show_all()
 
