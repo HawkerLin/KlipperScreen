@@ -61,11 +61,12 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_back = Gtk.Box()
         self.wizard_2_back.get_style_context().add_class('frame-item')
         self.wizard_2_back.set_size_request(50, 200)
-        self.wizard_2_back.add(self.second_nex)
+        self.wizard_2_back.add(self.second_bac)
 
         self.wizard_page_2 = Gtk.Grid()
         self.wizard_page_2.attach(self.wizard_2_title, 0, 0, 1, 1)
-        self.wizard_page_2.attach(self.wizard_2_next, 0, 1, 1, 1)
+        self.wizard_page_2.attach(self.wizard_2_back, 0, 1, 1, 1)
+        self.wizard_page_2.attach(self.wizard_2_next, 0, 2, 1, 1)
         self._screen.add(self._screen.wizard.wizard_page_2)
         self._screen.show_all()
 
