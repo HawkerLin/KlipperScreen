@@ -49,7 +49,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_title.set_valign(Gtk.Align.CENTER)
         self.wizard_2_title.add(self.wizard_2_lbl)
 
-        self.second_nex = self._gtk.Button(label="Next")
+        self.second_nex = self._gtk.Button(label="End")
         self.second_nex.connect("clicked", self.final_next)
         self.wizard_2_next = Gtk.Box()
         self.wizard_2_next.get_style_context().add_class('frame-item')
