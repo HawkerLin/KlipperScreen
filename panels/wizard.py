@@ -23,7 +23,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_title = Gtk.Box()
         self.wizard_1_title.get_style_context().add_class("title_bar")
         self.wizard_1_title.set_size_request(100, 200)
-        self.wizard_1_title.set_valign(Gtk.Align.CENTER)
+        #self.wizard_1_title.set_valign(Gtk.Align.CENTER)
         self.wizard_1_title.add(self.wizard_1_lbl)
 
         self.first_nex = self._gtk.Button(label="Next")
