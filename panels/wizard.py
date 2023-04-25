@@ -22,7 +22,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_lbl.set_label("Wizard")
         self.wizard_1_title = Gtk.Box()
         self.wizard_1_title.get_style_context().add_class("title_bar")
-        self.wizard_1_title.set_size_request(100, 200)
+        self.wizard_1_title.set_size_request(480, 700)
         self.wizard_1_title.set_valign(Gtk.Align.CENTER)
         self.wizard_1_title.add(self.wizard_1_lbl)
 
@@ -30,7 +30,7 @@ class WizardPanel(ScreenPanel):
         self.first_nex.connect("clicked", self.first_next)
         self.wizard_1_next = Gtk.Box()
         self.wizard_1_next.get_style_context().add_class('frame-item')
-        self.wizard_1_next.set_size_request(100, 200)
+        self.wizard_1_next.set_size_request(480, 100)
         self.wizard_1_next.add(self.first_nex)
 
         self.wizard_page_1 = Gtk.Grid()
@@ -45,7 +45,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_lbl.set_label("Wizard")
         self.wizard_2_title = Gtk.Box()
         self.wizard_2_title.get_style_context().add_class("title_bar")
-        self.wizard_2_title.set_size_request(700, 480)
+        self.wizard_2_title.set_size_request(480, 700)
         self.wizard_2_title.set_valign(Gtk.Align.CENTER)
         self.wizard_2_title.add(self.wizard_2_lbl)
 
@@ -53,14 +53,14 @@ class WizardPanel(ScreenPanel):
         self.second_nex.connect("clicked", self.final_next)
         self.wizard_2_next = Gtk.Box()
         self.wizard_2_next.get_style_context().add_class('frame-item')
-        self.wizard_2_next.set_size_request(100, 240)
+        self.wizard_2_next.set_size_request(240, 100)
         self.wizard_2_next.add(self.second_nex)
 
         self.second_bac = self._gtk.Button(label="End")
         self.second_bac.connect("clicked", self.second_back)
         self.wizard_2_back = Gtk.Box()
         self.wizard_2_back.get_style_context().add_class('frame-item')
-        self.wizard_2_back.set_size_request(100, 240)
+        self.wizard_2_back.set_size_request(240, 100)
         self.wizard_2_back.add(self.second_bac)
 
         self.wizard_page_2 = Gtk.Grid()
