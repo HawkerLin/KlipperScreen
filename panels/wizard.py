@@ -62,7 +62,7 @@ class WizardPanel(ScreenPanel):
         self._screen.add(self._screen.wizard_page_2)
         self._screen.show_all()
 
-    def first_next(self):
+    def first_next(self, widget):
         self._screen.remove(self.wizard_page_1)
         self.show_wizard_2()
         
@@ -70,7 +70,7 @@ class WizardPanel(ScreenPanel):
     # def second_next(self, widget):
     #     self._screen.remove()
 
-    def final_next(self):
+    def final_next(self, widget):
         #self._screen.remove(self.wizard_page)#如果只是remove这个而没有再次add、show_all则是黑屏
         self._screen.remove(self.wizard_page_2)
         self._screen.add(self._screen.base_panel.main_grid)
