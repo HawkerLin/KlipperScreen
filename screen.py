@@ -132,7 +132,7 @@ class KlipperScreen(Gtk.Window):
         self.set_icon_from_file(os.path.join(klipperscreendir, "styles", "icon.svg"))
 
         self.wizard = WizardPanel(self, title="wizard")
-        self.add(self.wizard.wizard_page)
+        self.add(self.wizard.wizard_page_1)
         #self.show_all()
 
         self.base_panel = BasePanel(self, title="Base Panel")
