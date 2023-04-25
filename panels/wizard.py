@@ -14,7 +14,7 @@ class WizardPanel(ScreenPanel):
         super().__init__(screen, title)
         self.show_wizard_1()
 
-    def show_wizard_1(self,widget):
+    def show_wizard_1(self):
         self.wizard_1_lbl = Gtk.Label()
         self.wizard_1_lbl.set_hexpand(True)
         self.wizard_1_lbl.set_halign(Gtk.Align.CENTER)
@@ -37,7 +37,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_page_1.attach(self.wizard_1_title, 0, 0, 1, 1)
         self.wizard_page_1.attach(self.wizard_1_next, 0, 1, 1, 1)
 
-    def show_wizard_2(self,widget):
+    def show_wizard_2(self):
         self.wizard_2_lbl = Gtk.Label()
         self.wizard_2_lbl.set_hexpand(True)
         self.wizard_2_lbl.set_halign(Gtk.Align.CENTER)
@@ -62,7 +62,7 @@ class WizardPanel(ScreenPanel):
         self._screen.add(self._screen.wizard_page_2)
         self._screen.show_all()
 
-    def first_next(self, widget):
+    def first_next(self):
         self._screen.remove(self.wizard_page_1)
         self.show_wizard_2()
         
@@ -70,7 +70,7 @@ class WizardPanel(ScreenPanel):
     # def second_next(self, widget):
     #     self._screen.remove()
 
-    def final_next(self, widget):
+    def final_next(self):
         #self._screen.remove(self.wizard_page)#如果只是remove这个而没有再次add、show_all则是黑屏
         self._screen.remove(self.wizard_page_2)
         self._screen.add(self._screen.base_panel.main_grid)
