@@ -6,42 +6,73 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import GLib, Gtk, Pango
 
 from ks_includes.screen_panel import ScreenPanel
-# from base_panel import BasePanel
+
 
 
 class WizardPanel(ScreenPanel):
     def __init__(self, screen, title):
         super().__init__(screen, title)
+        self.show_wizard_1()
 
-        self.wizardlbl = Gtk.Label()
-        self.wizardlbl.set_hexpand(True)
-        self.wizardlbl.set_halign(Gtk.Align.CENTER)
-        self.wizardlbl.set_ellipsize(Pango.EllipsizeMode.END)
-        self.wizardlbl.set_label("Wizard")
-        self.wizardtitle = Gtk.Box()
-        self.wizardtitle.get_style_context().add_class("wizardtitle")
-        self.wizardtitle.set_size_request(100, 200)
-        self.wizardtitle.set_valign(Gtk.Align.CENTER)
-        self.wizardtitle.add(self.wizardlbl)
+    def show_wizard_1(self,widget):
+        self.wizard_1_lbl = Gtk.Label()
+        self.wizard_1_lbl.set_hexpand(True)
+        self.wizard_1_lbl.set_halign(Gtk.Align.CENTER)
+        self.wizard_1_lbl.set_ellipsize(Pango.EllipsizeMode.END)
+        self.wizard_1_lbl.set_label("Wizard")
+        self.wizard_1_title = Gtk.Box()
+        self.wizard_1_title.get_style_context().add_class("title_bar")
+        self.wizard_1_title.set_size_request(100, 200)
+        self.wizard_1_title.set_valign(Gtk.Align.CENTER)
+        self.wizard_1_title.add(self.wizard_1_lbl)
 
-        self.button = self._gtk.Button(label="Next")
-        self.button.connect("clicked", self.on_button_clicked)
-        self.wizard_click = Gtk.Box()
-        self.wizard_click.get_style_context().add_class('wizard')
-        self.wizard_click.set_size_request(100, 200)
-        self.wizard_click.add(self.button)
-        #self.wizard_click.pack_end(self.button, False, False, 0)
+        self.first_nex = self._gtk.Button(label="Next")
+        self.first_nex.connect("clicked", self.first_next)
+        self.wizard_1_next = Gtk.Box()
+        self.wizard_1_next.get_style_context().add_class('frame-item')
+        self.wizard_1_next.set_size_request(100, 200)
+        self.wizard_1_next.add(self.first_nex)
 
-        self.wizard_page = Gtk.Grid()
-        self.wizard_page.attach(self.wizardtitle, 0, 0, 1, 1)
-        self.wizard_page.attach(self.wizard_click, 0, 1, 1, 1)
+        self.wizard_page_1 = Gtk.Grid()
+        self.wizard_page_1.attach(self.wizard_1_title, 0, 0, 1, 1)
+        self.wizard_page_1.attach(self.wizard_1_next, 0, 1, 1, 1)
 
-    def on_button_clicked(self, widget):
-        # self.base_panel = BasePanel(self, title="Base Panel")
-        #self._screen.remove(self.wizard_page)#黑屏
-        #self._screen.get_toplevel().base_panel.show_all()
-        # self._screen.base_panel.activate()
-        self._screen.remove(self.wizard_page)
+    def show_wizard_2(self,widget):
+        self.wizard_2_lbl = Gtk.Label()
+        self.wizard_2_lbl.set_hexpand(True)
+        self.wizard_2_lbl.set_halign(Gtk.Align.CENTER)
+        self.wizard_2_lbl.set_ellipsize(Pango.EllipsizeMode.END)
+        self.wizard_2_lbl.set_label("Wizard")
+        self.wizard_2_title = Gtk.Box()
+        self.wizard_2_title.get_style_context().add_class("title_bar")
+        self.wizard_2_title.set_size_request(100, 200)
+        self.wizard_2_title.set_valign(Gtk.Align.CENTER)
+        self.wizard_2_title.add(self.wizard_2_lbl)
+
+        self.second_nex = self._gtk.Button(label="Next")
+        self.second_nex.connect("clicked", self.final_next)
+        self.wizard_2_next = Gtk.Box()
+        self.wizard_2_next.get_style_context().add_class('frame-item')
+        self.wizard_2_next.set_size_request(100, 200)
+        self.wizard_2_next.add(self.second_nex)
+
+        self.wizard_page_2 = Gtk.Grid()
+        self.wizard_page_2.attach(self.wizard_2_title, 0, 0, 1, 1)
+        self.wizard_page_2.attach(self.wizard_2_next, 0, 1, 1, 1)
+        self._screen.add(self._screen.wizard_page_2)
+        self._screen.show_all()
+
+    def first_next(self, widget):
+        self._screen.remove(self.wizard_page_1)
+        self.show_wizard_2()
+        
+
+    # def second_next(self, widget):
+    #     self._screen.remove()
+
+    def final_next(self, widget):
+        #self._screen.remove(self.wizard_page)#如果只是remove这个而没有再次add、show_all则是黑屏
+        self._screen.remove(self.wizard_page_2)
         self._screen.add(self._screen.base_panel.main_grid)
         self._screen.show_all()
 
