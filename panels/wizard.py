@@ -22,7 +22,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_lbl.set_label("Wizard")
         self.wizard_1_title = Gtk.Box()
         self.wizard_1_title.get_style_context().add_class("title_bar")
-        self.wizard_1_title.set_size_request(240, 350)
+        self.wizard_1_title.set_size_request(240, 700)
         self.wizard_1_title.set_valign(Gtk.Align.CENTER)
         self.wizard_1_title.add(self.wizard_1_lbl)
 
@@ -30,7 +30,7 @@ class WizardPanel(ScreenPanel):
         self.first_nex.connect("clicked", self.first_next)
         self.wizard_1_next = Gtk.Box()
         self.wizard_1_next.get_style_context().add_class('frame-item')
-        self.wizard_1_next.set_size_request(240, 50)
+        self.wizard_1_next.set_size_request(240, 100)
         self.wizard_1_next.add(self.first_nex)
 
         self.wizard_page_1 = Gtk.Grid()
