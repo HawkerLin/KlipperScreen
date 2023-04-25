@@ -64,9 +64,9 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_back.add(self.second_bac)
 
         self.wizard_page_2 = Gtk.Grid()
-        self.wizard_page_2.attach(self.wizard_2_title, 0, 0, 1, 1)
+        self.wizard_page_2.attach(self.wizard_2_title, 0, 0, 3, 3)
         self.wizard_page_2.attach(self.wizard_2_back, 0, 1, 1, 1)
-        self.wizard_page_2.attach(self.wizard_2_next, 0, 2, 1, 1)
+        self.wizard_page_2.attach(self.wizard_2_next, 1, 1, 1, 1)
         self._screen.add(self._screen.wizard.wizard_page_2)
         self._screen.show_all()
 
