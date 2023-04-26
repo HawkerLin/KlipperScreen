@@ -17,7 +17,7 @@ class WizardPanel(ScreenPanel):
     def show_wizard_1(self):
         image = self._gtk.Image("sovoler", self._gtk.content_width * .2, self._gtk.content_height * .5)
         self.logo = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=0)
-        self.logo.set_size_request(120, 80)
+        self.logo.set_size_request(80, 80)
         self.logo.pack_start(image, False, True, 8)
         self.logo.pack_end(image, True, True, 8)
 
