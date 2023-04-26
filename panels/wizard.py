@@ -38,7 +38,9 @@ class WizardPanel(ScreenPanel):
 
         self.first_nex = self._gtk.Button("arrow-right","Next", f"color3")
         self.first_nex.connect("clicked", self.first_next)
-        self.first_nex.set_size_request(440, 60)
+        self.first_nex.set_size_request(440, 40)
+        self.first_nex.set_halign(Gtk.Align.CENTER)
+        self.first_nex.set_valign(Gtk.Align.CENTER)
         self.wizard_1_next = Gtk.Box()
         self.wizard_1_next.pack_start(self.first_nex, False, False, 20)
         #self.wizard_1_next.set_halign(Gtk.Align.CENTER)
