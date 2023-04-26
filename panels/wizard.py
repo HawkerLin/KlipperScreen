@@ -12,7 +12,8 @@ from ks_includes.screen_panel import ScreenPanel
 class WizardPanel(ScreenPanel):
     def __init__(self, screen, title):
         super().__init__(screen, title)
-        self.show_wizard_1()
+        #self.show_wizard_1()
+        self.first_next()
 
     def show_wizard_1(self):
         image = self._gtk.Image("sovoler", self._gtk.content_width * .1, self._gtk.content_height * .1)
