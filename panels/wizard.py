@@ -18,7 +18,7 @@ class WizardPanel(ScreenPanel):
         image = self._gtk.Image("sovoler", self._gtk.content_width * .2, self._gtk.content_height * .5)
         self.logo = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=0)
         #self.logo.set_halign(Gtk.Align.END)
-        self.logo.set_valign(Gtk.Align.END)
+        #self.logo.set_valign(Gtk.Align.END)
         self.logo.set_size_request(80, 80)
         #self.logo.pack_start(image, False, True, 8)#将image添加到self.logo的起始位置
         self.logo.pack_end(image, True, False, 10)#将image添加到self.logo的末尾位置
