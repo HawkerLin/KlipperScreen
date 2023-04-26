@@ -29,7 +29,7 @@ class WizardPanel(ScreenPanel):
         self.first_nex = self._gtk.Button(label="Next")
         self.first_nex.connect("clicked", self.first_next)
         self.wizard_1_next = Gtk.Box()
-        self.wizard_1_next.get_style_context().add_class('frame-item')
+        self.wizard_1_next.get_style_context().add_class('button_active')
         self.wizard_1_next.set_size_request(240, 80)
         self.wizard_1_next.add(self.first_nex)
 
@@ -53,14 +53,14 @@ class WizardPanel(ScreenPanel):
         self.second_nex = self._gtk.Button(label="End")
         self.second_nex.connect("clicked", self.final_next)
         self.wizard_2_next = Gtk.Box()
-        self.wizard_2_next.get_style_context().add_class('frame-item')
+        self.wizard_2_next.get_style_context().add_class('button_active')
         self.wizard_2_next.set_size_request(230, 80)
         self.wizard_2_next.add(self.second_nex)
 
         self.second_bac = self._gtk.Button(label="Back")
         self.second_bac.connect("clicked", self.second_back)
         self.wizard_2_back = Gtk.Box()
-        self.wizard_2_back.get_style_context().add_class('frame-item')
+        self.wizard_2_back.get_style_context().add_class('button_active')
         self.wizard_2_back.set_size_request(230, 80)
         self.wizard_2_back.add(self.second_bac)
 
