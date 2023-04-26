@@ -19,7 +19,7 @@ class WizardPanel(ScreenPanel):
         self.logo = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=0)
         self.logo.set_size_request(240, 80)
         self.logo.pack_start(image, False, True, 8)
-        self.logo.pack_end(scroll, True, True, 8)
+        self.logo.pack_end(image, True, True, 8)
 
         self.wizard_1_lbl = Gtk.Label()
         self.wizard_1_lbl.set_hexpand(True)#水平扩展填充
