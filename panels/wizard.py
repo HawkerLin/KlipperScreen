@@ -18,9 +18,10 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_lbl = Gtk.Label()
         self.wizard_1_lbl.set_hexpand(True)#水平扩展填充
         self.wizard_1_lbl.set_halign(Gtk.Align.END)#水平对齐,CENTER设置为中心
+        self.wizard_1_title.set_valign(Gtk.Align.START)
         self.wizard_1_lbl.set_ellipsize(Pango.EllipsizeMode.END)#文本末尾空间不够的话以省略号显示
         #self.wizard_1_lbl.set_label("Wizard")
-        self.wizard_1_lbl.set_markup("<span font='Sans 12'>向导</span>")
+        self.wizard_1_lbl.set_markup("<span font='SydneySerial-Medium 28'>向导</span>")
         self.wizard_1_title = Gtk.Box()
         self.wizard_1_title.get_style_context().add_class("title_bar")
         self.wizard_1_title.set_size_request(240, 680)
