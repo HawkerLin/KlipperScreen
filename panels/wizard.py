@@ -134,7 +134,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_title.set_valign(Gtk.Align.START)
         self.wizard_3_title.add(self.wizard_3_lbl)
 
-        image = self._gtk.Image("level", self._gtk.content_width * .5, self._gtk.content_height * .5)
+        image = self._gtk.Image("level", self._gtk.content_width * .2, self._gtk.content_height * .2)
         self.level_logo = Gtk.Box()
         #self.level_logo.set_halign(Gtk.Align.CENTER)
         #self.level_logo.set_valign(Gtk.Align.CENTER)
