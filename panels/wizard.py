@@ -82,7 +82,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_title.set_valign(Gtk.Align.START)
         self.wizard_2_title.add(self.wizard_2_lbl)
 
-        image = self._gtk.Image("wifi", self._gtk.content_width * .1, self._gtk.content_height * .1)
+        image = self._gtk.Image("wifi", self._gtk.content_width * 5, self._gtk.content_height * 5)
         self.wifi_logo = Gtk.Box()
         #self.wifi_logo.set_halign(Gtk.Align.CENTER)
         #self.wifi_logo.set_valign(Gtk.Align.CENTER)
@@ -92,7 +92,7 @@ class WizardPanel(ScreenPanel):
 
         self.second_nex = self._gtk.Button("arrow-right","Next", f"color2")
         self.second_nex.connect("clicked", self.final_next)
-        self.second_nex.set_size_request(210, 40)
+        self.second_nex.set_size_request(210, 35)
         self.second_nex.set_halign(Gtk.Align.CENTER)
         self.second_nex.set_valign(Gtk.Align.CENTER)
         self.wizard_2_next = Gtk.Box()
@@ -103,7 +103,7 @@ class WizardPanel(ScreenPanel):
 
         self.second_bac = self._gtk.Button("arrow-left","Back", f"color1")
         self.second_bac.connect("clicked", self.second_back)
-        self.second_bac.set_size_request(210, 40)
+        self.second_bac.set_size_request(210, 35)
         self.second_bac.set_halign(Gtk.Align.CENTER)
         self.second_bac.set_valign(Gtk.Align.CENTER)
         self.wizard_2_back = Gtk.Box()
