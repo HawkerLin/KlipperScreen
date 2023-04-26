@@ -78,7 +78,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_lbl.set_markup("<span font='DejaVu Sans-bold 30'>Connect Network</span>")
         self.wizard_2_title = Gtk.Box()
         #self.wizard_2_title.get_style_context().add_class("title_bar")
-        #self.wizard_2_title.set_size_request(240, 680)
+        self.wizard_2_title.set_size_request(480, 80)
         self.wizard_2_title.set_valign(Gtk.Align.START)
         self.wizard_2_title.add(self.wizard_2_lbl)
 
@@ -86,7 +86,7 @@ class WizardPanel(ScreenPanel):
         self.wifi_logo = Gtk.Box()
         #self.wifi_logo.set_halign(Gtk.Align.CENTER)
         #self.wifi_logo.set_valign(Gtk.Align.CENTER)
-        self.wifi_logo.set_size_request(480, 240)
+        self.wifi_logo.set_size_request(480, 640)
         self.wifi_logo.pack_end(image, False, False, 20)#将image添加到self.logo的起始位置
         #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
 
@@ -96,7 +96,7 @@ class WizardPanel(ScreenPanel):
         self.second_nex.set_halign(Gtk.Align.CENTER)
         self.second_nex.set_valign(Gtk.Align.CENTER)
         self.wizard_2_next = Gtk.Box()
-        self.wizard_2_next.pack_start(self.second_nex, False, False, 20)
+        self.wizard_2_next.pack_start(self.second_nex, False, False, 10)
         #self.wizard_2_next.get_style_context().add_class('button_active')
         self.wizard_2_next.set_size_request(240, 80)
         self.wizard_2_next.add(self.second_nex)
@@ -107,7 +107,7 @@ class WizardPanel(ScreenPanel):
         self.second_bac.set_halign(Gtk.Align.CENTER)
         self.second_bac.set_valign(Gtk.Align.CENTER)
         self.wizard_2_back = Gtk.Box()
-        self.wizard_2_back.pack_start(self.second_bac, False, False, 20)
+        self.wizard_2_back.pack_start(self.second_bac, False, False, 10)
         #self.wizard_2_back.get_style_context().add_class('button_active')
         self.wizard_2_back.set_size_request(240, 80)
         self.wizard_2_back.add(self.second_bac)
