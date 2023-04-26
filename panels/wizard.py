@@ -53,6 +53,7 @@ class WizardPanel(ScreenPanel):
         self.language_menu = Gtk.Label()
         self.language_menu.set_markup("<span font='DejaVu Sans-bold 28'>ENGLISH</span>")
         #self.language_menu.set_hexpand(True)
+        self.language_menu.set_size_request(240, 40)
         self.language_menu.set_halign(Gtk.Align.CENTER)
         self.language_menu.set_valign(Gtk.Align.START)
         self.language = Gtk.Box()
