@@ -15,6 +15,12 @@ class WizardPanel(ScreenPanel):
         self.show_wizard_1()
 
     def show_wizard_1(self):
+        image = self._gtk.Image("sovoler", self._gtk.content_width * .2, self._gtk.content_height * .5)
+        self.logo = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=0)
+        self.logo.set_size_request(240, 80)
+        self.logo.pack_start(image, False, True, 8)
+        self.logo.pack_end(scroll, True, True, 8)
+
         self.wizard_1_lbl = Gtk.Label()
         self.wizard_1_lbl.set_hexpand(True)#水平扩展填充
         self.wizard_1_lbl.set_halign(Gtk.Align.END)#水平对齐,CENTER设置为中心
@@ -24,7 +30,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_lbl.set_markup("<span font='SydneySerial-Medium 38'>Your Languages</span>")
         self.wizard_1_title = Gtk.Box()
         #self.wizard_1_title.get_style_context().add_class("title_bar")
-        self.wizard_1_title.set_size_request(240, 680)
+        self.wizard_1_title.set_size_request(240, 80)
         self.wizard_1_title.set_valign(Gtk.Align.START)
         self.wizard_1_title.add(self.wizard_1_lbl)
 
@@ -34,6 +40,15 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_next.get_style_context().add_class('button_active')
         self.wizard_1_next.set_size_request(240, 80)
         self.wizard_1_next.add(self.first_nex)
+
+
+        self.language_menu = Gtk.Label()
+        self.language_menu.set_hexpand(True)
+        self.language_menu.set_halign(Gtk.Align.CENTER)
+        self.language_menu.set_valign(Gtk.Align.START)
+        self.language = Gtk.Box()
+        self.language.set_size_request(240, 600)
+        self.language.add(self.language_menu)
 
         self.wizard_page_1 = Gtk.Grid()
         self.wizard_page_1.attach(self.wizard_1_title, 0, 0, 1, 1)
