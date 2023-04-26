@@ -142,7 +142,7 @@ class WizardPanel(ScreenPanel):
         self.level_logo.pack_end(image, True, True, 20)#将image添加到self.logo的起始位置
         #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
 
-        self.third_nex = self._gtk.Button(label="Finish", f"color1")
+        self.third_nex = self._gtk.Button("","Finish", f"color1")
         self.third_nex.connect("clicked", self.final_next)
         self.third_nex.set_size_request(210, 35)
         self.third_nex.set_halign(Gtk.Align.CENTER)
