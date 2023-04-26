@@ -67,6 +67,9 @@ class WizardPanel(ScreenPanel):
         self.wizard_page_1.attach(self.wizard_1_title, 1, 0, 1, 1)
         self.wizard_page_1.attach(self.language, 0, 1, 2, 1)
         self.wizard_page_1.attach(self.wizard_1_next, 0, 2, 2, 1)
+        self.stack = Gtk.Stack()
+        self.stack.set_transition_type(Gtk.StackTransitionType.SLIDE_LEFT_RIGHT)
+        self.stack.add_named(self.wizard_page_1, "page-1")
 
     def show_wizard_2(self):
         self.wizard_2_lbl = Gtk.Label()
@@ -177,10 +180,11 @@ class WizardPanel(ScreenPanel):
         self.show_wizard_2()
 
     def second_back(self,widget):
-        self._screen.remove(self.wizard_page_2)
-        self.show_wizard_1()
-        self._screen.add(self._screen.wizard.wizard_page_1)
-        self._screen.show_all()
+        # self._screen.remove(self.wizard_page_2)
+        # self.show_wizard_1()
+        # self._screen.add(self._screen.wizard.wizard_page_1)
+        # self._screen.show_all()
+        self.stack.set_visible_child_name("page-1")
 
     def second_next(self,widget):
         self._screen.remove(self.wizard_page_2)
