@@ -51,8 +51,10 @@ class WizardPanel(ScreenPanel):
         self.language.add(self.language_menu)
 
         self.wizard_page_1 = Gtk.Grid()
-        self.wizard_page_1.attach(self.wizard_1_title, 0, 0, 1, 1)
-        self.wizard_page_1.attach(self.wizard_1_next, 0, 1, 1, 1)
+        self.wizard_page_1.attach(self.logo, 0,0,1,1)
+        self.wizard_page_1.attach(self.wizard_1_title, 1, 0, 1, 1)
+        self.wizard_page_1.attach(self.language, 0, 1, 1, 1)
+        self.wizard_page_1.attach(self.wizard_1_next, 0, 2, 1, 1)
 
     def show_wizard_2(self):
         self.wizard_2_lbl = Gtk.Label()
