@@ -56,7 +56,7 @@ class WizardPanel(ScreenPanel):
         self.language_menu.set_halign(Gtk.Align.CENTER)
         self.language_menu.set_valign(Gtk.Align.START)
         self.language = Gtk.Box()
-        self.language.pack_start(self.language_menu, False, False, 240)
+        self.language.pack_start(self.language_menu, False, False, 20)
         self.language.set_size_request(480, 600)
         self.language.add(self.language_menu)
 
