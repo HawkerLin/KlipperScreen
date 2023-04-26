@@ -82,7 +82,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_title.set_valign(Gtk.Align.START)
         self.wizard_2_title.add(self.wizard_2_lbl)
 
-        image = self._gtk.Image("wifi", self._gtk.content_width * 2, self._gtk.content_height * 2)
+        image = self._gtk.Image("wifi", self._gtk.content_width * 1, self._gtk.content_height * 1)
         self.wifi_logo = Gtk.Box()
         #self.wifi_logo.set_halign(Gtk.Align.CENTER)
         #self.wifi_logo.set_valign(Gtk.Align.CENTER)
