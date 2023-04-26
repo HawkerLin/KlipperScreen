@@ -134,7 +134,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_title.set_valign(Gtk.Align.START)
         self.wizard_3_title.add(self.wizard_3_lbl)
 
-        image = self._gtk.Image("level", self._gtk.content_width * .2, self._gtk.content_height * .2)
+        image = self._gtk.Image("level", self._gtk.content_width * .3, self._gtk.content_height * .3)
         self.level_logo = Gtk.Box()
         #self.level_logo.set_halign(Gtk.Align.CENTER)
         #self.level_logo.set_valign(Gtk.Align.CENTER)
@@ -150,7 +150,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_next = Gtk.Box()
         self.wizard_3_next.pack_start(self.third_nex, False, False, 10)
         #self.wizard_3_next.get_style_context().add_class('button_active')
-        self.wizard_3_next.set_size_request(340, 80)
+        self.wizard_3_next.set_size_request(240, 80)
         self.wizard_3_next.add(self.third_nex)
 
         self.third_bac = self._gtk.Button("arrow-left","Back", f"color1")
@@ -161,7 +161,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_back = Gtk.Box()
         self.wizard_3_back.pack_start(self.third_bac, False, False, 10)
         #self.wizard_3_back.get_style_context().add_class('button_active')
-        self.wizard_3_back.set_size_request(340, 80)
+        self.wizard_3_back.set_size_request(240, 80)
         self.wizard_3_back.add(self.third_bac)
 
         self.wizard_page_3 = Gtk.Grid()
@@ -185,14 +185,10 @@ class WizardPanel(ScreenPanel):
     def second_next(self,widget):
         self._screen.remove(self.wizard_page_2)
         self.show_wizard_3()
-        self._screen.add(self._screen.wizard.wizard_page_3)
-        self._screen.show_all()
 
     def third_back(self,widget):
         self._screen.remove(self.wizard_page_3)
-        self.show_wizard_3()
-        self._screen.add(self._screen.wizard.wizard_page_2)
-        self._screen.show_all()
+        self.show_wizard_2()
         
 
     # def second_next(self, widget):
