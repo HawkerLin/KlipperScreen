@@ -42,7 +42,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_next.pack_start(self.first_nex, True, True, 10)
         #self.wizard_1_next.set_halign(Gtk.Align.CENTER)
         #self.wizard_1_next.set_valign(Gtk.Align.CENTER)
-        self.wizard_1_next.get_style_context().add_class('button_active')
+        #self.wizard_1_next.get_style_context().add_class('button_active')
         self.wizard_1_next.set_size_request(480, 80)
         self.wizard_1_next.add(self.first_nex)
 
