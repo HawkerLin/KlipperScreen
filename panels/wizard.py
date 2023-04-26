@@ -83,11 +83,11 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_title.add(self.wizard_2_lbl)
 
         image = self._gtk.Image("wifi", self._gtk.content_width * .1, self._gtk.content_height * .1)
-        self.logo = Gtk.Box()
-        self.logo.set_halign(Gtk.Align.CENTER)
-        self.logo.set_valign(Gtk.Align.CENTER)
-        self.logo.set_size_request(480, 240)
-        self.logo.pack_start(image, False, False, 20)#将image添加到self.logo的起始位置
+        self.wifi_logo = Gtk.Box()
+        self.wifi_logo.set_halign(Gtk.Align.CENTER)
+        self.wifi_logo.set_valign(Gtk.Align.CENTER)
+        #self.wifi_logo.set_size_request(480, 240)
+        self.wifi_logo.pack_start(image, False, False, 20)#将image添加到self.logo的起始位置
         #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
 
         self.second_nex = self._gtk.Button("arrow-right","Next", f"color2")
@@ -114,7 +114,7 @@ class WizardPanel(ScreenPanel):
 
         self.wizard_page_2 = Gtk.Grid()
         self.wizard_page_2.attach(self.wizard_2_title, 0, 0, 2, 1)
-        self.wizard_page_2.attach(self.logo, 0, 1, 2, 0)
+        self.wizard_page_2.attach(self.wifi_logo, 0, 1, 2, 0)
         self.wizard_page_2.attach(self.wizard_2_back, 0, 3, 1, 1)
         self.wizard_page_2.attach(self.wizard_2_next, 1, 3, 1, 1)
         self._screen.add(self._screen.wizard.wizard_page_2)
