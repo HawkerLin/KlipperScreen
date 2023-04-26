@@ -84,10 +84,10 @@ class WizardPanel(ScreenPanel):
 
         image = self._gtk.Image("wifi", self._gtk.content_width * .1, self._gtk.content_height * .1)
         self.wifi_logo = Gtk.Box()
-        self.wifi_logo.set_halign(Gtk.Align.CENTER)
-        self.wifi_logo.set_valign(Gtk.Align.CENTER)
-        #self.wifi_logo.set_size_request(480, 240)
-        self.wifi_logo.pack_start(image, False, False, 20)#将image添加到self.logo的起始位置
+        #self.wifi_logo.set_halign(Gtk.Align.CENTER)
+        #self.wifi_logo.set_valign(Gtk.Align.CENTER)
+        self.wifi_logo.set_size_request(480, 240)
+        self.wifi_logo.pack_end(image, False, False, 20)#将image添加到self.logo的起始位置
         #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
 
         self.second_nex = self._gtk.Button("arrow-right","Next", f"color2")
