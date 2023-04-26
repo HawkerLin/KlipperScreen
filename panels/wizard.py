@@ -19,7 +19,7 @@ class WizardPanel(ScreenPanel):
         self.logo = Gtk.Box()
         #self.logo.set_halign(Gtk.Align.END)
         #self.logo.set_valign(Gtk.Align.END)
-        #self.logo.set_size_request(80, 80)
+        self.logo.set_size_request(80, 80)
         #self.logo.pack_start(image, False, True, 8)#将image添加到self.logo的起始位置
         self.logo.pack_end(image, True, False, 10)#将image添加到self.logo的末尾位置
 
@@ -57,8 +57,8 @@ class WizardPanel(ScreenPanel):
         self.wizard_page_1 = Gtk.Grid()
         self.wizard_page_1.attach(self.logo, 0,0,1,1)
         self.wizard_page_1.attach(self.wizard_1_title, 1, 0, 1, 1)
-        self.wizard_page_1.attach(self.language, 0, 1, 1, 1)
-        self.wizard_page_1.attach(self.wizard_1_next, 0, 2, 1, 1)
+        self.wizard_page_1.attach(self.language, 0, 1, 2, 1)
+        self.wizard_page_1.attach(self.wizard_1_next, 0, 2, 2, 1)
 
     def show_wizard_2(self):
         self.wizard_2_lbl = Gtk.Label()
