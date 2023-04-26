@@ -40,7 +40,7 @@ class WizardPanel(ScreenPanel):
     def show_wizard_2(self):
         self.wizard_2_lbl = Gtk.Label()
         self.wizard_2_lbl.set_hexpand(True)
-        self.wizard_2_lbl.set_halign(Gtk.Align.CENTER)
+        #self.wizard_2_lbl.set_halign(Gtk.Align.CENTER)
         self.wizard_1_lbl.set_valign(Gtk.Align.START)
         self.wizard_2_lbl.set_ellipsize(Pango.EllipsizeMode.END)
         self.wizard_2_lbl.set_label("Wizard")
