@@ -65,7 +65,7 @@ class WizardPanel(ScreenPanel):
         css_provider = Gtk.CssProvider()
         css_provider.load_from_data(b"""
             #language_menu{
-                border-radius: 10px;
+                border-radius: 50px;
             }
         """)
         languages = self.ini_language_dic()
