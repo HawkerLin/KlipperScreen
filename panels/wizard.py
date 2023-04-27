@@ -22,6 +22,9 @@ class WizardPanel(ScreenPanel):
         return languages
 
     def show_wizard_1(self):
+        self.blank = Gtk.Box()
+        self.blank.set_size_request(480, 60)
+
         image = self._gtk.Image("sovoler", self._gtk.content_width * .1, self._gtk.content_height * .1)
         self.logo = Gtk.Box()
         #self.logo.set_halign(Gtk.Align.END)
@@ -75,14 +78,15 @@ class WizardPanel(ScreenPanel):
         self.language = Gtk.Box()
         self.language.set_halign(Gtk.Align.CENTER)
         self.language.pack_start(self.language_menu, False, False, 15)
-        self.language.set_size_request(480, 600)
+        self.language.set_size_request(480, 540)
         self.language.add(self.language_menu)
 
         self.wizard_page_1 = Gtk.Grid()
-        self.wizard_page_1.attach(self.logo, 0,0,1,1)
-        self.wizard_page_1.attach(self.wizard_1_title, 1, 0, 1, 1)
-        self.wizard_page_1.attach(self.language, 0, 1, 2, 1)
-        self.wizard_page_1.attach(self.wizard_1_next, 0, 2, 2, 1)
+        self.wizard_page_1.attach(self.blank, 0, 0, 2, 1)
+        self.wizard_page_1.attach(self.logo, 0,1,1,1)
+        self.wizard_page_1.attach(self.wizard_1_title, 1, 1, 1, 1)
+        self.wizard_page_1.attach(self.language, 0, 2, 2, 1)
+        self.wizard_page_1.attach(self.wizard_1_next, 0, 3, 2, 1)
 
     def show_wizard_2(self):
         self.wizard_2_lbl = Gtk.Label()
