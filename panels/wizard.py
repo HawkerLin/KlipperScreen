@@ -67,12 +67,6 @@ class WizardPanel(ScreenPanel):
             if value['value'] == self._config.get_config()[languages['section']].get('language', languages['value']):
                 self.language_menu.set_active(key)
         self.language_menu.connect("changed", self.on_dropdown_change, languages['section'], 'language', languages['callback'])
-        debug_lang = self.language_menu.get_active_iter()
-        if debug_lang is not None:
-            model = self.language_menu.get_model()
-            debug_v0 = model[debug_lang][0]
-            debug_v1 = model[debug_lang][1]
-            logging.debug(f"0:{debug_v0},1:{debug_v1}")
         self.language_menu.set_entry_text_column(0)
         self.language_menu.set_size_request(240, 40)
         self.language_menu.set_halign(Gtk.Align.CENTER)
