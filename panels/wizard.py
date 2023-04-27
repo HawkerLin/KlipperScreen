@@ -38,7 +38,7 @@ class WizardPanel(ScreenPanel):
         #self.wizard_1_lbl.set_label("Wizard")
         #self.wizard_1_lbl.set_markup("<span font='DejaVu Sans-bold 30'>Your Languages</span>")
         text = "System"
-        self.wizard_1_lbl.set_markup("<span font='DejaVu Sans-bold 30'>{text}</span>")
+        self.wizard_1_lbl.set_markup("<span font='DejaVu Sans-bold 30'>{}</span>".format(text))
         self.wizard_1_title = Gtk.Box()
         #self.wizard_1_title.get_style_context().add_class("title_bar")
         self.wizard_1_title.set_size_request(240, 80)
