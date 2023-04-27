@@ -31,7 +31,7 @@ class WizardPanel(ScreenPanel):
         #self.logo.set_valign(Gtk.Align.END)
         self.logo.set_size_request(80, 80)
         #self.logo.pack_start(image, False, True, 8)#将image添加到self.logo的起始位置
-        self.logo.pack_end(image, True, False, 10)#将image添加到self.logo的末尾位置
+        self.logo.pack_end(image, True, False, 0)#将image添加到self.logo的末尾位置
 
         self.wizard_1_lbl = Gtk.Label()
         self.wizard_1_lbl.set_hexpand(True)#水平扩展填充
@@ -62,15 +62,9 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_next.add(self.first_nex)
 
 
-        css_provider = Gtk.CssProvider()
-        css_provider.load_from_data(b"""
-            #language_menu{
-                border-radius: 5em;
-            }
-        """)
+
         languages = self.ini_language_dic()
         self.language_menu = Gtk.ComboBoxText()
-        self.language_menu.get_style_context().add_provider(css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
         #self.language_menu.set_markup("<span font='DejaVu Sans-bold 28'>ENGLISH</span>")
         #self.language_menu.set_hexpand(True)
         for key,value in enumerate(languages['options']):
