@@ -690,7 +690,7 @@ class KlipperScreen(Gtk.Window):
         self._config._create_configurable_options(self)
         self.reload_panels()
         self.remove(self.wizard.wizard_page_1)
-        self.wizard = WizardPanel(self, title="wizard")
+        #self.wizard = WizardPanel(self, title="wizard")
         self.add(self.wizard.wizard_page_1)
         self.show_all()
 
