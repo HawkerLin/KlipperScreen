@@ -1,4 +1,5 @@
 import gi
+import logging
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Pango
@@ -86,6 +87,7 @@ class SettingsPanel(ScreenPanel):
         elif option['type'] == "dropdown":
             dropdown = Gtk.ComboBoxText()
             for i, opt in enumerate(option['options']):
+                logging.info(f"i:{i},opt:{opt}")
                 dropdown.append(opt['value'], opt['name'])
                 if opt['value'] == self._config.get_config()[option['section']].get(opt_name, option['value']):
                     dropdown.set_active(i)
