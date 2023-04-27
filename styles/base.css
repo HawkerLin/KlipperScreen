@@ -99,6 +99,7 @@ button.invalid {
 
 combobox box button {
     border: .05em solid #cccccc;
+    border-radius: 5em;
     padding: .5em 1em;
 }
 
