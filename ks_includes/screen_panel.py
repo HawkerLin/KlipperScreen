@@ -92,7 +92,6 @@ class ScreenPanel:
         if tree_iter is not None:
             model = combo.get_model()
             value = model[tree_iter][1]
-            logging.debug(f"{combo.get_active_text()}")
             logging.debug(f"[{section}] {option} changed to {value}")
             self._config.set(section, option, value)
             self._config.save_user_config_options()

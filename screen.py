@@ -689,10 +689,11 @@ class KlipperScreen(Gtk.Window):
         self.lang_ltr = set_text_direction(lang)
         self._config._create_configurable_options(self)
         self.reload_panels()
-        self.remove(self.wizard.wizard_page_1)
-        #self.wizard = WizardPanel(self, title="wizard")
-        self.add(self.wizard.wizard_page_1)
-        self.show_all()
+        if True:
+            self.remove(self.wizard.wizard_page_1)
+            self.wizard = WizardPanel(self, title="wizard")
+            self.add(self.wizard.wizard_page_1)
+            self.show_all()
 
     def reload_panels(self, *args):
         if "printer_select" in self._cur_panels:
