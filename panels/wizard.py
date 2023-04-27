@@ -50,9 +50,14 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_next.add(self.first_nex)
 
 
-        self.language_menu = Gtk.Label()
-        self.language_menu.set_markup("<span font='DejaVu Sans-bold 28'>ENGLISH</span>")
+        self.language_menu = Gtk.ComboBoxText()
+        #self.language_menu.set_markup("<span font='DejaVu Sans-bold 28'>ENGLISH</span>")
         #self.language_menu.set_hexpand(True)
+        self.language_menu.append("system_lang", _("System") + " " + _("(default)"))
+        if "system_lang" == self._config.get_config()["main"].get("main", "system_lang"):
+            self.language_menu.set_active(0)
+        self.language_menu.connect("changed", self.on_dropdown_change, "main", "main", self._screen.change_language)
+        self.language_menu.set_entry_text_column(0)
         self.language_menu.set_size_request(240, 40)
         self.language_menu.set_halign(Gtk.Align.CENTER)
         self.language_menu.set_valign(Gtk.Align.START)
