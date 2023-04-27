@@ -69,7 +69,7 @@ class WizardPanel(ScreenPanel):
                 self.language_menu.set_active(key)
         self.language_menu.connect("changed", self.on_dropdown_change, languages['section'], 'language', languages['callback'])
         self.language_menu.set_entry_text_column(0)
-        self.language_menu.set_size_request(360, 40)
+        self.language_menu.set_size_request(400, 80)
         self.language_menu.set_halign(Gtk.Align.CENTER)
         self.language_menu.set_valign(Gtk.Align.START)
         self.language = Gtk.Box()
