@@ -29,6 +29,7 @@ class SettingsPanel(ScreenPanel):
         for option in options:
             logging.debug(f"这里是开始：{option}")
             name = list(option)[0]
+            logging.debug(f"这里是关键:{name}")
             self.add_option('settings', self.settings, name, option[name])
 
         self.labels['printers_menu'] = self._gtk.ScrolledWindow()
