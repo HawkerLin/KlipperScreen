@@ -12,13 +12,16 @@ from ks_includes.screen_panel import ScreenPanel
 class WizardPanel(ScreenPanel):
     def __init__(self, screen, title):
         super().__init__(screen, title)
+        self.show_wizard_1()
+
+    def ini_language_dic(self):
         options = self._config.get_configurable_options().copy()
         for option in options:
             if list(option)[0] == "language":
                 languages = option['language']
-        self.show_wizard_1(languages)
+        return languages
 
-    def show_wizard_1(self, languages):
+    def show_wizard_1(self):
         image = self._gtk.Image("sovoler", self._gtk.content_width * .1, self._gtk.content_height * .1)
         self.logo = Gtk.Box()
         #self.logo.set_halign(Gtk.Align.END)
@@ -55,6 +58,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_next.add(self.first_nex)
 
 
+        languages = self.ini_language_dic()
         self.language_menu = Gtk.ComboBoxText()
         #self.language_menu.set_markup("<span font='DejaVu Sans-bold 28'>ENGLISH</span>")
         #self.language_menu.set_hexpand(True)
