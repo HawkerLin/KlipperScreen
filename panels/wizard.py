@@ -12,9 +12,13 @@ from ks_includes.screen_panel import ScreenPanel
 class WizardPanel(ScreenPanel):
     def __init__(self, screen, title):
         super().__init__(screen, title)
-        self.show_wizard_1()
+        options = self._config.get_configurable_options().copy()
+        for option in options:
+            if list(option)[0] == "language":
+                languages = option['language']
+        self.show_wizard_1(languages)
 
-    def show_wizard_1(self):
+    def show_wizard_1(self, languages):
         image = self._gtk.Image("sovoler", self._gtk.content_width * .1, self._gtk.content_height * .1)
         self.logo = Gtk.Box()
         #self.logo.set_halign(Gtk.Align.END)
@@ -54,10 +58,11 @@ class WizardPanel(ScreenPanel):
         self.language_menu = Gtk.ComboBoxText()
         #self.language_menu.set_markup("<span font='DejaVu Sans-bold 28'>ENGLISH</span>")
         #self.language_menu.set_hexpand(True)
-        self.language_menu.append("system_lang", _("System") + " " + _("(default)"))
-        if "system_lang" == self._config.get_config()["main"].get("main", "system_lang"):
-            self.language_menu.set_active(0)
-        self.language_menu.connect("changed", self.on_dropdown_change, "main", "main", self._screen.change_language)
+        for key,value in enumerate(languages['options']):
+            self.language_menu.append(value['value'], value['name'])
+            if value['value'] == self._config.get_config()[languages['section']].get('language', languages['value']):
+                self.language_menu.set_active(key)
+        self.language_menu.connect("changed", self.on_dropdown_change, languages['section'], 'language', languages['callback'])
         self.language_menu.set_entry_text_column(0)
         self.language_menu.set_size_request(240, 40)
         self.language_menu.set_halign(Gtk.Align.CENTER)
