@@ -62,8 +62,15 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_next.add(self.first_nex)
 
 
+        css_provider = Gtk.CssProvider()
+        css_provider.load_from_data(b"""
+            #language_menu{
+                border-radius: 10px;
+            }
+        """)
         languages = self.ini_language_dic()
         self.language_menu = Gtk.ComboBoxText()
+        self.language_menu.get_style_context().add_provider(css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
         #self.language_menu.set_markup("<span font='DejaVu Sans-bold 28'>ENGLISH</span>")
         #self.language_menu.set_hexpand(True)
         for key,value in enumerate(languages['options']):
