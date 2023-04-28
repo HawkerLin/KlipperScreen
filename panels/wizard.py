@@ -198,7 +198,7 @@ class WizardPanel(ScreenPanel):
         self._screen.remove(self.wizard_page_1)
         self.show_wizard_2()
 
-    def show_network(self):
+    def show_network(self,widget):
         self.network = NetworkPanel(self, title="Network")
         self._screen.add(self._screen.wizard.network)
         self._screen.show_all()
