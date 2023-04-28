@@ -6,6 +6,7 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import GLib, Gtk, Pango
 
 from ks_includes.screen_panel import ScreenPanel
+from panels.network import NetworkPanel
 
 
 
@@ -73,18 +74,14 @@ class WizardPanel(ScreenPanel):
                 self.language_menu.set_active(key)
         self.language_menu.connect("changed", self.on_dropdown_change, languages['section'], 'language', languages['callback'])
         self.language_menu.set_entry_text_column(0)
-        self.language_menu.set_size_request(430, 70)
+        self.language_menu.set_size_request(440, 80)
         self.language_menu.set_halign(Gtk.Align.CENTER)
         self.language_menu.set_valign(Gtk.Align.START)
-        self.lang_scro = Gtk.ScrolledWindow()
-        self.lang_scro.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
-        self.lang_scro.set_size_request(440, 80)
-        self.lang_scro.add(self.language_menu)
         self.language = Gtk.Box()
         self.language.set_halign(Gtk.Align.CENTER)
         self.language.pack_start(self.language_menu, False, False, 15)
         self.language.set_size_request(480, 540)
-        self.language.add(self.lang_scro)
+        self.language.add(self.language_menu)
 
         self.wizard_page_1 = Gtk.Grid()
         self.wizard_page_1.attach(self.blank, 0, 0, 2, 1)
@@ -116,7 +113,7 @@ class WizardPanel(ScreenPanel):
         #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
 
         self.second_nex = self._gtk.Button("arrow-right","Next", f"color2")
-        self.second_nex.connect("clicked", self.second_next)
+        self.second_nex.connect("clicked", self.show_network)
         self.second_nex.set_size_request(210, 35)
         self.second_nex.set_halign(Gtk.Align.CENTER)
         self.second_nex.set_valign(Gtk.Align.CENTER)
@@ -200,6 +197,11 @@ class WizardPanel(ScreenPanel):
     def first_next(self, widget):
         self._screen.remove(self.wizard_page_1)
         self.show_wizard_2()
+
+    def show_network(self):
+        self.network = NetworkPanel(self, title="Network")
+        self._screen.add(self._screen.wizard.network)
+        self._screen.show_all()
 
     def second_back(self,widget):
         self._screen.remove(self.wizard_page_2)
