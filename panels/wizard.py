@@ -12,6 +12,7 @@ from panels.network import NetworkPanel
 
 
 class WizardPanel(ScreenPanel):
+    printer = None
     def __init__(self, screen, title):
         super().__init__(screen, title)
         self.show_wizard_1()
