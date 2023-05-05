@@ -109,12 +109,42 @@ class WizardPanel(ScreenPanel):
         self.wifi_logo = Gtk.Box()
         #self.wifi_logo.set_halign(Gtk.Align.CENTER)
         #self.wifi_logo.set_valign(Gtk.Align.CENTER)
-        self.wifi_logo.set_size_request(480, 640)
+        self.wifi_logo.set_size_request(480, 560)
         self.wifi_logo.pack_end(image, True, True, 20)#将image添加到self.logo的起始位置
         #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
 
+
+        gws = netifaces.gateways()
+        logging.info("init:gws:" + str(gws))
+        logging.info("init:netifaces.AF_INET:" + str(netifaces.AF_INET))
+        if "default" in gws and netifaces.AF_INET in gws["default"]:
+            self.interface = gws["default"][netifaces.AF_INET][1]
+        else:
+            ints = netifaces.interfaces()
+            if 'lo' in ints:
+                ints.pop(ints.index('lo'))
+                ints.pop(ints.index('eth0'))
+            if len(ints) > 0:
+                self.interface = ints[0]
+            else:
+                self.interface = 'lo'
+        logging.info("init:self.interface:" + str(self.interface))
+        res = netifaces.ifaddresses(self.interface)
+        if netifaces.AF_INET in res and len(res[netifaces.AF_INET]) > 0:
+            ip = res[netifaces.AF_INET][0]['addr']
+        else:
+            ip = "Connect"
+        self.connect_wifi = self._gtk.Button("", ip, f"color1")
+        self.connect_wifi.connect("clicked", self.show_network)
+        self.connect_wifi.set_size_request(450, 35)
+        self.connect_wifi.set_halign(Gtk.Align.CENTER)
+        self.connect_wifi.set_valign(Gtk.Align.CENTER)
+        self.wizard_wifi_butt = Gtk.Box()
+        self.wizard_wifi_butt.pack_start(self.connect_wifi, False, False, 10)
+        self.wizard_wifi_butt.set_size_request(480, 80)
+
         self.second_nex = self._gtk.Button("arrow-right","Next", f"color2")
-        self.second_nex.connect("clicked", self.show_network)
+        self.second_nex.connect("clicked", self.second_next)
         self.second_nex.set_size_request(210, 35)
         self.second_nex.set_halign(Gtk.Align.CENTER)
         self.second_nex.set_valign(Gtk.Align.CENTER)
@@ -138,6 +168,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_page_2 = Gtk.Grid()
         self.wizard_page_2.attach(self.wizard_2_title, 0, 0, 2, 1)
         self.wizard_page_2.attach(self.wifi_logo, 0, 1, 2, 1)
+        self.wizard_page_2.attach(self.wizard_wifi_butt, 0, 2, 2, 1)
         self.wizard_page_2.attach(self.wizard_2_back, 0, 3, 1, 1)
         self.wizard_page_2.attach(self.wizard_2_next, 1, 3, 1, 1)
         self._screen.add(self._screen.wizard.wizard_page_2)
