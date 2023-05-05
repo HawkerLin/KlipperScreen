@@ -209,6 +209,12 @@ class WizardPanel(ScreenPanel):
         self._screen.remove(self.wizard_page_2)
         self.show_wizard_3()
 
+    def leave_wifi_page(self,widget):
+        self._screen.remove(self.box)
+        self.show_wizard_2()
+        self._screen.add(self._screen.wizard.wizard_page_1)
+        self._screen.show_all()
+
     def third_back(self,widget):
         self._screen.remove(self.wizard_page_3)
         self.show_wizard_2()
@@ -278,7 +284,7 @@ class WizardPanel(ScreenPanel):
         reload_networks.connect("clicked", self.reload_networks)
         reload_networks.set_hexpand(False)
         back_to_page_2 = self._gtk.Button("arrow-left", None , "color2", .66)
-        back_to_page_2.connect("clicked", self.show_wizard_2)
+        back_to_page_2.connect("clicked", self.leave_wifi_page)
         back_to_page_2.set_hexpand(False)
 
         sbox = Gtk.Box()
