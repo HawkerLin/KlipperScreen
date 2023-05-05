@@ -277,6 +277,9 @@ class WizardPanel(ScreenPanel):
         reload_networks = self._gtk.Button("refresh", None, "color1", .66)
         reload_networks.connect("clicked", self.reload_networks)
         reload_networks.set_hexpand(False)
+        back_to_page_2 = self._gtk.Button("arrow-left", None , "color2", .66)
+        back_to_page_2.connect("clicked", self.show_wizard_2)
+        back_to_page_2.set_hexpand(False)
 
         sbox = Gtk.Box()
         sbox.set_hexpand(True)
@@ -286,6 +289,7 @@ class WizardPanel(ScreenPanel):
             self.labels['ip'].set_text(f"IP: {ip}  ")
             sbox.add(self.labels['ip'])
         sbox.add(reload_networks)
+        sbox.add(back_to_page_2)
 
         scroll = self._gtk.ScrolledWindow()
 
