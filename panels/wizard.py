@@ -224,6 +224,7 @@ class WizardPanel(ScreenPanel):
         self._screen.show_all()
 
     def show_network(self,widget):
+        self._screen.remove(self.wizard_page_2)
         self.show_add = False
         self.networks = {}
         self.interface = None
@@ -288,14 +289,14 @@ class WizardPanel(ScreenPanel):
 
         scroll = self._gtk.ScrolledWindow()
 
-        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
-        box.set_vexpand(True)
+        self.box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
+        self.box.set_vexpand(True)
 
         self.labels['networklist'] = Gtk.Grid()
 
         if self.wifi is not None and self.wifi.initialized:
-            box.pack_start(sbox, False, False, 5)
-            box.pack_start(scroll, True, True, 0)
+            self.box.pack_start(sbox, False, False, 5)
+            self.box.pack_start(scroll, True, True, 0)
 
             GLib.idle_add(self.load_networks)
             scroll.add(self.labels['networklist'])
@@ -308,14 +309,17 @@ class WizardPanel(ScreenPanel):
         else:
             self.labels['networkinfo'] = Gtk.Label("")
             self.labels['networkinfo'].get_style_context().add_class('temperature_entry')
-            box.pack_start(self.labels['networkinfo'], False, False, 0)
+            self.box.pack_start(self.labels['networkinfo'], False, False, 0)
             self.update_single_network_info()
             if self.update_timeout is None:
                 self.update_timeout = GLib.timeout_add_seconds(5, self.update_single_network_info)
 
-        self.content.add(box)
-        self.labels['main_box'] = box
+        self._screen.add(self._screen.wizard.box)
+        self.labels['main_box'] = self.box
         self.initialized = True
+
+        self._screen.add(self._screen.wizard.box)
+        self._screen.show_all()
 
 
 #for network ↓
@@ -326,7 +330,7 @@ class WizardPanel(ScreenPanel):
         for net in networks:
             self.add_network(net, False)
         self.update_all_networks()
-        self.content.show_all()
+        self._screen.show_all()
 
     def add_network(self, ssid, show=True):
 
@@ -456,10 +460,10 @@ class WizardPanel(ScreenPanel):
         if not self.show_add:
             return
 
-        for child in self.content.get_children():
-            self.content.remove(child)
-        self.content.add(self.labels['main_box'])
-        self.content.show()
+        for child in self._screen.get_children():
+            self._screen.remove(child)
+        self._screen.add(self.labels['main_box'])
+        self._screen.show()
         for i in ['add_network', 'network_psk']:
             if i in self.labels:
                 del self.labels[i]
@@ -538,14 +542,14 @@ class WizardPanel(ScreenPanel):
             self.remove_network(net, False)
         for net in new_networks:
             self.add_network(net, False)
-        self.content.show_all()
+        self._screen.show_all()
 
     def show_add_network(self, widget, ssid):
         if self.show_add:
             return
 
-        for child in self.content.get_children():
-            self.content.remove(child)
+        for child in self._screen.get_children():
+            self._screen.remove(child)
 
         if "add_network" in self.labels:
             del self.labels['add_network']
@@ -573,9 +577,9 @@ class WizardPanel(ScreenPanel):
         self.labels['add_network'].pack_start(label, True, True, 5)
         self.labels['add_network'].pack_start(box, True, True, 5)
 
-        self.content.add(self.labels['add_network'])
+        self._screen.add(self.labels['add_network'])
         self.labels['network_psk'].grab_focus_without_selecting()
-        self.content.show_all()
+        self._screen.show_all()
         self.show_add = True
 
     def update_all_networks(self):
