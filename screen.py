@@ -994,7 +994,7 @@ class KlipperScreen(Gtk.Window):
 
 
 def main():
-    #version = functions.get_software_version()
+    version = functions.get_software_version()
     parser = argparse.ArgumentParser(description="KlipperScreen - A GUI for Klipper")
     homedir = os.path.expanduser("~")
 

@@ -87,7 +87,8 @@ def get_software_version():
         process = subprocess.Popen(prog, stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE)
         ver, err = process.communicate()
-        retcode = process.wait()
+        #retcode = process.wait()
+        retcode = 0
         if retcode == 0:
             version = ver.strip()
             if isinstance(version, bytes):
