@@ -105,11 +105,11 @@ class KlipperScreen(Gtk.Window):
         self.dialogs = []
         self.confirm = None
 
-        image_path = "logo.png"
-        pixbuf = GdkPixbuf.Pixbuf.new_from_file(image_path)
-        image = Gtk.Image.new_from_pixbuf(pixbuf)
-        self.add(image)
-        self.show_all()
+        self.logo = Gtk.Image()
+        self.logo.set_from_file("logo.png")
+        self.add(self.logo)
+        self.logo.show()
+        GLib.timeout_add_seconds(2, self.remove_logo)
 
         configfile = os.path.normpath(os.path.expanduser(args.configfile))
 
@@ -162,8 +162,9 @@ class KlipperScreen(Gtk.Window):
         self.initial_connection()
 
     def remove_logo(self):
-        self.remove(self.get_children()[0])
+        self.remove(self.logo)
         return False
+
 
     def initial_connection(self):
         printers = self._config.get_printers()
