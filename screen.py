@@ -994,40 +994,34 @@ class KlipperScreen(Gtk.Window):
 
 
 def main():
+    subprocess.call(["touch 1"])
     version = functions.get_software_version()
-    functions.setup_logging(
-    os.path.normpath(os.path.expanduser(args.logfile)),
-    version
-    )
-    logging.info(f"第一")
+    subprocess.call(["touch 2"])
     parser = argparse.ArgumentParser(description="KlipperScreen - A GUI for Klipper")
-    logging.info(f"第二")
     homedir = os.path.expanduser("~")
-    logging.info(f"第三")
-
+    subprocess.call(["touch 3"])
     parser.add_argument(
         "-c", "--configfile", default=os.path.join(homedir, "KlipperScreen.conf"), metavar='<configfile>',
         help="Location of KlipperScreen configuration file"
     )
-    logging.info(f"第四")
+    subprocess.call(["touch 4"])
     logdir = os.path.join(homedir, "printer_data", "logs")
-    logging.info(f"第五")
     if not os.path.exists(logdir):
         logdir = "/tmp"
     parser.add_argument(
         "-l", "--logfile", default=os.path.join(logdir, "KlipperScreen.log"), metavar='<logfile>',
         help="Location of KlipperScreen logfile output"
     )
-    logging.info(f"第六")
+    subprocess.call(["touch 5"])
     args = parser.parse_args()
-    logging.info(f"第7")
-    # functions.setup_logging(
-    #     os.path.normpath(os.path.expanduser(args.logfile)),
-    #     version
-    # )
-    logging.info(f"第8")
+    subprocess.call(["touch 6"])
+    functions.setup_logging(
+        os.path.normpath(os.path.expanduser(args.logfile)),
+        version
+    )
+    subprocess.call(["touch 7"])
     functions.patch_threading_excepthook()
-    logging.info(f"第9")
+    subprocess.call(["touch 8"])
     logging.info(f"KlipperScreen version: {version}")
     if not Gtk.init_check(None)[0]:
         logging.critical("Failed to initialize Gtk")
