@@ -995,6 +995,10 @@ class KlipperScreen(Gtk.Window):
 
 def main():
     version = functions.get_software_version()
+    functions.setup_logging(
+    os.path.normpath(os.path.expanduser(args.logfile)),
+    version
+    )
     logging.info(f"第一")
     parser = argparse.ArgumentParser(description="KlipperScreen - A GUI for Klipper")
     logging.info(f"第二")
@@ -1017,10 +1021,10 @@ def main():
     logging.info(f"第六")
     args = parser.parse_args()
     logging.info(f"第7")
-    functions.setup_logging(
-        os.path.normpath(os.path.expanduser(args.logfile)),
-        version
-    )
+    # functions.setup_logging(
+    #     os.path.normpath(os.path.expanduser(args.logfile)),
+    #     version
+    # )
     logging.info(f"第8")
     functions.patch_threading_excepthook()
     logging.info(f"第9")
