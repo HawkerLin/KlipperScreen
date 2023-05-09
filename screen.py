@@ -105,6 +105,12 @@ class KlipperScreen(Gtk.Window):
         self.dialogs = []
         self.confirm = None
 
+        image_path = "logo.png"
+        pixbuf = GdkPixbuf.Pixbuf.new_from_file(image_path)
+        image = Gtk.Image.new_from_pixbuf(pixbuf)
+        self.add(image)
+        self.show_all()
+
         configfile = os.path.normpath(os.path.expanduser(args.configfile))
 
         self._config = KlipperScreenConfig(configfile, self)
@@ -154,6 +160,10 @@ class KlipperScreen(Gtk.Window):
         self.set_screenblanking_timeout(self._config.get_main_config().get('screen_blanking'))
 
         self.initial_connection()
+
+    def remove_logo(self):
+        self.remove(self.get_children()[0])
+        return False
 
     def initial_connection(self):
         printers = self._config.get_printers()

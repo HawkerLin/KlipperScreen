@@ -14,6 +14,7 @@ class WizardPanel(ScreenPanel):
     initialized = False
     def __init__(self, screen, title):
         super().__init__(screen, title)
+        self._screen.remove_logo()
         self.show_wizard_1()
 
     def ini_language_dic(self):
