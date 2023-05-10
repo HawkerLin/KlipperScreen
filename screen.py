@@ -109,7 +109,7 @@ class KlipperScreen(Gtk.Window):
         self.logo.set_from_file("logo.png")
         self.add(self.logo)
         self.logo.show()
-        GLib.timeout_add_seconds(2, self.remove_logo)
+        GLib.timeout_add_seconds(10, self.remove_logo)
 
         configfile = os.path.normpath(os.path.expanduser(args.configfile))
 
@@ -163,6 +163,7 @@ class KlipperScreen(Gtk.Window):
 
     def remove_logo(self):
         self.remove(self.logo)
+        self.show_all()
         return False
 
 
