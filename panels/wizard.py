@@ -42,7 +42,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_1_lbl.set_ellipsize(Pango.EllipsizeMode.END)#文本末尾空间不够的话以省略号显示
         #self.wizard_1_lbl.set_label("Wizard")
         #self.wizard_1_lbl.set_markup("<span font='DejaVu Sans-bold 30'>Your Languages</span>")
-        text = _("System")
+        text = _("Your languages")
         self.wizard_1_lbl.set_markup("<span font='DejaVu Sans-bold 30'>{}</span>".format(text))
         self.wizard_1_title = Gtk.Box()
         #self.wizard_1_title.get_style_context().add_class("title_bar")
