@@ -105,11 +105,11 @@ class KlipperScreen(Gtk.Window):
         self.dialogs = []
         self.confirm = None
 
-        self.logo = Gtk.Image()
-        self.logo.set_from_file("logo.png")
-        self.add(self.logo)
-        self.logo.show()
-        GLib.timeout_add_seconds(10, self.remove_logo)
+        # self.logo = Gtk.Image()
+        # self.logo.set_from_file("logo.png")
+        # self.add(self.logo)
+        # self.logo.show()
+        # GLib.timeout_add_seconds(10, self.remove_logo)
 
         configfile = os.path.normpath(os.path.expanduser(args.configfile))
 
