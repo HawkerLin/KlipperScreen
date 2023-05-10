@@ -754,3 +754,45 @@ msgstr ""
 
 msgid "mm³/s"
 msgstr ""
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
+msgstr ""
+
+msgid "Connect"
+msgstr ""
+
+msgid "Connecting"
+msgstr ""
+
+msgid "Connect Network"
+msgstr ""
+
+msgid "Leveling Calibration"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr ""
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr ""
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr ""
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr ""
+
+msgid "Your languages"
+msgstr ""
+
+msgid "IP"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Finish"
+msgstr ""

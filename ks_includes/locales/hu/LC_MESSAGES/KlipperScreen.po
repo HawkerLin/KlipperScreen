@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -277,7 +277,7 @@ msgid "Hide sensors in Temp."
 msgstr "Hőfok szenzorok elrejtése."
 
 msgid "Hide temp."
-msgstr "Hőfok elrejtése"
+msgstr "Hőfok elrejtése."
 
 msgid "Home All"
 msgstr "X-Y-Z kezdőpont"
@@ -441,12 +441,8 @@ msgstr "Soha"
 msgid "New"
 msgstr "Új"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
-msgstr ""
-"Az automatikus felismerés nem támogatott, a klipperscreenben kell beállítani."
-"conf"
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
+msgstr "Az automatikus felismerés nem támogatott, a klipperscreenben kell beállítani.conf"
 
 msgid "Nothing selected"
 msgstr "Nincs kiválasztva"
@@ -756,6 +752,47 @@ msgstr "mm/s²"
 
 msgid "mm³/s"
 msgstr "mm³/s"
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
+msgstr ""
+"Miután a gépet a hálózathoz csatlakoztatták, az azonos LAN-t használó eszközök az IP-címhez való hozzáféréssel "
+"vezérelhetik a gépet."
+
+msgid "Connect"
+msgstr "Csatlakozás"
+
+msgid "Connecting"
+msgstr "A  csatlakoztatása"
+
+msgid "Connect Network"
+msgstr "Hálózat csatlakoztatása"
+
+msgid "Leveling Calibration"
+msgstr "Nivellálási kalibrálás"
+
+msgid "Next"
+msgstr "Következő"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "Kérjük, kövesse az alábbi lépéseket a gép kalibrálásához, a részletekért olvassa el a kézikönyvet."
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1.Művelet Z kalibrációs beállítási eltolás"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2.Operate Bed Level az ágy laposságának beállításához"
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3.Operate ágy háló automatikus szintezése"
+
+msgid "Your languages"
+msgstr "Az Ön nyelvei"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Back"
+msgstr "Vissza"
 
 #~ msgid "Sort:"
 #~ msgstr "Fajta:"

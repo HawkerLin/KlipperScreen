@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -24,7 +24,7 @@ msgid "24 Hour Time"
 msgstr "24시간"
 
 msgid "A FIRMWARE_RESTART may fix the issue."
-msgstr "펌웨어를 재시작해 문제를 해결할 수 있습니다"
+msgstr "펌웨어를 재시작해 문제를 해결할 수 있습니다."
 
 msgid "ADXL Not Configured"
 msgstr "가속도계 설정이 없습니다"
@@ -42,7 +42,7 @@ msgid "Actions"
 msgstr "툴 헤드 제어"
 
 msgid "Add profile"
-msgstr ""
+msgstr "프로필 추가"
 
 msgid "Apply"
 msgstr "확인"
@@ -56,7 +56,7 @@ msgid "Apply %s%.2f offset to Probe?"
 msgstr "프로브 높이 기준을 %s%.2f 높이의 옵셋으로 설정 하시겠습니까?"
 
 msgid "Are you sure do you want to exclude the object?"
-msgstr ""
+msgstr "개체를 제외하시겠습니까?"
 
 msgid "Are you sure you want to run Emergency Stop?"
 msgstr "비상정지 시킬까요?"
@@ -80,7 +80,7 @@ msgid "Auto-calibrate"
 msgstr "자동 교정"
 
 msgid "Auto-close notifications"
-msgstr ""
+msgstr "자동 닫기 알림"
 
 msgid "Auto-scroll"
 msgstr "오토 스크롤"
@@ -92,7 +92,7 @@ msgid "Bed Mesh"
 msgstr "배드 메시"
 
 msgid "Bed screw configuration:"
-msgstr ""
+msgstr "침대 나사 구성:"
 
 msgid "Calibrate"
 msgstr "교정"
@@ -104,7 +104,7 @@ msgid "Calibrated, save configuration to make it permanent"
 msgstr "교정됨, 설정을 저장합니다"
 
 msgid "Calibrating"
-msgstr ""
+msgstr "보정"
 
 msgid "Can't set above the maximum:"
 msgstr "최대 값을 초과하는 설정은 할 수 없습니다:"
@@ -131,7 +131,7 @@ msgid "Check ADXL Wiring"
 msgstr "가속도계 배선을 확인해 주세요"
 
 msgid "Checking for updates, please wait..."
-msgstr ""
+msgstr "업데이트 확인 중 잠시만 기다려주세요..."
 
 msgid "Clear"
 msgstr "초기화"
@@ -153,7 +153,7 @@ msgstr "연결됨"
 
 #, python-format
 msgid "Connecting to %s"
-msgstr "%s에 연결 중.."
+msgstr "%s에 연결 중"
 
 msgid "Console"
 msgstr "콘솔 제어 명령"
@@ -171,7 +171,7 @@ msgid "Decrease"
 msgstr "낮추기"
 
 msgid "Delete File?"
-msgstr ""
+msgstr "파일 삭제?"
 
 msgid "Deselect"
 msgstr "선택 해제"
@@ -199,13 +199,13 @@ msgid "Estimated Time Method"
 msgstr "예상시간 옵션"
 
 msgid "Exclude Object"
-msgstr ""
+msgstr "개체 제외"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "엑스트라 라지"
 
 msgid "Extrude"
-msgstr "압출 "
+msgstr "압출"
 
 msgid "Extrusion +"
 msgstr "압출 +"
@@ -238,7 +238,7 @@ msgid "File:"
 msgstr "파일:"
 
 msgid "Finding ADXL"
-msgstr "가속도계 찾는 중.."
+msgstr "가속도계 찾는 중"
 
 msgid "Fine Tuning"
 msgstr "미세 조정"
@@ -298,7 +298,7 @@ msgid "Homing"
 msgstr "툴 헤드 위치 초기화"
 
 msgid "Host"
-msgstr ""
+msgstr "호스트"
 
 msgid "Hostname"
 msgstr "호스트 이름"
@@ -322,7 +322,7 @@ msgid "Invalid"
 msgstr "존재하지 않음"
 
 msgid "Invalid password"
-msgstr ""
+msgstr "잘못된 비밀번호"
 
 msgid "Invert X"
 msgstr "X축 반전"
@@ -340,7 +340,7 @@ msgid "Klipper has disconnected"
 msgstr "클리퍼와 연결이 끊어졌습니다"
 
 msgid "Klipper has encountered an error."
-msgstr "클리퍼에 오류가 발생했습니다"
+msgstr "클리퍼에 오류가 발생했습니다."
 
 msgid "Klipper has shutdown"
 msgstr "클리퍼가 종료되었습니다"
@@ -385,7 +385,7 @@ msgid "Main Menu"
 msgstr "메인 메뉴"
 
 msgid "Max"
-msgstr ""
+msgstr "최대"
 
 msgid "Max Acceleration"
 msgstr "최대 가속"
@@ -397,7 +397,7 @@ msgid "Max Velocity"
 msgstr "출력 속도"
 
 msgid "Maximum"
-msgstr ""
+msgstr "최대"
 
 msgid "Measure Both"
 msgstr "XY축 모두 측정"
@@ -415,7 +415,7 @@ msgid "Menu"
 msgstr "메뉴"
 
 msgid "Mesh calibrate"
-msgstr ""
+msgstr "Mesh calibrate"
 
 msgid "Modified"
 msgstr "수정됨"
@@ -436,15 +436,13 @@ msgid "Network"
 msgstr "네트워크"
 
 msgid "Never"
-msgstr ""
+msgstr "절대로"
 
 msgid "New"
 msgstr "신규"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
-msgstr ""
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
+msgstr "자동 감지는 지원되지 않으며, klipperscreen.conf에서 구성해야 합니다."
 
 msgid "Nothing selected"
 msgstr "아무것도 선택하지 않ㅇ"
@@ -461,7 +459,7 @@ msgid_plural "Packages will be updated"
 msgstr[0] "패키지가 업데이트 됩니다"
 
 msgid "Part Fan"
-msgstr ""
+msgstr "부품 팬"
 
 msgid "Password saved"
 msgstr "비밀번호 저장됨"
@@ -476,10 +474,10 @@ msgid "Perform a full upgrade?"
 msgstr "전체 업그레이드를 실행합니까?"
 
 msgid "Pins"
-msgstr ""
+msgstr "핀"
 
 msgid "Please recompile and flash the micro-controller."
-msgstr "MCU 펌웨어를 다시 컴파일 한 다음 플래싱 해주세요"
+msgstr "MCU 펌웨어를 다시 컴파일 한 다음 플래싱 해주세요."
 
 msgid "Power"
 msgstr "전원"
@@ -488,7 +486,7 @@ msgid "Power On Printer"
 msgstr "프린터 전원 켜기"
 
 msgid "Pressure Advance:"
-msgstr "모서리 압출 제어"
+msgstr "모서리 압출 제어:"
 
 msgid "Print"
 msgstr "출력"
@@ -500,13 +498,13 @@ msgid "Print Time"
 msgstr "출력 시간"
 
 msgid "Printer"
-msgstr ""
+msgstr "프린터"
 
 msgid "Printer Connections"
 msgstr "프린터 연결"
 
 msgid "Printer Select"
-msgstr ""
+msgstr "프린터 선택"
 
 msgid "Printing"
 msgstr "출력중"
@@ -518,7 +516,7 @@ msgid "Profile Name:"
 msgstr "프로파일 이름:"
 
 msgid "Provide KlipperScreen.log when asking for help.\n"
-msgstr ""
+msgstr "도움을 요청할 때 KlipperScreen.log를 제공하세요.\n"
 
 msgid "Quad Gantry Level"
 msgstr "쿼드 갠트리 레벨"
@@ -527,7 +525,7 @@ msgid "Raise Nozzle"
 msgstr "노즐 높임"
 
 msgid "Recover"
-msgstr ""
+msgstr "복구"
 
 msgid "Recover Hard"
 msgstr "강화 복구 모드"
@@ -539,7 +537,7 @@ msgid "Reference"
 msgstr "참조"
 
 msgid "Refresh"
-msgstr ""
+msgstr "새로 고침"
 
 msgid "Restart"
 msgstr "재시작"
@@ -560,10 +558,10 @@ msgid "Retraction Speed"
 msgstr "퇴출 속도"
 
 msgid "Retry"
-msgstr ""
+msgstr "다시 시도"
 
 msgid "Retrying"
-msgstr ""
+msgstr "재시도"
 
 msgid "Save"
 msgstr "저장"
@@ -613,10 +611,10 @@ msgid "Show"
 msgstr "보기"
 
 msgid "Show Heater Power"
-msgstr ""
+msgstr "히터 전력 표시"
 
 msgid "Shutdown"
-msgstr ""
+msgstr "종료"
 
 msgid "Size"
 msgstr "크기"
@@ -682,7 +680,7 @@ msgid "Unknown Heater"
 msgstr "알 수 없는 히터"
 
 msgid "Unknown screw position"
-msgstr ""
+msgstr "알 수 없는 나사 위치"
 
 msgid "Unload"
 msgstr "필라 꺼내기"
@@ -700,7 +698,7 @@ msgid "Update"
 msgstr "업데이트"
 
 msgid "Updating"
-msgstr "업데이트 중.."
+msgstr "업데이트 중"
 
 msgid "Uploaded"
 msgstr "업로드됨"
@@ -750,7 +748,46 @@ msgid "mm/s²"
 msgstr "mm/s²"
 
 msgid "mm³/s"
-msgstr ""
+msgstr "mm³/s"
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
+msgstr "머신이 네트워크에 연결되면 동일한 LAN을 사용하는 디바이스가 IP에 액세스하여 머신을 제어할 수 있습니다."
+
+msgid "Connect"
+msgstr "연결"
+
+msgid "Connecting"
+msgstr "연결"
+
+msgid "Connect Network"
+msgstr "네트워크 연결"
+
+msgid "Leveling Calibration"
+msgstr "레벨링 보정"
+
+msgid "Next"
+msgstr "다음"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "아래 단계에 따라 기기를 보정하고 자세한 내용은 설명서를 참조하세요."
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1. 작동 Z 캘리브레이션 설정 오프셋"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2. 침대 수평을 조작하여 침대의 평탄도를 조정합니다."
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3. 베드 메쉬 자동 레벨링 작동"
+
+msgid "Your languages"
+msgstr "언어"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Back"
+msgstr "뒤로"
 
 #~ msgid "Sort:"
 #~ msgstr "종류:"

@@ -8,16 +8,15 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2022-11-30 18:14-0300\n"
+"PO-Revision-Date: 2023-05-09 15:17+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
-"|| n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.2.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -91,6 +90,9 @@ msgstr "Powiadomienia o automatycznym zamknięciu"
 msgid "Auto-scroll"
 msgstr "Auto-scroll"
 
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
+msgstr "Une fois connecté au réseau, vous pouvez opérer l’imprimante via l’adresse IP par un équipement branché au même réseau"
+
 msgid "Bed Level"
 msgstr "Poziom stołu"
 
@@ -99,6 +101,9 @@ msgstr "Poziom siatki stołu"
 
 msgid "Bed screw configuration:"
 msgstr "Konfiguracja śrub łóżka:"
+
+msgid "Back"
+msgstr "Wstecz"
 
 msgid "Calibrate"
 msgstr "Kalibracja"
@@ -140,7 +145,7 @@ msgid "Checking for updates, please wait..."
 msgstr "Trwa sprawdzanie dostępności aktualizacji, proszę czekać..."
 
 msgid "Clear"
-msgstr ""
+msgstr "Jasne"
 
 msgid "Close"
 msgstr "Zamknij"
@@ -169,6 +174,15 @@ msgstr "Kontynuacja"
 
 msgid "Cooldown"
 msgstr "Studzenie"
+
+msgid "Connect"
+msgstr "Połącz"
+
+msgid "Connecting"
+msgstr "Łączenie"
+
+msgid "Connect Network"
+msgstr "Podłącz do sieci"
 
 msgid "Date"
 msgstr "Data"
@@ -253,7 +267,7 @@ msgid "Finish"
 msgstr "Zakończ"
 
 msgid "Firmware Restart"
-msgstr ""
+msgstr "Restart oprogramowania sprzętowego"
 
 msgid "Flow:"
 msgstr "Pływ:"
@@ -304,7 +318,7 @@ msgid "Homing"
 msgstr "Bazowanie"
 
 msgid "Host"
-msgstr ""
+msgstr "Host"
 
 msgid "Hostname"
 msgstr "Nazwa hosta"
@@ -319,7 +333,7 @@ msgid "Initializing printer..."
 msgstr "Drukarka Startuje..."
 
 msgid "Input Shaper"
-msgstr ""
+msgstr "Input Shaper"
 
 msgid "Interface"
 msgstr "Interfejs"
@@ -328,7 +342,7 @@ msgid "Invalid"
 msgstr "Nieprawidłowy"
 
 msgid "Invalid password"
-msgstr ""
+msgstr "Nieważne hasło"
 
 msgid "Invert X"
 msgstr "Odwróć X"
@@ -339,8 +353,11 @@ msgstr "Odwróć Y"
 msgid "Invert Z"
 msgstr "Odwróć Z"
 
+msgid "IP:"
+msgstr "Adres IP:"
+
 msgid "Klipper Restart"
-msgstr ""
+msgstr "Restart Klippera"
 
 msgid "Klipper has disconnected"
 msgstr "Klipper się rozłączył"
@@ -380,6 +397,9 @@ msgstr "Ładuj"
 
 msgid "Lower Nozzle"
 msgstr "Obniż  dyszę"
+
+msgid "Leveling Calibration"
+msgstr "Kalibracja"
 
 msgid "Macro shortcut on sidebar"
 msgstr "Skrót do makr na pasku bocznym"
@@ -447,15 +467,14 @@ msgstr "Nigdy"
 msgid "New"
 msgstr "Nowy"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
-msgstr ""
-"Nieobsługiwany do automatycznego wykrywania, musi być skonfigurowany w pliku "
-"klipperscreen.conf"
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
+msgstr "Nieobsługiwany do automatycznego wykrywania, musi być skonfigurowany w pliku klipperscreen.conf"
 
 msgid "Nothing selected"
 msgstr "Nic nie wybrano"
+
+msgid "Next"
+msgstr "Następny"
 
 #, python-format
 msgid "Outdated by %d"
@@ -471,7 +490,7 @@ msgstr[1] "Pakiety zostaną zaktualizowane"
 msgstr[2] "Pakiety zostaną zaktualizowane"
 
 msgid "Part Fan"
-msgstr ""
+msgstr "Wentylator cz."
 
 msgid "Password saved"
 msgstr "Hasło zostało zapisane"
@@ -486,7 +505,7 @@ msgid "Perform a full upgrade?"
 msgstr "Przeprowadzić pełną aktualizację?"
 
 msgid "Pins"
-msgstr ""
+msgstr "Szpilki"
 
 msgid "Please recompile and flash the micro-controller."
 msgstr "Proszę przekompilować i sflashować mikrokontroler."
@@ -528,7 +547,19 @@ msgid "Profile Name:"
 msgstr "Nazwa Profilu:"
 
 msgid "Provide KlipperScreen.log when asking for help.\n"
-msgstr ""
+msgstr "Podaj KlipperScreen.log prosząc o pomoc.\n"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "Wykonaj proszę poniższe czynności, aby skalibrować urządzenie. Więcej informacji na ten temat znajdziesz w instrukcji"
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1.Wykonaj kalibrację ustawień offsetu Z"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2.Wykonaj poziomowanie stołu roboczego, aby wyregulować jego płaskość"
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3.Wykonaj automatyczną korektę poziomowania stołu roboczego za pomocą siatki pomiarów"
 
 msgid "Quad Gantry Level"
 msgstr "Poziom Bramy"
@@ -638,7 +669,7 @@ msgid "Slicer Time correction (%)"
 msgstr "Korekta czasu krajalnicy (%)"
 
 msgid "Slicer:"
-msgstr ""
+msgstr "Krajalnica:"
 
 msgid "Small"
 msgstr "Mały"
@@ -698,10 +729,10 @@ msgid "Unload"
 msgstr "Wyładuj"
 
 msgid "Unretract Extra Length"
-msgstr ""
+msgstr "Rozkładanie na części"
 
 msgid "Unretract Speed"
-msgstr ""
+msgstr "Prędkość odwijania"
 
 msgid "Up To Date"
 msgstr "Aktualne"
@@ -734,7 +765,7 @@ msgid "Z Tilt"
 msgstr "Przechył Z"
 
 msgid "Z offset:"
-msgstr ""
+msgstr "Przesunięcie Z:"
 
 msgid "commit"
 msgid_plural "commits"
@@ -764,7 +795,10 @@ msgid "mm/s²"
 msgstr "mm/s²"
 
 msgid "mm³/s"
-msgstr ""
+msgstr "mm³/s"
+
+msgid "Your languages"
+msgstr "Twoje języki"
 
 #~ msgid "Sort:"
 #~ msgstr "Sortować:"

@@ -8,16 +8,15 @@ msgstr ""
 "Project-Id-Version: Klipperscreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2022-11-30 18:11-0300\n"
+"PO-Revision-Date: 2023-05-09 15:51+0800\n"
 "Last-Translator: Tal Rahav <talrhv1@gmail.com>\n"
 "Language-Team: \n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
-"2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : 3);\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #, python-format
@@ -40,7 +39,7 @@ msgid "Abort"
 msgstr "בטל"
 
 msgid "Acceleration:"
-msgstr "האצה"
+msgstr "האצהתאוצה:"
 
 msgid "Accept"
 msgstr "אשר"
@@ -60,10 +59,10 @@ msgstr "הוסף %.2f לתחנת קצה?"
 
 #, python-format
 msgid "Apply %s%.2f offset to Probe?"
-msgstr "החל היסט של %s%.2f על בדיקה"
+msgstr "להחיל קיזוז %s%.2f על בדיקה?"
 
 msgid "Are you sure do you want to exclude the object?"
-msgstr ""
+msgstr "האם אתה בטוח שברצונך להחריג את האובייקט?"
 
 msgid "Are you sure you want to run Emergency Stop?"
 msgstr "האם אתה בטוח שאתה רוצה לבצע עצירת חירום?"
@@ -99,7 +98,7 @@ msgid "Bed Mesh"
 msgstr "מיפוי מיטה"
 
 msgid "Bed screw configuration:"
-msgstr "הגדרת בורג מיטה"
+msgstr "תצורת בורג מיטה:"
 
 msgid "Calibrate"
 msgstr "לכייל"
@@ -138,7 +137,7 @@ msgid "Check ADXL Wiring"
 msgstr "בדוק את החיווט של ה ADXL"
 
 msgid "Checking for updates, please wait..."
-msgstr "בודק עדכונים, אנא המתן"
+msgstr "בודק אם קיימים עדכונים, אנא המתן..."
 
 msgid "Clear"
 msgstr "נקה"
@@ -178,7 +177,7 @@ msgid "Decrease"
 msgstr "הורד"
 
 msgid "Delete File?"
-msgstr "מחק קובץ"
+msgstr "למחוק קובץ?"
 
 msgid "Deselect"
 msgstr "בטל את הבחירה"
@@ -209,7 +208,7 @@ msgid "Exclude Object"
 msgstr "ביטול אובייקט"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "אקסטרה לארג'"
 
 msgid "Extrude"
 msgstr "הוצא חומר"
@@ -230,19 +229,19 @@ msgid "Filament Used"
 msgstr "חומר ששומש"
 
 msgid "Filament total:"
-msgstr "חומר כולל"
+msgstr "סה\"כ נימה:"
 
 msgid "Filament used:"
 msgstr "חומר ששומש:"
 
 msgid "Filament:"
-msgstr "חומר גלם"
+msgstr "נימה:"
 
 msgid "File"
 msgstr "קובץ"
 
 msgid "File:"
-msgstr ""
+msgstr "קובץ:"
 
 msgid "Finding ADXL"
 msgstr "מחפש ADXL"
@@ -257,10 +256,10 @@ msgid "Firmware Restart"
 msgstr "אתחול קושחה"
 
 msgid "Flow:"
-msgstr "זרם"
+msgstr "זרם:"
 
 msgid "Flowrate:"
-msgstr "קצב זרימה"
+msgstr "קצב זרימה:"
 
 msgid "Font Size"
 msgstr "גודל טקסט"
@@ -272,7 +271,7 @@ msgid "Go Back"
 msgstr "חזרה"
 
 msgid "Height:"
-msgstr "גובה"
+msgstr "גובה:"
 
 msgid "Hidden"
 msgstr "מוסתר"
@@ -284,7 +283,7 @@ msgid "Hide sensors in Temp."
 msgstr "הסתר חיישנים בטמפ'."
 
 msgid "Hide temp."
-msgstr "הסתר טמפרטורה"
+msgstr "הסתר טמפרטורה."
 
 msgid "Home All"
 msgstr "איפוס XYZ"
@@ -329,7 +328,7 @@ msgid "Invalid"
 msgstr "לא חוקי"
 
 msgid "Invalid password"
-msgstr ""
+msgstr "סיסמה לא חוקית"
 
 msgid "Invert X"
 msgstr "הפוך את X"
@@ -368,7 +367,7 @@ msgid "Large"
 msgstr "גדול"
 
 msgid "Layer:"
-msgstr "שכבה"
+msgstr "שכבה:"
 
 msgid "Left:"
 msgstr "זמן שנותר:"
@@ -404,7 +403,7 @@ msgid "Max Velocity"
 msgstr "מהירות מרבית"
 
 msgid "Maximum"
-msgstr ""
+msgstr "המרבי"
 
 msgid "Measure Both"
 msgstr "מדוד את שניהם"
@@ -422,7 +421,7 @@ msgid "Menu"
 msgstr "תפריט"
 
 msgid "Mesh calibrate"
-msgstr ""
+msgstr "כיול רשת שינוי"
 
 msgid "Modified"
 msgstr "שונה"
@@ -443,14 +442,12 @@ msgid "Network"
 msgstr "רשת"
 
 msgid "Never"
-msgstr ""
+msgstr "אף פעם"
 
 msgid "New"
 msgstr "חדש"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
 msgstr "איתור אוטומטי אינו נתמך, זה צריך להיות מוגדר ב klipperscreen"
 
 msgid "Nothing selected"
@@ -498,7 +495,7 @@ msgid "Power On Printer"
 msgstr "הפעל מדפסת"
 
 msgid "Pressure Advance:"
-msgstr "פרשר אדוונס"
+msgstr "פרשר אדוונס:"
 
 msgid "Print"
 msgstr "הדפסה"
@@ -516,7 +513,7 @@ msgid "Printer Connections"
 msgstr "חיבורי מדפסת"
 
 msgid "Printer Select"
-msgstr ""
+msgstr "בחירת מדפסת"
 
 msgid "Printing"
 msgstr "מדפיס"
@@ -528,7 +525,7 @@ msgid "Profile Name:"
 msgstr "שם פרופיל:"
 
 msgid "Provide KlipperScreen.log when asking for help.\n"
-msgstr ""
+msgstr "ספק את KlipperScreen.log בעת בקשת עזרה.\n"
 
 msgid "Quad Gantry Level"
 msgstr "יישור הגנטרי הריבועי"
@@ -570,7 +567,7 @@ msgid "Retraction Speed"
 msgstr "מהירות משיכה"
 
 msgid "Retry"
-msgstr ""
+msgstr "ניסיון חוזר"
 
 msgid "Retrying"
 msgstr "מנסה שוב"
@@ -638,7 +635,7 @@ msgid "Slicer Time correction (%)"
 msgstr "תיקון זמן פריסה (%)"
 
 msgid "Slicer:"
-msgstr ""
+msgstr "מבצעה:"
 
 msgid "Small"
 msgstr "קטן"
@@ -653,7 +650,7 @@ msgid "Speed -"
 msgstr "מהירות -"
 
 msgid "Speed:"
-msgstr "מהירות"
+msgstr "מהירות:"
 
 msgid "Square Corner Velocity"
 msgstr "מהירות פינה מרובעת"
@@ -698,10 +695,10 @@ msgid "Unload"
 msgstr "העלה"
 
 msgid "Unretract Extra Length"
-msgstr ""
+msgstr "ביטול ביטול אורך נוסף"
 
 msgid "Unretract Speed"
-msgstr ""
+msgstr "ביטול מהירות"
 
 msgid "Up To Date"
 msgstr "עדכני"
@@ -734,7 +731,7 @@ msgid "Z Tilt"
 msgstr "הטיה Z"
 
 msgid "Z offset:"
-msgstr "Z אוף-סט"
+msgstr "Z אוף-סט:"
 
 msgid "commit"
 msgid_plural "commits"
@@ -763,10 +760,49 @@ msgid "mm/s"
 msgstr "מ\"מ/ש"
 
 msgid "mm/s²"
-msgstr "mm/s²"
+msgstr "מ\"מ/שנייה²"
 
 msgid "mm³/s"
-msgstr ""
+msgstr "מ\"מ/שניה"
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
+msgstr "לאחר חיבור ההתקן לרשת, התקנים המשתמשים באותה רשת LAN יכולים לשלוט במכשיר על ידי גישה לכתובת ה-IP"
+
+msgid "Connect"
+msgstr "התחבר"
+
+msgid "Connecting"
+msgstr "חיבור"
+
+msgid "Connect Network"
+msgstr "התחבר לרשת"
+
+msgid "Leveling Calibration"
+msgstr "כיול פילוס"
+
+msgid "Next"
+msgstr "הבא"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "בצע את השלבים הבאים כדי לכייל את המכשיר, עיין במדריך לקבלת פרטים"
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1. קיזוז הגדרת כיול Z"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2. הפעילו את מפלס המיטה כדי להתאים את משטח המיטה"
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3. הפעל פילוס אוטומטי של רשת מיטה"
+
+msgid "Your languages"
+msgstr "השפות שלך"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Back"
+msgstr "גב"
 
 #~ msgid "Sort:"
 #~ msgstr "מיין"
@@ -933,9 +969,6 @@ msgstr ""
 
 #~ msgid "Network Info"
 #~ msgstr "מידע על הרשת"
-
-#~ msgid "Back"
-#~ msgstr "חזור"
 
 #~ msgid "Extrusion"
 #~ msgstr "שיחול"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2022-11-30 18:10-0300\n"
+"PO-Revision-Date: 2023-05-09 15:59+0800\n"
 "Last-Translator: livinhack\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -139,7 +139,7 @@ msgid "Checking for updates, please wait..."
 msgstr "Suche nach Updates, bitte warten..."
 
 msgid "Clear"
-msgstr ""
+msgstr "Klar"
 
 msgid "Close"
 msgstr "Schließen"
@@ -282,7 +282,7 @@ msgid "Hide sensors in Temp."
 msgstr "Sensoren in Temp ausblenden."
 
 msgid "Hide temp."
-msgstr "Temp. ausblenden"
+msgstr "Temp. ausblenden."
 
 msgid "Home All"
 msgstr "Alle Achsen zurücksetzen"
@@ -446,12 +446,8 @@ msgstr "Niemals"
 msgid "New"
 msgstr "Neu"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
-msgstr ""
-"Wird für die automatische Erkennung nicht unterstützt, muss in klipperscreen."
-"conf konfiguriert werden"
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
+msgstr "Wird für die automatische Erkennung nicht unterstützt, muss in klipperscreen.conf konfiguriert werden"
 
 msgid "Nothing selected"
 msgstr "Nichts ausgewählt"
@@ -526,7 +522,7 @@ msgid "Profile Name:"
 msgstr "Profilname:"
 
 msgid "Provide KlipperScreen.log when asking for help.\n"
-msgstr ""
+msgstr "Geben Sie KlipperScreen.log an, wenn Sie um Hilfe bitten.\n"
 
 msgid "Quad Gantry Level"
 msgstr "Quad Gantry Level"
@@ -762,7 +758,48 @@ msgid "mm/s²"
 msgstr "mm/s²"
 
 msgid "mm³/s"
+msgstr "mm³/s"
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
 msgstr ""
+"Nachdem das Gerät mit dem Netzwerk verbunden ist, können Geräte, die dasselbe LAN verwenden, das Gerät steuern, indem sie "
+"auf die IP-Adresse zugreifen"
+
+msgid "Connect"
+msgstr "Verbinden"
+
+msgid "Connecting"
+msgstr "Verbindend"
+
+msgid "Connect Network"
+msgstr "Netzwerk verbinden"
+
+msgid "Leveling Calibration"
+msgstr "Kalibrierung der Nivellierung"
+
+msgid "Next"
+msgstr "Nächster"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "Bitte befolgen Sie die folgenden Schritte, um das Gerät zu kalibrieren, Details finden Sie im Handbuch"
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1.Operation Z Kalibrierungseinstellung Offset"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2. Bedienen Sie die Bettwaage, um die Ebenheit des Bettes einzustellen"
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3. Automatisches Nivellieren des Bettgitters betreiben"
+
+msgid "Your languages"
+msgstr "Ihre Sprachen"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Back"
+msgstr "Zurück"
 
 #~ msgid "Sort:"
 #~ msgstr "Sortieren:"

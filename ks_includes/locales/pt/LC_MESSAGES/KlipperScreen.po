@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2022-11-30 18:14-0300\n"
+"PO-Revision-Date: 2023-05-09 15:14+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -139,7 +139,7 @@ msgid "Checking for updates, please wait..."
 msgstr "Verificando atualizações, aguarde..."
 
 msgid "Clear"
-msgstr ""
+msgstr "Limpo"
 
 msgid "Close"
 msgstr "Fechar"
@@ -282,7 +282,7 @@ msgid "Hide sensors in Temp."
 msgstr "Ocultar temperatura."
 
 msgid "Hide temp."
-msgstr "Ocultar temperatura"
+msgstr "Ocultar temperatura."
 
 msgid "Home All"
 msgstr "Calibrar XYZ"
@@ -303,7 +303,7 @@ msgid "Homing"
 msgstr "Calibrar"
 
 msgid "Host"
-msgstr ""
+msgstr "Anfitrião"
 
 msgid "Hostname"
 msgstr "Hostname"
@@ -318,7 +318,7 @@ msgid "Initializing printer..."
 msgstr "Inicializando impressora..."
 
 msgid "Input Shaper"
-msgstr ""
+msgstr "Shaper de entrada"
 
 msgid "Interface"
 msgstr "Interface"
@@ -327,7 +327,7 @@ msgid "Invalid"
 msgstr "Inválido"
 
 msgid "Invalid password"
-msgstr ""
+msgstr "Palavra-passe inválida"
 
 msgid "Invert X"
 msgstr "Inverter X"
@@ -446,12 +446,8 @@ msgstr "Nunca"
 msgid "New"
 msgstr "Novo"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
-msgstr ""
-"Não é compatível com detecção automática, precisa ser configurado no "
-"klipperscreen.conf"
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
+msgstr "Não é compatível com detecção automática, precisa ser configurado no klipperscreen.conf"
 
 msgid "Nothing selected"
 msgstr "Nada selecionado"
@@ -484,7 +480,7 @@ msgid "Perform a full upgrade?"
 msgstr "Realizar uma atualização completa?"
 
 msgid "Pins"
-msgstr ""
+msgstr "Alfinetes"
 
 msgid "Please recompile and flash the micro-controller."
 msgstr "Por favor, recompile e atualize o microcontrolador."
@@ -526,7 +522,7 @@ msgid "Profile Name:"
 msgstr "Nome do perfil:"
 
 msgid "Provide KlipperScreen.log when asking for help.\n"
-msgstr ""
+msgstr "Forneça KlipperScreen.log quando pedir ajuda.\n"
 
 msgid "Quad Gantry Level"
 msgstr "Nível do pórtico quádruplo"
@@ -636,7 +632,7 @@ msgid "Slicer Time correction (%)"
 msgstr "Correção do tempo do fatiador (%)"
 
 msgid "Slicer:"
-msgstr ""
+msgstr "Cortador:"
 
 msgid "Small"
 msgstr "Pequeno"
@@ -696,10 +692,10 @@ msgid "Unload"
 msgstr "Descarregar"
 
 msgid "Unretract Extra Length"
-msgstr ""
+msgstr "Comprimento extra para desatarraxar"
 
 msgid "Unretract Speed"
-msgstr ""
+msgstr "Velocidade de desprendimento"
 
 msgid "Up To Date"
 msgstr "Atualizado"
@@ -760,7 +756,47 @@ msgid "mm/s²"
 msgstr "mm/s²"
 
 msgid "mm³/s"
+msgstr "mm³/s"
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
 msgstr ""
+"Depois de a máquina estar ligada à rede, os dispositivos que utilizam a mesma LAN podem controlar a máquina acedendo ao IP"
+
+msgid "Connect"
+msgstr "Ligar"
+
+msgid "Connecting"
+msgstr "Ligação"
+
+msgid "Connect Network"
+msgstr "Ligar a rede"
+
+msgid "Leveling Calibration"
+msgstr "Calibração de nivelamento"
+
+msgid "Next"
+msgstr "Seguinte"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "Siga os passos abaixo para calibrar a máquina; consulte o manual para obter mais informações"
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1.Operação Desvio da definição da calibração Z"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2. accionar o nível da cama para ajustar o nivelamento da cama"
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3. operar o nivelamento automático da malha da cama"
+
+msgid "Your languages"
+msgstr "As suas línguas"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Back"
+msgstr "Voltar"
 
 #~ msgid "Sort:"
 #~ msgstr "Ordenar:"

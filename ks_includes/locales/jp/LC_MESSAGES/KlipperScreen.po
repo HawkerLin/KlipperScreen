@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -24,7 +24,7 @@ msgid "24 Hour Time"
 msgstr "24時間表記"
 
 msgid "A FIRMWARE_RESTART may fix the issue."
-msgstr "ファームウェアの更新を行うと不具合が解決する場合があります"
+msgstr "ファームウェアの更新を行うと不具合が解決する場合があります."
 
 msgid "ADXL Not Configured"
 msgstr "ADXL が構成されていません"
@@ -131,7 +131,7 @@ msgid "Check ADXL Wiring"
 msgstr "ADXL Wiring を検査する"
 
 msgid "Checking for updates, please wait..."
-msgstr ""
+msgstr "アップデートをチェックしています、お待ちください..."
 
 msgid "Clear"
 msgstr "クリア"
@@ -274,13 +274,13 @@ msgid "Hide"
 msgstr "隠す"
 
 msgid "Hide sensors in Temp."
-msgstr "温度を非表示にする"
+msgstr "温度を非表示にする."
 
 msgid "Hide temp."
-msgstr "温度を非表示にする"
+msgstr "温度を非表示にする."
 
 msgid "Home All"
-msgstr ""
+msgstr "ホーム 全て"
 
 msgid "Home X"
 msgstr "Home X"
@@ -298,7 +298,7 @@ msgid "Homing"
 msgstr "Homing"
 
 msgid "Host"
-msgstr ""
+msgstr "ホスト"
 
 msgid "Hostname"
 msgstr "Hostname"
@@ -310,10 +310,10 @@ msgid "Increase"
 msgstr "増加"
 
 msgid "Initializing printer..."
-msgstr ""
+msgstr "プリンターを初期化しています..."
 
 msgid "Input Shaper"
-msgstr ""
+msgstr "インプットシェイパー"
 
 msgid "Interface"
 msgstr "インターフェース"
@@ -322,7 +322,7 @@ msgid "Invalid"
 msgstr "不正"
 
 msgid "Invalid password"
-msgstr ""
+msgstr "パスワードが無効"
 
 msgid "Invert X"
 msgstr "X軸を反対にする"
@@ -340,7 +340,7 @@ msgid "Klipper has disconnected"
 msgstr "Klipperの接続が切れました"
 
 msgid "Klipper has encountered an error."
-msgstr "Klipperのエラーが発生しました"
+msgstr "Klipperのエラーが発生しました."
 
 msgid "Klipper has shutdown"
 msgstr "Klipperはシャットダウンしました"
@@ -370,7 +370,7 @@ msgid "Limits"
 msgstr "制限"
 
 msgid "Load"
-msgstr ""
+msgstr "負荷"
 
 msgid "Lower Nozzle"
 msgstr "ノズルが低い"
@@ -441,27 +441,25 @@ msgstr "未"
 msgid "New"
 msgstr "新"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
-msgstr ""
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
+msgstr "自動検出には対応していませんので、klipperscreen.confで設定する必要があります"
 
 msgid "Nothing selected"
 msgstr "未選択"
 
 #, python-format
 msgid "Outdated by %d"
-msgstr ""
+msgstr "日付は %d で古い"
 
 msgid "PSK for"
-msgstr ""
+msgstr "PSKの場合"
 
 msgid "Package will be updated"
 msgid_plural "Packages will be updated"
 msgstr[0] ""
 
 msgid "Part Fan"
-msgstr ""
+msgstr "パートファン"
 
 msgid "Password saved"
 msgstr "パスワードを保存しました"
@@ -479,7 +477,7 @@ msgid "Pins"
 msgstr "Pins"
 
 msgid "Please recompile and flash the micro-controller."
-msgstr "マイクロコントローラーをリコンパイル＆フラッシュしてください"
+msgstr "マイクロコントローラーをリコンパイル＆フラッシュしてください."
 
 msgid "Power"
 msgstr "電源"
@@ -488,7 +486,7 @@ msgid "Power On Printer"
 msgstr "プリンター電源"
 
 msgid "Pressure Advance:"
-msgstr ""
+msgstr "プレッシャーアドバンス："
 
 msgid "Print"
 msgstr "印刷"
@@ -518,25 +516,25 @@ msgid "Profile Name:"
 msgstr "プロファイル:"
 
 msgid "Provide KlipperScreen.log when asking for help.\n"
-msgstr ""
+msgstr "お問い合わせの際は、KlipperScreen.logをご提示ください。\n"
 
 msgid "Quad Gantry Level"
 msgstr "ガントリーレベル"
 
 msgid "Raise Nozzle"
-msgstr ""
+msgstr "ノズルを上げる"
 
 msgid "Recover"
-msgstr ""
+msgstr "リカバー"
 
 msgid "Recover Hard"
-msgstr ""
+msgstr "リカバーハード"
 
 msgid "Recover Soft"
-msgstr ""
+msgstr "リカバーソフト"
 
 msgid "Reference"
-msgstr ""
+msgstr "リファレンス"
 
 msgid "Refresh"
 msgstr "最新表示"
@@ -585,23 +583,23 @@ msgid "Saved offset: %s"
 msgstr "保存しました offset: %s"
 
 msgid "Screen DPMS"
-msgstr ""
+msgstr "スクリーンDPMS"
 
 msgid "Screen Power Off Time"
-msgstr ""
+msgstr "画面の電源オフ時間"
 
 msgid "Screws Adjust"
-msgstr ""
+msgstr "ネジ 調整"
 
 msgid "Select"
-msgstr ""
+msgstr "セレクト"
 
 msgid "Send"
-msgstr ""
+msgstr "送信"
 
 #, python-format
 msgid "Sending Power ON signal to: %s"
-msgstr ""
+msgstr "にパワーオン信号を送信する： %s"
 
 msgid "Set Temp"
 msgstr "温度設定"
@@ -613,7 +611,7 @@ msgid "Show"
 msgstr "表示"
 
 msgid "Show Heater Power"
-msgstr ""
+msgstr "ヒーターパワーを表示する"
 
 msgid "Shutdown"
 msgstr "シャットダウン"
@@ -634,16 +632,16 @@ msgid "Small"
 msgstr "小"
 
 msgid "Speed (mm/s)"
-msgstr ""
+msgstr "速度（mm/s）"
 
 msgid "Speed +"
-msgstr ""
+msgstr "スピード＋α"
 
 msgid "Speed -"
-msgstr ""
+msgstr "スピード-"
 
 msgid "Speed:"
-msgstr ""
+msgstr "速度です："
 
 msgid "Square Corner Velocity"
 msgstr "四隅の速度"
@@ -688,10 +686,10 @@ msgid "Unload"
 msgstr "アンロード"
 
 msgid "Unretract Extra Length"
-msgstr ""
+msgstr "アンリトラクト・エクストラレングス"
 
 msgid "Unretract Speed"
-msgstr ""
+msgstr "巻き戻し速度"
 
 msgid "Up To Date"
 msgstr "最新"
@@ -718,39 +716,78 @@ msgid "Z Move Speed (mm/s)"
 msgstr "X軸 移動速度 (mm/s)"
 
 msgid "Z Speed (mm/s)"
-msgstr ""
+msgstr "Zスピード（mm/s）"
 
 msgid "Z Tilt"
-msgstr ""
+msgstr "Zチルト"
 
 msgid "Z offset:"
-msgstr ""
+msgstr "Zオフセット："
 
 msgid "commit"
 msgid_plural "commits"
 msgstr[0] ""
 
 msgid "dBm"
-msgstr ""
+msgstr "デシベルム"
 
 msgid "hour"
 msgid_plural "hours"
-msgstr[0] ""
+msgstr[0] "時"
 
 msgid "minutes"
 msgstr "分"
 
 msgid "mm"
-msgstr ""
+msgstr "mm"
 
 msgid "mm/s"
-msgstr ""
+msgstr "mm/s"
 
 msgid "mm/s²"
-msgstr ""
+msgstr "mm/s²"
 
 msgid "mm³/s"
-msgstr ""
+msgstr "mm³/s"
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
+msgstr "本機をネットワークに接続した後、同じLANを使用する機器は、本機のIPにアクセスすることで本機を制御できます"
+
+msgid "Connect"
+msgstr "接続"
+
+msgid "Connecting"
+msgstr "コネクティング"
+
+msgid "Connect Network"
+msgstr "ネットワークをつなぐ"
+
+msgid "Leveling Calibration"
+msgstr "レベリングキャリブレーション"
+
+msgid "Next"
+msgstr "次のページ"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "以下の手順でキャリブレーションを行ってください。詳細はマニュアルをご参照ください"
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1.Operation Zキャリブレーション設定オフセット"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2.ベッドの平坦度を調整する「ベッドレベル」を操作する"
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3.Operate ベッドメッシュの自動レベリング"
+
+msgid "Your languages"
+msgstr "あなたの言語"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Back"
+msgstr "バック"
 
 #~ msgid "Sort:"
 #~ msgstr "ソート順:"

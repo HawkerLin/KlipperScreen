@@ -7,16 +7,15 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-29 09:28-0600\n"
-"PO-Revision-Date: 2022-11-30 18:15-0300\n"
+"PO-Revision-Date: 2023-05-09 15:10+0800\n"
 "Last-Translator: Jakob Kais <schpuntik@freenet.de>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.2.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Flags-xgettext: --add-comments\n"
 
 #, python-format
@@ -113,7 +112,7 @@ msgid "Calibrating"
 msgstr "Калибровка"
 
 msgid "Camera"
-msgstr ""
+msgstr "Камера"
 
 msgid "Can't set above the maximum:"
 msgstr "Невозможно установить выше максимума:"
@@ -177,7 +176,7 @@ msgid "Date"
 msgstr "Дата"
 
 msgid "Delete Directory?"
-msgstr ""
+msgstr "Удалить каталог?"
 
 msgid "Delete File?"
 msgstr "Удалить Файл?"
@@ -271,7 +270,7 @@ msgid "Full Update"
 msgstr "Полный Обновлять"
 
 msgid "Fullscreen"
-msgstr ""
+msgstr "Полный экран"
 
 msgid "Go Back"
 msgstr "Назад"
@@ -331,7 +330,7 @@ msgid "Invalid"
 msgstr "Неверный"
 
 msgid "Invalid password"
-msgstr ""
+msgstr "Неверный пароль"
 
 msgid "Invert X"
 msgstr "Инверсия X"
@@ -450,12 +449,8 @@ msgstr "Никогда"
 msgid "New"
 msgstr "Новый"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
-msgstr ""
-"Не поддерживается для автоматического обнаружения, его необходимо настроить "
-"в klipperscreen.conf"
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
+msgstr "Не поддерживается для автоматического обнаружения, его необходимо настроить в klipperscreen.conf"
 
 msgid "Nothing selected"
 msgstr "Ничего не выбрано"
@@ -531,7 +526,7 @@ msgid "Profile Name:"
 msgstr "Имя профиля:"
 
 msgid "Provide KlipperScreen.log when asking for help.\n"
-msgstr ""
+msgstr "Предоставьте KlipperScreen.log при обращении за помощью.\n"
 
 msgid "Quad Gantry Level"
 msgstr "Уровень Quad Gantry"
@@ -555,7 +550,7 @@ msgid "Refresh"
 msgstr "Обновить"
 
 msgid "Rename/Move:"
-msgstr ""
+msgstr "Переименовать/переместить:"
 
 msgid "Restart"
 msgstr "Перезагрузка"
@@ -767,6 +762,47 @@ msgstr "мм/с²"
 
 msgid "mm³/s"
 msgstr "мм/с³"
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
+msgstr ""
+"После подключения машины к сети устройства, использующие ту же локальную сеть, могут управлять машиной, обращаясь к IP-"
+"адресу"
+
+msgid "Connect"
+msgstr "Подключайтесь"
+
+msgid "Connecting"
+msgstr "Подключение"
+
+msgid "Connect Network"
+msgstr "Подключение сети"
+
+msgid "Leveling Calibration"
+msgstr "Калибровка нивелира"
+
+msgid "Next"
+msgstr "Следующий"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "Для калибровки машины выполните следующие действия, подробности см. в руководстве."
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1.Операция Смещение настройки калибровки Z"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2.Управление уровнем станины для регулировки ровности станины"
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3.Управление автоматическим выравниванием сетки кровати"
+
+msgid "Your languages"
+msgstr "Ваши языки"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Back"
+msgstr "Назад"
 
 #~ msgid "Decrease"
 #~ msgstr "Уменьшить"

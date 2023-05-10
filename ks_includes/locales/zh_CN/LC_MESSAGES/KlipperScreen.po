@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2022-11-28 11:36-0300\n"
+"PO-Revision-Date: 2023-05-09 14:37+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -47,7 +47,7 @@ msgid "Actions"
 msgstr "控制"
 
 msgid "Add profile"
-msgstr ""
+msgstr "添加资料"
 
 msgid "Apply"
 msgstr "应用"
@@ -61,7 +61,7 @@ msgid "Apply %s%.2f offset to Probe?"
 msgstr "将%s%.2f的偏移量应用于探针？"
 
 msgid "Are you sure do you want to exclude the object?"
-msgstr ""
+msgstr "你确定你要排除该对象吗？"
 
 msgid "Are you sure you want to run Emergency Stop?"
 msgstr "您确定要紧急停止吗？"
@@ -85,7 +85,7 @@ msgid "Auto-calibrate"
 msgstr "自动校准"
 
 msgid "Auto-close notifications"
-msgstr ""
+msgstr "自动关闭通知"
 
 msgid "Auto-scroll"
 msgstr "自动滚屏"
@@ -97,7 +97,7 @@ msgid "Bed Mesh"
 msgstr "热床网格"
 
 msgid "Bed screw configuration:"
-msgstr ""
+msgstr "床位螺钉配置："
 
 msgid "Calibrate"
 msgstr "校准"
@@ -109,7 +109,7 @@ msgid "Calibrated, save configuration to make it permanent"
 msgstr "已校准，保存配置后生效"
 
 msgid "Calibrating"
-msgstr ""
+msgstr "校准中"
 
 msgid "Can't set above the maximum:"
 msgstr "设置值超出最大值："
@@ -136,7 +136,7 @@ msgid "Check ADXL Wiring"
 msgstr "检查ADXL的接线"
 
 msgid "Checking for updates, please wait..."
-msgstr ""
+msgstr "正在检查更新，请等待..."
 
 msgid "Clear"
 msgstr "清楚"
@@ -176,7 +176,7 @@ msgid "Decrease"
 msgstr "减少"
 
 msgid "Delete File?"
-msgstr ""
+msgstr "删除文件？"
 
 msgid "Deselect"
 msgstr "取消选择"
@@ -204,10 +204,10 @@ msgid "Estimated Time Method"
 msgstr "估算剩余时间方式"
 
 msgid "Exclude Object"
-msgstr ""
+msgstr "排除对象"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "特大号"
 
 msgid "Extrude"
 msgstr "挤出机"
@@ -303,7 +303,7 @@ msgid "Homing"
 msgstr "归零"
 
 msgid "Host"
-msgstr ""
+msgstr "主机"
 
 msgid "Hostname"
 msgstr "主机名"
@@ -327,7 +327,7 @@ msgid "Invalid"
 msgstr "无效"
 
 msgid "Invalid password"
-msgstr ""
+msgstr "无效密码"
 
 msgid "Invert X"
 msgstr "反转X轴"
@@ -402,16 +402,16 @@ msgid "Max Velocity"
 msgstr "最大速度"
 
 msgid "Maximum"
-msgstr ""
+msgstr "最大"
 
 msgid "Measure Both"
-msgstr ""
+msgstr "测量两者"
 
 msgid "Measure X"
-msgstr ""
+msgstr "测量X"
 
 msgid "Measure Y"
-msgstr ""
+msgstr "测量Y"
 
 msgid "Medium"
 msgstr "中"
@@ -420,7 +420,7 @@ msgid "Menu"
 msgstr "菜单"
 
 msgid "Mesh calibrate"
-msgstr ""
+msgstr "网格校准"
 
 msgid "Modified"
 msgstr "修改时间"
@@ -441,15 +441,13 @@ msgid "Network"
 msgstr "网络"
 
 msgid "Never"
-msgstr ""
+msgstr "从不"
 
 msgid "New"
-msgstr ""
+msgstr "新的"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
-msgstr ""
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
+msgstr "不支持自动检测，需要在klipperscreen.conf中进行配置"
 
 msgid "Nothing selected"
 msgstr "未选择任何内容"
@@ -466,7 +464,7 @@ msgid_plural "Packages will be updated"
 msgstr[0] "包将被更新"
 
 msgid "Part Fan"
-msgstr ""
+msgstr "风扇部分"
 
 msgid "Password saved"
 msgstr "密码已保存"
@@ -481,7 +479,7 @@ msgid "Perform a full upgrade?"
 msgstr "是否全部升级？"
 
 msgid "Pins"
-msgstr ""
+msgstr "引脚"
 
 msgid "Please recompile and flash the micro-controller."
 msgstr "请重新编译并烧录微控制器。"
@@ -505,13 +503,13 @@ msgid "Print Time"
 msgstr "打印用时"
 
 msgid "Printer"
-msgstr ""
+msgstr "打印机"
 
 msgid "Printer Connections"
 msgstr "龙门架调平"
 
 msgid "Printer Select"
-msgstr ""
+msgstr "打印机选择"
 
 msgid "Printing"
 msgstr "打印中"
@@ -523,7 +521,7 @@ msgid "Profile Name:"
 msgstr "配置文件名称:"
 
 msgid "Provide KlipperScreen.log when asking for help.\n"
-msgstr ""
+msgstr "在寻求帮助时提供KlipperScreen.log。\n"
 
 msgid "Quad Gantry Level"
 msgstr "龙门架调平"
@@ -532,7 +530,7 @@ msgid "Raise Nozzle"
 msgstr "升高喷嘴"
 
 msgid "Recover"
-msgstr ""
+msgstr "恢复"
 
 msgid "Recover Hard"
 msgstr "重置(Hard)"
@@ -544,10 +542,10 @@ msgid "Reference"
 msgstr "参考"
 
 msgid "Refresh"
-msgstr ""
+msgstr "刷新"
 
 msgid "Restart"
-msgstr "重启Klipper"
+msgstr "重新打印"
 
 msgid "Resume"
 msgstr "继续"
@@ -565,10 +563,10 @@ msgid "Retraction Speed"
 msgstr "回抽速度"
 
 msgid "Retry"
-msgstr ""
+msgstr "重试"
 
 msgid "Retrying"
-msgstr ""
+msgstr "重试中"
 
 msgid "Save"
 msgstr "保存"
@@ -618,10 +616,10 @@ msgid "Show"
 msgstr "显示"
 
 msgid "Show Heater Power"
-msgstr ""
+msgstr "显示加热器功率"
 
 msgid "Shutdown"
-msgstr ""
+msgstr "关机"
 
 msgid "Size"
 msgstr "大小"
@@ -687,16 +685,16 @@ msgid "Unknown Heater"
 msgstr "未知加热器"
 
 msgid "Unknown screw position"
-msgstr ""
+msgstr "未知的螺丝位置"
 
 msgid "Unload"
 msgstr "卸载"
 
 msgid "Unretract Extra Length"
-msgstr ""
+msgstr "超长解压"
 
 msgid "Unretract Speed"
-msgstr ""
+msgstr "松开速度"
 
 msgid "Up To Date"
 msgstr "最新的"
@@ -736,7 +734,7 @@ msgid_plural "commits"
 msgstr[0] "更改"
 
 msgid "dBm"
-msgstr ""
+msgstr "dBm"
 
 msgid "hour"
 msgid_plural "hours"
@@ -746,7 +744,7 @@ msgid "minutes"
 msgstr "分钟"
 
 msgid "mm"
-msgstr ""
+msgstr "毫米"
 
 msgid "mm/s"
 msgstr ""
@@ -756,6 +754,45 @@ msgstr ""
 
 msgid "mm³/s"
 msgstr ""
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
+msgstr "机器连接到网络后，使用同一局域网的设备可以通过访问IP来控制机器"
+
+msgid "Connect"
+msgstr "连接"
+
+msgid "Connecting"
+msgstr "连接中"
+
+msgid "Connect Network"
+msgstr "连接网络"
+
+msgid "Leveling Calibration"
+msgstr "水平校准"
+
+msgid "Next"
+msgstr "下一页"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "请按照以下步骤来校准机器，详细情况请参考手册"
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr ".操作Z轴校准设置偏移"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2.操作床身水平仪，调整床身的平整度"
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3.操作床网自动调平"
+
+msgid "Your languages"
+msgstr "你的语言"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Back"
+msgstr "返回"
 
 #~ msgid "Sort:"
 #~ msgstr "排序:"

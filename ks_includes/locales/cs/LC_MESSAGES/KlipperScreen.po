@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Czech\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-29 09:28-0600\n"
-"PO-Revision-Date: 2023-01-29 09:27-0600\n"
+"PO-Revision-Date: 2023-05-09 16:14+0800\n"
 "Last-Translator: \n"
 "Language-Team: Jan Stanka (stanky@email.cz)\n"
 "Language: cs\n"
@@ -16,14 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, python-format
 msgid "%s will be updated to version"
 msgstr "%s bude aktualizováno na verzi"
 
 msgid "(default)"
-msgstr ""
+msgstr "(výchozí)"
 
 msgid "24 Hour Time"
 msgstr "24 hod formát"
@@ -112,7 +112,7 @@ msgid "Calibrating"
 msgstr "Kalibruji"
 
 msgid "Camera"
-msgstr ""
+msgstr "Fotoaparát"
 
 msgid "Can't set above the maximum:"
 msgstr "Nemohu nastavit víc než max:"
@@ -176,7 +176,7 @@ msgid "Date"
 msgstr "Datum"
 
 msgid "Delete Directory?"
-msgstr ""
+msgstr "Smazat adresář?"
 
 msgid "Delete File?"
 msgstr "Smazat soubor?"
@@ -270,7 +270,7 @@ msgid "Full Update"
 msgstr "Úplný update"
 
 msgid "Fullscreen"
-msgstr ""
+msgstr "Celá obrazovka"
 
 msgid "Go Back"
 msgstr "Zpět"
@@ -288,7 +288,7 @@ msgid "Hide sensors in Temp."
 msgstr "Skrýt senzory v Temp."
 
 msgid "Hide temp."
-msgstr "Skrýt teplotu"
+msgstr "Skrýt teplotu."
 
 msgid "Home All"
 msgstr "Zaparkovat XYZ"
@@ -321,7 +321,7 @@ msgid "Initializing printer..."
 msgstr "Startuji tiskárnu ..."
 
 msgid "Input Shaper"
-msgstr ""
+msgstr "Tvarovač vstupů"
 
 msgid "Interface"
 msgstr "Rozhraní"
@@ -449,9 +449,7 @@ msgstr "Nikdy"
 msgid "New"
 msgstr "Nový"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
 msgstr "Nepodporováno autodetekcí, nakonfiguruj v klipperscreen.conf"
 
 msgid "Nothing selected"
@@ -552,7 +550,7 @@ msgid "Refresh"
 msgstr "Obnovit"
 
 msgid "Rename/Move:"
-msgstr ""
+msgstr "Přejmenování/přesun:"
 
 msgid "Restart"
 msgstr "Restart"
@@ -655,7 +653,7 @@ msgid "Speed:"
 msgstr "Rychlost:"
 
 msgid "Square Corner Velocity"
-msgstr ""
+msgstr "Čtvercová rohová rychlost"
 
 msgid "Start"
 msgstr "Start"
@@ -737,7 +735,7 @@ msgstr "Z offset:"
 
 msgid "commit"
 msgid_plural "commits"
-msgstr[0] ""
+msgstr[0] "odevzdat"
 msgstr[1] ""
 msgstr[2] ""
 
@@ -764,6 +762,45 @@ msgstr "mm/s²"
 
 msgid "mm³/s"
 msgstr "mm³/s"
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
+msgstr "Po připojení stroje k síti mohou zařízení používající stejnou síť LAN ovládat stroj přístupem k IP adrese."
+
+msgid "Back"
+msgstr "Zpět"
+
+msgid "Connect"
+msgstr "Připojení"
+
+msgid "Connecting"
+msgstr "Připojení"
+
+msgid "Connect Network"
+msgstr "Připojení k síti"
+
+msgid "Leveling Calibration"
+msgstr "Kalibrace nivelace"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "Při kalibraci přístroje postupujte podle následujících kroků, podrobnosti naleznete v příručce."
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1.Operace Nastavení posunu kalibrace Z"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2.Ovládejte vodováhu lůžka, abyste nastavili rovinnost lůžka."
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3.Operate Bed Mesh automatické vyrovnávání"
+
+msgid "Your languages"
+msgstr "Vaše jazyky"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Next"
+msgstr "Další"
 
 #~ msgid "Decrease"
 #~ msgstr "Snížit"

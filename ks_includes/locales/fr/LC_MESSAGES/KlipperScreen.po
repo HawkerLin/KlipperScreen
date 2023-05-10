@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2022-11-30 18:11-0300\n"
+"PO-Revision-Date: 2023-05-09 15:53+0800\n"
 "Last-Translator: O. Robardet\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -90,6 +90,9 @@ msgstr "Fermeture automatique des notifications"
 msgid "Auto-scroll"
 msgstr "Défilement automatique"
 
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
+msgstr "Une fois connecté au réseau, vous pouvez opérer l’imprimante via l’adresse IP par un équipement branché au même réseau"
+
 msgid "Bed Level"
 msgstr "Nivellement"
 
@@ -98,6 +101,9 @@ msgstr "Maillage du plateau"
 
 msgid "Bed screw configuration:"
 msgstr "Configuration des vis:"
+
+msgid "Back"
+msgstr "Retour"
 
 msgid "Calibrate"
 msgstr "Calibrer"
@@ -168,6 +174,15 @@ msgstr "Continuer"
 
 msgid "Cooldown"
 msgstr "Refroidir"
+
+msgid "Connect"
+msgstr "Connecté"
+
+msgid "Connecting"
+msgstr "Connexion"
+
+msgid "Connect Network"
+msgstr "Connexion au réseau"
 
 msgid "Date"
 msgstr "Date"
@@ -279,7 +294,7 @@ msgid "Hide"
 msgstr "Masquer"
 
 msgid "Hide sensors in Temp."
-msgstr "Masquer les capteurs dans Températures"
+msgstr "Masquer les capteurs dans Températures."
 
 msgid "Hide temp."
 msgstr "Masquer temp."
@@ -327,7 +342,7 @@ msgid "Invalid"
 msgstr "Invalide"
 
 msgid "Invalid password"
-msgstr ""
+msgstr "Mot de passe non valide"
 
 msgid "Invert X"
 msgstr "Inverser l'axe X"
@@ -379,6 +394,9 @@ msgstr "Charger"
 
 msgid "Lower Nozzle"
 msgstr "Rapprocher la buse"
+
+msgid "Leveling Calibration"
+msgstr "Nivellement et calibration"
 
 msgid "Macro shortcut on sidebar"
 msgstr "Raccourci des Macros sur la barre latérale"
@@ -446,15 +464,14 @@ msgstr "Jamais"
 msgid "New"
 msgstr "Nouveau"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
-msgstr ""
-"Non pris en charge pour la détection automatique, il doit être configuré "
-"dans klipperscreen.conf"
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
+msgstr "Non pris en charge pour la détection automatique, il doit être configuré dans klipperscreen.conf"
 
 msgid "Nothing selected"
 msgstr "Rien de sélectionné"
+
+msgid "Next"
+msgstr "Suivant"
 
 #, python-format
 msgid "Outdated by %d"
@@ -526,7 +543,19 @@ msgid "Profile Name:"
 msgstr "Nom du profil:"
 
 msgid "Provide KlipperScreen.log when asking for help.\n"
-msgstr ""
+msgstr "Fournissez KlipperScreen.log lorsque vous demandez de l’aide.\n"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "Veuillez suivre ces instructions pour calibrer la machine.  Reférez-vous au manuel d’instruction pour plus de détails"
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1.Calibration du décalage du Z"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2.Ajustement du niveau du plateau"
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3.Nivellement automatique"
 
 msgid "Quad Gantry Level"
 msgstr "Portique à quatre niveaux"
@@ -762,6 +791,9 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "Your languages"
+msgstr "Votre langue"
+
 #~ msgid "Sort:"
 #~ msgstr "Trier:"
 
@@ -921,9 +953,6 @@ msgstr "mm³/s"
 
 #~ msgid "Network Info"
 #~ msgstr "Information réseau "
-
-#~ msgid "Back"
-#~ msgstr "Retour"
 
 #~ msgid "Extrusion"
 #~ msgstr "Extrusion"

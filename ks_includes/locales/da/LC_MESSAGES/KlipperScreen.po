@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -27,7 +27,7 @@ msgid "A FIRMWARE_RESTART may fix the issue."
 msgstr "En FIRMWARE_RESTART kan løse problemet."
 
 msgid "ADXL Not Configured"
-msgstr ""
+msgstr "ADXL Ikke konfigurert"
 
 msgid "Abort"
 msgstr "Annuller"
@@ -42,21 +42,21 @@ msgid "Actions"
 msgstr "Muligheder"
 
 msgid "Add profile"
-msgstr ""
+msgstr "Legg til profil"
 
 msgid "Apply"
-msgstr ""
+msgstr "Søke om"
 
 #, python-format
 msgid "Apply %.2f offset to Endstop?"
-msgstr ""
+msgstr "Bruk %.2f offset til Endestopp?"
 
 #, python-format
 msgid "Apply %s%.2f offset to Probe?"
-msgstr ""
+msgstr "Bruk %s%.2f offset til Probe?"
 
 msgid "Are you sure do you want to exclude the object?"
-msgstr ""
+msgstr "Er du sikker på, at du ønsker at udelukke objektet?"
 
 msgid "Are you sure you want to run Emergency Stop?"
 msgstr "Er du sikker på, at du vil køre nødstop?"
@@ -80,7 +80,7 @@ msgid "Auto-calibrate"
 msgstr "Automatisk kalibrering"
 
 msgid "Auto-close notifications"
-msgstr ""
+msgstr "Automatisk lukning af meddelelser"
 
 msgid "Auto-scroll"
 msgstr "Auto-scroll"
@@ -92,7 +92,7 @@ msgid "Bed Mesh"
 msgstr "Bed-mesh"
 
 msgid "Bed screw configuration:"
-msgstr ""
+msgstr "Konfiguration af sengeskruer:"
 
 msgid "Calibrate"
 msgstr "Kalibrér"
@@ -128,13 +128,13 @@ msgid "Channel"
 msgstr "Kanal"
 
 msgid "Check ADXL Wiring"
-msgstr ""
+msgstr "Kontroller ADXL-ledninger"
 
 msgid "Checking for updates, please wait..."
-msgstr ""
+msgstr "Tjekker for opdateringer, vent venligst..."
 
 msgid "Clear"
-msgstr ""
+msgstr "Klar"
 
 msgid "Close"
 msgstr "Luk"
@@ -171,7 +171,7 @@ msgid "Decrease"
 msgstr "Formindsk"
 
 msgid "Delete File?"
-msgstr ""
+msgstr "Slet fil?"
 
 msgid "Deselect"
 msgstr "Fravælg"
@@ -199,10 +199,10 @@ msgid "Estimated Time Method"
 msgstr "Metode til beregning af tid"
 
 msgid "Exclude Object"
-msgstr ""
+msgstr "Udelukke objekt"
 
 msgid "Extra Large"
-msgstr ""
+msgstr "Ekstra stor"
 
 msgid "Extrude"
 msgstr "Ekstrudér"
@@ -250,10 +250,10 @@ msgid "Firmware Restart"
 msgstr "Firmware Genstart"
 
 msgid "Flow:"
-msgstr ""
+msgstr "Flow:"
 
 msgid "Flowrate:"
-msgstr ""
+msgstr "Flowrate:"
 
 msgid "Font Size"
 msgstr "Skriftstørrelse"
@@ -265,7 +265,7 @@ msgid "Go Back"
 msgstr "Gå tilbage"
 
 msgid "Height:"
-msgstr ""
+msgstr "Højde:"
 
 msgid "Hidden"
 msgstr "Skjult"
@@ -277,7 +277,7 @@ msgid "Hide sensors in Temp."
 msgstr "Skjul sensorer i Temp."
 
 msgid "Hide temp."
-msgstr ""
+msgstr "Skjul temp."
 
 msgid "Home All"
 msgstr "Home alle"
@@ -298,7 +298,7 @@ msgid "Homing"
 msgstr "Homing"
 
 msgid "Host"
-msgstr ""
+msgstr "Vært"
 
 msgid "Hostname"
 msgstr "Værtsnavn"
@@ -313,7 +313,7 @@ msgid "Initializing printer..."
 msgstr "Initialiserer printer..."
 
 msgid "Input Shaper"
-msgstr ""
+msgstr "Input Shaper"
 
 msgid "Interface"
 msgstr "Interface"
@@ -322,7 +322,7 @@ msgid "Invalid"
 msgstr "Ugyldig"
 
 msgid "Invalid password"
-msgstr ""
+msgstr "Ugyldig adgangskode"
 
 msgid "Invert X"
 msgstr "Invertér X"
@@ -361,7 +361,7 @@ msgid "Large"
 msgstr "Stor"
 
 msgid "Layer:"
-msgstr ""
+msgstr "Lag:"
 
 msgid "Left:"
 msgstr "Resterende:"
@@ -385,7 +385,7 @@ msgid "Main Menu"
 msgstr "Hovedmenu"
 
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 msgid "Max Acceleration"
 msgstr "Maks. Acceleration"
@@ -397,16 +397,16 @@ msgid "Max Velocity"
 msgstr "Maks. hastighed"
 
 msgid "Maximum"
-msgstr ""
+msgstr "Maksimum"
 
 msgid "Measure Both"
-msgstr ""
+msgstr "Måle begge dele"
 
 msgid "Measure X"
-msgstr ""
+msgstr "Foranstaltning X"
 
 msgid "Measure Y"
-msgstr ""
+msgstr "Foranstaltning Y"
 
 msgid "Medium"
 msgstr "Mellem"
@@ -415,7 +415,7 @@ msgid "Menu"
 msgstr "Menu"
 
 msgid "Mesh calibrate"
-msgstr ""
+msgstr "Kalibrering af net"
 
 msgid "Modified"
 msgstr "Ændret"
@@ -436,15 +436,13 @@ msgid "Network"
 msgstr "Netværk"
 
 msgid "Never"
-msgstr ""
+msgstr "Aldrig"
 
 msgid "New"
 msgstr "Ny"
 
-msgid ""
-"Not supported for auto-detection, it needs to be configured in klipperscreen."
-"conf"
-msgstr ""
+msgid "Not supported for auto-detection, it needs to be configured in klipperscreen.conf"
+msgstr "Ikke understøttet til automatisk detektion, det skal konfigureres i klipperscreen.conf"
 
 msgid "Nothing selected"
 msgstr "Intet valgt"
@@ -462,7 +460,7 @@ msgstr[0] "Pakken vil blive opdateret"
 msgstr[1] "Pakker vil blive opdateret"
 
 msgid "Part Fan"
-msgstr ""
+msgstr "Del ventilator"
 
 msgid "Password saved"
 msgstr "Adgangskode gemt"
@@ -477,7 +475,7 @@ msgid "Perform a full upgrade?"
 msgstr "Vil du udføre en fuld opgradering?"
 
 msgid "Pins"
-msgstr ""
+msgstr "Stifter"
 
 msgid "Please recompile and flash the micro-controller."
 msgstr "Genkompilér og flash mikrocontrolleren."
@@ -489,7 +487,7 @@ msgid "Power On Printer"
 msgstr "Tænd printer"
 
 msgid "Pressure Advance:"
-msgstr ""
+msgstr "Trykforskud:"
 
 msgid "Print"
 msgstr "Print"
@@ -501,25 +499,25 @@ msgid "Print Time"
 msgstr "Printtid"
 
 msgid "Printer"
-msgstr ""
+msgstr "Printer"
 
 msgid "Printer Connections"
 msgstr "Printer forbindelser"
 
 msgid "Printer Select"
-msgstr ""
+msgstr "Vælg printer"
 
 msgid "Printing"
 msgstr "Printer"
 
 msgid "Probe Offset"
-msgstr ""
+msgstr "Offset af sonde"
 
 msgid "Profile Name:"
 msgstr "Profilnavn:"
 
 msgid "Provide KlipperScreen.log when asking for help.\n"
-msgstr ""
+msgstr "Angiv KlipperScreen.log, når du beder om hjælp.\n"
 
 msgid "Quad Gantry Level"
 msgstr "Justering af 4-søjlers konstruktion"
@@ -540,7 +538,7 @@ msgid "Reference"
 msgstr "Reference"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Opdater"
 
 msgid "Restart"
 msgstr "Genstart"
@@ -552,19 +550,19 @@ msgid "Retract"
 msgstr "Retract"
 
 msgid "Retraction"
-msgstr ""
+msgstr "Tilbagetrækning"
 
 msgid "Retraction Length"
-msgstr ""
+msgstr "Tilbagetrækningslængde"
 
 msgid "Retraction Speed"
-msgstr ""
+msgstr "Hastighed ved tilbagetrækning"
 
 msgid "Retry"
-msgstr ""
+msgstr "Genoptag"
 
 msgid "Retrying"
-msgstr ""
+msgstr "Genforsøg"
 
 msgid "Save"
 msgstr "Gem"
@@ -583,7 +581,7 @@ msgstr "Gemt"
 
 #, python-format
 msgid "Saved offset: %s"
-msgstr ""
+msgstr "Opbevaret offset: %s"
 
 msgid "Screen DPMS"
 msgstr "Skærm DPMS"
@@ -614,10 +612,10 @@ msgid "Show"
 msgstr "At vise"
 
 msgid "Show Heater Power"
-msgstr ""
+msgstr "Vis varmeapparatets effekt"
 
 msgid "Shutdown"
-msgstr ""
+msgstr "Lukning"
 
 msgid "Size"
 msgstr "Størrelse"
@@ -629,7 +627,7 @@ msgid "Slicer Time correction (%)"
 msgstr "Slicer Tidskorrektion (%)"
 
 msgid "Slicer:"
-msgstr ""
+msgstr "Skærer:"
 
 msgid "Small"
 msgstr "Lille"
@@ -683,16 +681,16 @@ msgid "Unknown Heater"
 msgstr "Ukendt varmelegeme"
 
 msgid "Unknown screw position"
-msgstr ""
+msgstr "Ukendt skruestilling"
 
 msgid "Unload"
 msgstr "Tilbagetræk"
 
 msgid "Unretract Extra Length"
-msgstr ""
+msgstr "Udrulning af ekstra længde"
 
 msgid "Unretract Speed"
-msgstr ""
+msgstr "Hastighed for udtrækning"
 
 msgid "Up To Date"
 msgstr "Up-to-Date"
@@ -725,7 +723,7 @@ msgid "Z Tilt"
 msgstr "Z-tilt"
 
 msgid "Z offset:"
-msgstr ""
+msgstr "Z forskydning:"
 
 msgid "commit"
 msgid_plural "commits"
@@ -753,7 +751,47 @@ msgid "mm/s²"
 msgstr "mm/s²"
 
 msgid "mm³/s"
+msgstr "mm³/s"
+
+msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
 msgstr ""
+"Når maskinen er tilsluttet til netværket, kan enheder, der bruger det samme LAN, styre maskinen ved at få adgang til IP"
+
+msgid "Connect"
+msgstr "Forbind"
+
+msgid "Connecting"
+msgstr "Tilslutning af"
+
+msgid "Connect Network"
+msgstr "Forbind netværk"
+
+msgid "Leveling Calibration"
+msgstr "Kalibrering af nivellering"
+
+msgid "Next"
+msgstr "Næste"
+
+msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
+msgstr "Følg nedenstående trin for at kalibrere maskinen, se manualen for detaljer"
+
+msgid "1.Operation Z Calibration Setting Offset"
+msgstr "1.Operation Z kalibreringsindstilling Offset"
+
+msgid "2.Operate Bed Level to adjust the flatness of the bed"
+msgstr "2.Operate Bed Level for at justere sengens planhed"
+
+msgid "3.Operate Bed Mesh automatic leveling"
+msgstr "3.Operate Bed Mesh automatisk nivellering"
+
+msgid "Your languages"
+msgstr "Dine sprog"
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Back"
+msgstr "Tilbage"
 
 #~ msgid "Sort:"
 #~ msgstr "Sortere: "
