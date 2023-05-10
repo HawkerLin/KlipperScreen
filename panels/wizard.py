@@ -182,7 +182,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_lbl.set_valign(Gtk.Align.CENTER)
         #self.wizard_3_lbl.set_ellipsize(Pango.EllipsizeMode.END)
         #self.wizard_3_lbl.set_label("Wizard")
-        text = _(Leveling Calibration)
+        text = _("Leveling Calibration")
         self.wizard_3_lbl.set_markup("<span font='DejaVu Sans-bold 30'>{}</span>".format(text))
         self.wizard_3_title = Gtk.Box()
         #self.wizard_3_title.get_style_context().add_class("title_bar")
