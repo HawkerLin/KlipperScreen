@@ -123,10 +123,10 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_text.set_markup("<span font='DejaVu Sans 20'>{}</span>".format(text))
         self.wizard_2_txt_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.wizard_2_txt_box.set_halign(Gtk.Align.CENTER)
-        self.wizard_2_txt_box.set_size_request(450, 470)
+        self.wizard_2_txt_box.set_size_request(450, 480)
         self.wizard_2_txt_box.pack_start(image, False, False, 10)
         #self.wizard_2_txt_box.add(self.wizard_2_text)
-        self.wizard_2_txt_box.pack_start(self.wizard_2_text, False, False, 20)
+        self.wizard_2_txt_box.pack_start(self.wizard_2_text, False, False, 10)
 
         gws = netifaces.gateways()
         logging.info("init:gws:" + str(gws))
