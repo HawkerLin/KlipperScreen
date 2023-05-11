@@ -145,7 +145,7 @@ class WizardPanel(ScreenPanel):
         logging.info("init:self.interface:" + str(self.interface))
         res = netifaces.ifaddresses(self.interface)
         if netifaces.AF_INET in res and len(res[netifaces.AF_INET]) > 0:
-            ip = "IP:" + res[netifaces.AF_INET][0]['addr']
+            ip = "IP: " + res[netifaces.AF_INET][0]['addr']
         else:
             ip = "Connect"
         self.connect_wifi = self._gtk.Button("", ip, f"color1")
