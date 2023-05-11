@@ -180,6 +180,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_page_2 = Gtk.Grid()
         self.wizard_page_2.attach(self.wizard_2_title, 0, 0, 2, 1)
         self.wizard_page_2.attach(self.wifi_logo, 0, 1, 2, 1)
+        self.wizard_page_2.attach(self.wizard_2_txt_box, 0, 1, 2, 1)
         self.wizard_page_2.attach(self.wizard_wifi_butt, 0, 2, 2, 1)
         self.wizard_page_2.attach(self.wizard_2_back, 0, 3, 1, 1)
         self.wizard_page_2.attach(self.wizard_2_next, 1, 3, 1, 1)
