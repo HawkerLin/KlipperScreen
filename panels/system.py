@@ -105,9 +105,9 @@ class SystemPanel(ScreenPanel):
         box6.hide()
         box7.hide()
         grid.attach(box0, 0, 0, 1, 1)
-        grid.attach(box1, 0, 0, 1, 1)
-        grid.attach(box2, 0, 0, 1, 1)
-        grid.attach(box3, 0, 0, 1, 1)
+        grid.attach(box1, 1, 0, 1, 1)
+        grid.attach(box2, 2, 0, 1, 1)
+        grid.attach(box3, 3, 0, 1, 1)
 
         grid.attach(update_all, 0, 1, 1, 1)
         grid.attach(self.refresh, 1, 1, 1, 1)
@@ -115,9 +115,9 @@ class SystemPanel(ScreenPanel):
         grid.attach(shutdown, 3, 1, 1, 1)
 
         grid.attach(box4, 0, 2, 1, 1)
-        grid.attach(box5, 0, 2, 1, 1)
-        grid.attach(box6, 0, 2, 1, 1)
-        grid.attach(box7, 0, 2, 1, 1)
+        grid.attach(box5, 1, 2, 1, 1)
+        grid.attach(box6, 2, 2, 1, 1)
+        grid.attach(box7, 3, 2, 1, 1)
         self.content.add(grid)
 
     def activate(self):
