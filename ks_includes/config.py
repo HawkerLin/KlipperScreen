@@ -485,7 +485,7 @@ class KlipperScreenConfig:
         # save_config.set()
 
         save_output = self._build_config_string(save_config).split("\n")
-        logging.info(f"看这里有没有{save_output}")
+        #logging.info(f"看这里有没有{save_output}")
         for i in range(len(save_output)):
             save_output[i] = f"{self.do_not_edit_prefix} {save_output[i]}"
 
