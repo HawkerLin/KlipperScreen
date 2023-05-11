@@ -132,7 +132,7 @@ class KlipperScreen(Gtk.Window):
         self.vertical_mode = self.width < self.height
         logging.info(f"Screen resolution: {self.width}x{self.height}")
         self.theme = self._config.get_main_config().get('theme')
-        self.wizard_bool = self._config.get_main_config().get('wizard_bool')
+        self.wizard_bool = self._config.get_main_config().getboolean('wizard_bool', fallback=False)
         self.show_cursor = self._config.get_main_config().getboolean("show_cursor", fallback=False)
         self.gtk = KlippyGtk(self)
         self.init_style()
