@@ -107,11 +107,11 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_title.add(self.wizard_2_lbl)
 
         image = self._gtk.Image("wifi", self._gtk.content_width * .4, self._gtk.content_height * .4)
-        self.wifi_logo = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        self.wifi_logo.set_halign(Gtk.Align.CENTER)
+        #self.wifi_logo = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        #self.wifi_logo.set_halign(Gtk.Align.CENTER)
         #self.wifi_logo.set_valign(Gtk.Align.CENTER)
         #self.wifi_logo.set_size_request(480, 100)
-        self.wifi_logo.pack_start(image, False, False, 0)#将image添加到self.logo的起始位置
+        #self.wifi_logo.pack_start(image, False, False, 0)#将image添加到self.logo的起始位置
 
         self.wizard_2_text = Gtk.Label()
         #self.wizard_2_text.set_hexpand(True)
@@ -122,10 +122,11 @@ class WizardPanel(ScreenPanel):
         text = _("After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP")
         self.wizard_2_text.set_markup("<span font='DejaVu Sans 20'>{}</span>".format(text))
         self.wizard_2_txt_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        self.wizard_2_txt_box.set_halign(Gtk.Align.CENTER)
         self.wizard_2_txt_box.set_size_request(450, 400)
-        #self.wizard_2_txt_box.add(image)
+        self.wizard_2_txt_box.pack_start(image, False, False, 10)
         #self.wizard_2_txt_box.add(self.wizard_2_text)
-        self.wizard_2_txt_box.pack_start(self.wizard_2_text, True, True, 20)
+        self.wizard_2_txt_box.add(self.wizard_2_text)
 
         gws = netifaces.gateways()
         logging.info("init:gws:" + str(gws))
@@ -180,11 +181,11 @@ class WizardPanel(ScreenPanel):
 
         self.wizard_page_2 = Gtk.Grid()
         self.wizard_page_2.attach(self.wizard_2_title, 0, 0, 2, 1)
-        self.wizard_page_2.attach(self.wifi_logo, 0, 1, 2, 1)
-        self.wizard_page_2.attach(self.wizard_2_txt_box, 0, 2, 2, 1)
-        self.wizard_page_2.attach(self.wizard_wifi_butt, 0, 3, 2, 1)
-        self.wizard_page_2.attach(self.wizard_2_back, 0, 4, 1, 1)
-        self.wizard_page_2.attach(self.wizard_2_next, 1, 4, 1, 1)
+        #self.wizard_page_2.attach(self.wifi_logo, 0, 1, 2, 1)
+        self.wizard_page_2.attach(self.wizard_2_txt_box, 0, 1, 2, 1)
+        self.wizard_page_2.attach(self.wizard_wifi_butt, 0, 2, 2, 1)
+        self.wizard_page_2.attach(self.wizard_2_back, 0, 3, 1, 1)
+        self.wizard_page_2.attach(self.wizard_2_next, 1, 3, 1, 1)
         self._screen.add(self._screen.wizard.wizard_page_2)
         self._screen.show_all()
 
