@@ -159,7 +159,7 @@ class WizardPanel(ScreenPanel):
 
         self.second_nex = self._gtk.Button("arrow-right",_("Next"), f"color2")
         self.second_nex.connect("clicked", self.second_next)
-        self.second_nex.set_size_request(210, 75)
+        self.second_nex.set_size_request(210, 80)
         # self.second_nex.set_halign(Gtk.Align.CENTER)
         # self.second_nex.set_valign(Gtk.Align.CENTER)
         self.wizard_2_next = Gtk.Box()
@@ -172,7 +172,7 @@ class WizardPanel(ScreenPanel):
 
         self.second_bac = self._gtk.Button("arrow-left",_("Back"), f"color1")
         self.second_bac.connect("clicked", self.second_back)
-        self.second_bac.set_size_request(210, 75)
+        self.second_bac.set_size_request(210, 80)
         # self.second_bac.set_halign(Gtk.Align.CENTER)
         # self.second_bac.set_valign(Gtk.Align.CENTER)
         self.wizard_2_back = Gtk.Box()
