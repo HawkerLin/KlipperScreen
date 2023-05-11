@@ -110,7 +110,7 @@ class WizardPanel(ScreenPanel):
         self.wifi_logo = Gtk.Box()
         #self.wifi_logo.set_halign(Gtk.Align.CENTER)
         #self.wifi_logo.set_valign(Gtk.Align.CENTER)
-        self.wifi_logo.set_size_request(480, 186)
+        self.wifi_logo.set_size_request(480, 100)
         self.wifi_logo.pack_end(image, True, True, 20)#将image添加到self.logo的起始位置
         #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
 
@@ -123,7 +123,7 @@ class WizardPanel(ScreenPanel):
         text = _("After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP")
         self.wizard_2_text.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text))
         self.wizard_2_txt_box = Gtk.Box()
-        self.wizard_2_txt_box.set_size_request(480, 370)
+        self.wizard_2_txt_box.set_size_request(480, 440)
         self.wizard_2_txt_box.pack_start(self.wizard_2_text, True, True, 20)
 
         gws = netifaces.gateways()
