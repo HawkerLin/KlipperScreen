@@ -479,7 +479,7 @@ class KlipperScreenConfig:
                     if section not in save_config.sections():
                         save_config.add_section(section)
                     save_config.set(section, item, str(value))
-
+        logging.info(f"看这里有没有{save_config}")
         save_output = self._build_config_string(save_config).split("\n")
         for i in range(len(save_output)):
             save_output[i] = f"{self.do_not_edit_prefix} {save_output[i]}"
