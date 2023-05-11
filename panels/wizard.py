@@ -110,8 +110,8 @@ class WizardPanel(ScreenPanel):
         self.wifi_logo = Gtk.Box()
         #self.wifi_logo.set_halign(Gtk.Align.CENTER)
         #self.wifi_logo.set_valign(Gtk.Align.CENTER)
-        self.wifi_logo.set_size_request(480, 100)
-        self.wifi_logo.pack_end(image, True, True, 20)#将image添加到self.logo的起始位置
+        #self.wifi_logo.set_size_request(480, 100)
+        #self.wifi_logo.pack_end(image, True, True, 20)#将image添加到self.logo的起始位置
         #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
 
         self.wizard_2_text = Gtk.Label()
@@ -124,7 +124,9 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_text.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text))
         self.wizard_2_txt_box = Gtk.Box()
         self.wizard_2_txt_box.set_size_request(480, 440)
-        self.wizard_2_txt_box.pack_start(self.wizard_2_text, True, True, 20)
+        self.wizard_2_txt_box.add(image)
+        self.wizard_2_txt_box.add(self.wizard_2_text)
+        #self.wizard_2_txt_box.pack_start(self.wizard_2_text, True, True, 20)
 
         gws = netifaces.gateways()
         logging.info("init:gws:" + str(gws))
@@ -211,7 +213,7 @@ class WizardPanel(ScreenPanel):
         #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
 
         self.wizard_3_text1 = Gtk.Label()
-        self.wizard_3_text1.set_hexpand(True)
+        #self.wizard_3_text1.set_hexpand(True)
         self.wizard_3_text1.set_halign(Gtk.Align.CENTER)
         self.wizard_3_text1.set_valign(Gtk.Align.CENTER)
         self.wizard_3_text1.set_line_wrap(True)
@@ -220,7 +222,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_text1.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text1))
 
         self.wizard_3_text2 = Gtk.Label()
-        self.wizard_3_text2.set_hexpand(True)
+        #self.wizard_3_text2.set_hexpand(True)
         self.wizard_3_text2.set_halign(Gtk.Align.CENTER)
         self.wizard_3_text2.set_valign(Gtk.Align.CENTER)
         self.wizard_3_text2.set_line_wrap(True)
@@ -229,7 +231,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_text2.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text2))
 
         self.wizard_3_text3 = Gtk.Label()
-        self.wizard_3_text3.set_hexpand(True)
+        #self.wizard_3_text3.set_hexpand(True)
         self.wizard_3_text3.set_halign(Gtk.Align.CENTER)
         self.wizard_3_text3.set_valign(Gtk.Align.CENTER)
         self.wizard_3_text3.set_line_wrap(True)
@@ -238,7 +240,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_text3.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text3))
 
         self.wizard_3_text4 = Gtk.Label()
-        self.wizard_3_text4.set_hexpand(True)
+        #self.wizard_3_text4.set_hexpand(True)
         self.wizard_3_text4.set_halign(Gtk.Align.CENTER)
         self.wizard_3_text4.set_valign(Gtk.Align.CENTER)
         self.wizard_3_text4.set_line_wrap(True)
