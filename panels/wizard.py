@@ -195,6 +195,9 @@ class WizardPanel(ScreenPanel):
         self._screen.show_all()
 
     def show_wizard_3(self):
+        self.blank = Gtk.Box()
+        self.blank.set_size_request(480, 60)
+
         self.wizard_3_lbl = Gtk.Label()
         self.wizard_3_lbl.set_hexpand(True)
         self.wizard_3_lbl.set_halign(Gtk.Align.CENTER)
@@ -209,7 +212,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_title.set_valign(Gtk.Align.START)
         self.wizard_3_title.add(self.wizard_3_lbl)
 
-        image = self._gtk.Image("level", self._gtk.content_width * .3, self._gtk.content_height * .3)
+        image = self._gtk.Image("level", self._gtk.content_width * .4, self._gtk.content_height * .4)
         #self.level_logo = Gtk.Box()
         #self.level_logo.set_halign(Gtk.Align.CENTER)
         #self.level_logo.set_valign(Gtk.Align.CENTER)
@@ -254,7 +257,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_text4.set_markup("<span font='DejaVu Sans 20'>{}</span>".format(text4))
 
         self.wizard_3_txt_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        self.wizard_3_txt_box.set_size_request(480, 570)
+        self.wizard_3_txt_box.set_size_request(480, 500)
         self.wizard_3_txt_box.pack_start(image, False, False, 20)
         self.wizard_3_txt_box.add(self.wizard_3_text1)
         self.wizard_3_txt_box.add(self.wizard_3_text2)
@@ -284,11 +287,12 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_back.add(self.third_bac)
 
         self.wizard_page_3 = Gtk.Grid()
-        self.wizard_page_3.attach(self.wizard_3_title, 0, 0, 2, 1)
+        self.wizard_page_3.attach(self.blank, 0, 0, 2, 1)
+        self.wizard_page_3.attach(self.wizard_3_title, 0, 1, 2, 1)
         #self.wizard_page_3.attach(self.level_logo, 0, 1, 2, 1)
-        self.wizard_page_3.attach(self.wizard_3_txt_box, 0, 1, 2, 1)
-        self.wizard_page_3.attach(self.wizard_3_back, 0, 2, 1, 1)
-        self.wizard_page_3.attach(self.wizard_3_next, 1, 2, 1, 1)
+        self.wizard_page_3.attach(self.wizard_3_txt_box, 0, 2, 2, 1)
+        self.wizard_page_3.attach(self.wizard_3_back, 0, 3, 1, 1)
+        self.wizard_page_3.attach(self.wizard_3_next, 1, 3, 1, 1)
         self._screen.add(self._screen.wizard.wizard_page_3)
         self._screen.show_all()
 
