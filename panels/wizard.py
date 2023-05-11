@@ -248,7 +248,7 @@ class WizardPanel(ScreenPanel):
         text4 = _("3.Operate Bed Mesh automatic leveling")
         self.wizard_3_text4.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text4))
 
-        self.wizard_3_txt_box = Gtk.Box()
+        self.wizard_3_txt_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.wizard_3_txt_box.set_size_request(480, 473)
         self.wizard_3_txt_box.add(self.wizard_3_text1)
         self.wizard_3_txt_box.add(self.wizard_3_text2)
