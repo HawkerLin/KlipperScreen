@@ -122,7 +122,7 @@ class WizardPanel(ScreenPanel):
         text = _("After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP")
         self.wizard_2_text.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text))
         self.wizard_2_txt_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        self.wizard_2_txt_box.set_size_request(480, 450)
+        self.wizard_2_txt_box.set_size_request(450, 400)
         #self.wizard_2_txt_box.add(image)
         #self.wizard_2_txt_box.add(self.wizard_2_text)
         self.wizard_2_txt_box.pack_start(self.wizard_2_text, True, True, 20)
