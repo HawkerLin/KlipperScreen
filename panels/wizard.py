@@ -109,16 +109,16 @@ class WizardPanel(ScreenPanel):
         image = self._gtk.Image("wifi", self._gtk.content_width * .3, self._gtk.content_height * .3)
         self.wifi_logo = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.wifi_logo.set_halign(Gtk.Align.CENTER)
-        self.wifi_logo.set_valign(Gtk.Align.CENTER)
+        #self.wifi_logo.set_valign(Gtk.Align.CENTER)
         #self.wifi_logo.set_size_request(480, 100)
         self.wifi_logo.pack_start(image, True, True, 10)#将image添加到self.logo的起始位置
 
         self.wizard_2_text = Gtk.Label()
-        self.wizard_2_text.set_hexpand(True)
+        #self.wizard_2_text.set_hexpand(True)
         self.wizard_2_text.set_halign(Gtk.Align.CENTER)
-        self.wizard_2_text.set_valign(Gtk.Align.CENTER)
+        #self.wizard_2_text.set_valign(Gtk.Align.CENTER)
         self.wizard_2_text.set_line_wrap(True)
-        self.wizard_2_text.set_justify(Gtk.Justification.FILL)
+        self.wizard_2_text.set_justify(Gtk.Justification.CENTER)
         text = _("After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP")
         self.wizard_2_text.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text))
         self.wizard_2_txt_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -216,7 +216,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_text1.set_halign(Gtk.Align.CENTER)
         self.wizard_3_text1.set_valign(Gtk.Align.CENTER)
         self.wizard_3_text1.set_line_wrap(True)
-        self.wizard_3_text1.set_justify(Gtk.Justification.FILL)
+        self.wizard_3_text1.set_justify(Gtk.Justification.CENTER)
         text1 = _("Please follow the steps below to calibrate the machine, refer to the manual for details")
         self.wizard_3_text1.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text1))
 
@@ -225,7 +225,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_text2.set_halign(Gtk.Align.CENTER)
         self.wizard_3_text2.set_valign(Gtk.Align.CENTER)
         self.wizard_3_text2.set_line_wrap(True)
-        self.wizard_3_text2.set_justify(Gtk.Justification.FILL)
+        self.wizard_3_text2.set_justify(Gtk.Justification.CENTER)
         text2 = _("1.Operation Z Calibration Setting Offset")
         self.wizard_3_text2.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text2))
 
@@ -234,7 +234,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_text3.set_halign(Gtk.Align.CENTER)
         self.wizard_3_text3.set_valign(Gtk.Align.CENTER)
         self.wizard_3_text3.set_line_wrap(True)
-        self.wizard_3_text3.set_justify(Gtk.Justification.FILL)
+        self.wizard_3_text3.set_justify(Gtk.Justification.CENTER)
         text3 = _("2.Operate Bed Level to adjust the flatness of the bed")
         self.wizard_3_text3.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text3))
 
@@ -243,7 +243,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_text4.set_halign(Gtk.Align.CENTER)
         self.wizard_3_text4.set_valign(Gtk.Align.CENTER)
         self.wizard_3_text4.set_line_wrap(True)
-        self.wizard_3_text4.set_justify(Gtk.Justification.FILL)
+        self.wizard_3_text4.set_justify(Gtk.Justification.CENTER)
         text4 = _("3.Operate Bed Mesh automatic leveling")
         self.wizard_3_text4.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text4))
 
