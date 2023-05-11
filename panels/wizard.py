@@ -40,15 +40,12 @@ class WizardPanel(ScreenPanel):
         #self.wizard_1_lbl.set_halign(Gtk.Align.END)#水平对齐,CENTER设置为中心
         #self.wizard_1_lbl.set_valign(Gtk.Align.START)
         self.wizard_1_lbl.set_ellipsize(Pango.EllipsizeMode.END)#文本末尾空间不够的话以省略号显示
-        #self.wizard_1_lbl.set_label("Wizard")
-        #self.wizard_1_lbl.set_markup("<span font='DejaVu Sans-bold 33'>Your Languages</span>")
         title = _("Your languages")
         self.wizard_1_lbl.set_markup("<span font='DejaVu Sans-bold 33'>{}</span>".format(title))
         self.wizard_1_title = Gtk.Box()
-        #self.wizard_1_title.get_style_context().add_class("title_bar")
         self.wizard_1_title.set_size_request(240, 80)
-        #self.wizard_1_title.set_valign(Gtk.Align.START)
-        self.wizard_1_title.add(self.wizard_1_lbl)
+        self.wizard_1_title.set_halign(Gtk.Align.START)
+        self.wizard_1_title.pack_start(self.wizard_1_lbl, False, False, 30)
 
         self.first_nex = self._gtk.Button("arrow-right",_("Next"), f"color3")
         self.first_nex.connect("clicked", self.first_next)
