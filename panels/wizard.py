@@ -106,7 +106,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_title.set_valign(Gtk.Align.END)
         self.wizard_2_title.add(self.wizard_2_lbl)
 
-        image = self._gtk.Image("wifi", self._gtk.content_width * .3, self._gtk.content_height * .3)
+        image = self._gtk.Image("wifi", self._gtk.content_width * .4, self._gtk.content_height * .4)
         self.wifi_logo = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.wifi_logo.set_halign(Gtk.Align.CENTER)
         #self.wifi_logo.set_valign(Gtk.Align.CENTER)
@@ -120,7 +120,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_text.set_line_wrap(True)
         self.wizard_2_text.set_justify(Gtk.Justification.CENTER)
         text = _("After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP")
-        self.wizard_2_text.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text))
+        self.wizard_2_text.set_markup("<span font='DejaVu Sans 25'>{}</span>".format(text))
         self.wizard_2_txt_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.wizard_2_txt_box.set_size_request(450, 400)
         #self.wizard_2_txt_box.add(image)
