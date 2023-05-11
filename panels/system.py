@@ -98,7 +98,7 @@ class SystemPanel(ScreenPanel):
         logging.info(f"do nothing")
         # self.get_updates()
     
-    def restore_factory_setting(self):
+    def restore_factory_setting(self, widget):
         bakconf_dir_screen = "~/.Klipperscreen_bakconf/KlipperScreen.confbak"
         bakconf_dir_printer = "~/.Klipperscreen_bakconf/printer.cfgbak"
         current_conf_path = self._screen._config.config_path
