@@ -102,6 +102,7 @@ class SystemPanel(ScreenPanel):
         bakconf_dir_screen = "~/.Klipperscreen_bakconf/KlipperScreen.confbak"
         bakconf_dir_printer = "~/.Klipperscreen_bakconf/printer.cfgbak"
         current_conf_path = self._screen._config.config_path
+        logging.info(f"{current_conf_path}")
         if os.path.isfile(bakconf_dir_printer) :
             with open(bakconf_dir_printer, 'rb') as f:
                 data = f.read()
