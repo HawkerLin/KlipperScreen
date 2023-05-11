@@ -140,15 +140,15 @@ class KlipperScreen(Gtk.Window):
 
 
         
-        if self.wizard_bool == "True":
-            self.wizard = WizardPanel(self, title="wizard")
-            self.add(self.wizard.wizard_page_1)
-            self.base_panel = BasePanel(self, title="Base Panel")
-            self.show_all()
-        elif self.wizard_bool == "False":
-            self.base_panel = BasePanel(self, title="Base Panel")
-            self.add(self.base_panel.main_grid)
-            self.show_all()
+        # if self.wizard_bool == "True":
+        #     self.wizard = WizardPanel(self, title="wizard")
+        #     self.add(self.wizard.wizard_page_1)
+        #     self.base_panel = BasePanel(self, title="Base Panel")
+        #     self.show_all()
+        # elif self.wizard_bool == "False":
+        self.base_panel = BasePanel(self, title="Base Panel")
+        self.add(self.base_panel.main_grid)
+        self.show_all()
         
         if self.show_cursor:
             self.get_window().set_cursor(
