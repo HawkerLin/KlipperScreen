@@ -112,7 +112,7 @@ class WizardPanel(ScreenPanel):
         self.wifi_logo.set_valign(Gtk.Align.CENTER)
         self.wifi_logo.set_size_request(480, 160)
         #self.wifi_logo.pack_start(image, True, True, 20)#将image添加到self.logo的起始位置
-        self.wifi_logo.pack_end(image, True, True, 20)#将image添加到self.logo的末尾位置
+        self.wifi_logo.add(image)
 
         self.wizard_2_text = Gtk.Label()
         self.wizard_2_text.set_hexpand(True)
