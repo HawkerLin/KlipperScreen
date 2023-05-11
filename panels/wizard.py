@@ -284,10 +284,10 @@ class WizardPanel(ScreenPanel):
 
         self.wizard_page_3 = Gtk.Grid()
         self.wizard_page_3.attach(self.wizard_3_title, 0, 0, 2, 1)
-        self.wizard_page_3.attach(self.level_logo, 0, 1, 2, 1)
-        self.wizard_page_3.attach(self.wizard_3_txt_box, 0, 2, 2, 1)
-        self.wizard_page_3.attach(self.wizard_3_back, 0, 3, 1, 1)
-        self.wizard_page_3.attach(self.wizard_3_next, 1, 3, 1, 1)
+        #self.wizard_page_3.attach(self.level_logo, 0, 1, 2, 1)
+        self.wizard_page_3.attach(self.wizard_3_txt_box, 0, 1, 2, 1)
+        self.wizard_page_3.attach(self.wizard_3_back, 0, 2, 1, 1)
+        self.wizard_page_3.attach(self.wizard_3_next, 1, 2, 1, 1)
         self._screen.add(self._screen.wizard.wizard_page_3)
         self._screen.show_all()
 
