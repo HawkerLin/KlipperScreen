@@ -137,13 +137,18 @@ class KlipperScreen(Gtk.Window):
         self.init_style()
         self.set_icon_from_file(os.path.join(klipperscreendir, "styles", "icon.svg"))
 
-        self.wizard = WizardPanel(self, title="wizard")
-        self.add(self.wizard.wizard_page_1)
-        #self.show_all()
 
-        self.base_panel = BasePanel(self, title="Base Panel")
-        #self.add(self.base_panel.main_grid)
-        self.show_all()
+        self.wizard_bool = self._config.get_main_config().get("wizard_bool")
+        if self.wizard_bool == "True":
+            self.wizard = WizardPanel(self, title="wizard")
+            self.add(self.wizard.wizard_page_1)
+            self.base_panel = BasePanel(self, title="Base Panel")
+            self.show_all()
+        elif self.wizard_bool == "False":
+            self.base_panel = BasePanel(self, title="Base Panel")
+            self.add(self.base_panel.main_grid)
+            self.show_all()
+        
         if self.show_cursor:
             self.get_window().set_cursor(
                 Gdk.Cursor.new_for_display(Gdk.Display.get_default(), Gdk.CursorType.ARROW))
