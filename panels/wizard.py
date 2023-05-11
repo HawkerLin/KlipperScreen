@@ -205,7 +205,7 @@ class WizardPanel(ScreenPanel):
         self.level_logo = Gtk.Box()
         #self.level_logo.set_halign(Gtk.Align.CENTER)
         #self.level_logo.set_valign(Gtk.Align.CENTER)
-        self.level_logo.set_size_request(480, 640)
+        self.level_logo.set_size_request(480, 167)
         self.level_logo.pack_end(image, True, True, 20)#将image添加到self.logo的起始位置
         #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
 
@@ -246,7 +246,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_text4.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text4))
 
         self.wizard_3_txt_box = Gtk.Box()
-        self.wizard_3_txt_box.set_size_request(480, 373)
+        self.wizard_3_txt_box.set_size_request(480, 473)
         self.wizard_3_txt_box.add(self.wizard_3_text1)
         self.wizard_3_txt_box.add(self.wizard_3_text2)
         self.wizard_3_txt_box.add(self.wizard_3_text3)
