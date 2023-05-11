@@ -95,7 +95,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_lbl = Gtk.Label()
         self.wizard_2_lbl.set_hexpand(True)
         self.wizard_2_lbl.set_halign(Gtk.Align.CENTER)
-        self.wizard_2_lbl.set_valign(Gtk.Align.CENTER)
+        #self.wizard_2_lbl.set_valign(Gtk.Align.CENTER)
         #self.wizard_2_lbl.set_ellipsize(Pango.EllipsizeMode.END)
         #self.wizard_2_lbl.set_label("Wizard")
         title = _("Connect Network")
@@ -111,7 +111,7 @@ class WizardPanel(ScreenPanel):
         self.wifi_logo.set_halign(Gtk.Align.CENTER)
         #self.wifi_logo.set_valign(Gtk.Align.CENTER)
         #self.wifi_logo.set_size_request(480, 100)
-        self.wifi_logo.pack_start(image, True, True, 10)#将image添加到self.logo的起始位置
+        self.wifi_logo.pack_start(image, False, False, 10)#将image添加到self.logo的起始位置
 
         self.wizard_2_text = Gtk.Label()
         #self.wizard_2_text.set_hexpand(True)
