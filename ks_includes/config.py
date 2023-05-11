@@ -150,7 +150,7 @@ class KlipperScreenConfig:
                     'autoclose_popups', 'use_dpms', 'use_default_menu', 'side_macro_shortcut', 'use-matchbox-keyboard',
                     'show_heater_power'
                 )
-                strs = ( 'wizard_bool',
+                strs = ( 'wizard_tag',
                     'default_printer', 'language', 'print_sort_dir', 'theme', 'screen_blanking', 'font_size',
                     'print_estimate_method', 'screen_blanking', "screen_on_devices", "screen_off_devices",
                 )
