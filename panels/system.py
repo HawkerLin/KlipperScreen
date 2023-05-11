@@ -88,10 +88,36 @@ class SystemPanel(ScreenPanel):
         # scroll.add(infogrid)
 
         #grid.attach(scroll, 0, 0, 4, 2)
+        box0 = self._gtk.Box()
+        box1 = self._gtk.Box()
+        box2 = self._gtk.Box()
+        box3 = self._gtk.Box()
+        box4 = self._gtk.Box()
+        box5 = self._gtk.Box()
+        box6 = self._gtk.Box()
+        box7 = self._gtk.Box()
+        box0.hide()
+        box1.hide()
+        box2.hide()
+        box3.hide()
+        box4.hide()
+        box5.hide()
+        box6.hide()
+        box7.hide()
+        grid.attach(box0, 0, 0, 1, 1)
+        grid.attach(box1, 0, 0, 1, 1)
+        grid.attach(box2, 0, 0, 1, 1)
+        grid.attach(box3, 0, 0, 1, 1)
+
         grid.attach(update_all, 0, 1, 1, 1)
         grid.attach(self.refresh, 1, 1, 1, 1)
         grid.attach(reboot, 2, 1, 1, 1)
         grid.attach(shutdown, 3, 1, 1, 1)
+
+        grid.attach(box4, 0, 2, 1, 1)
+        grid.attach(box5, 0, 2, 1, 1)
+        grid.attach(box6, 0, 2, 1, 1)
+        grid.attach(box7, 0, 2, 1, 1)
         self.content.add(grid)
 
     def activate(self):
@@ -117,6 +143,8 @@ class SystemPanel(ScreenPanel):
                 f.write(data)
         self._screen.show_popup_message("Restoring factory settings, please wait...", level=1)
         GLib.timeout_add_seconds(3, self._screen.close_popup_message, "true")
+        self._screen.show_popup_message("Restore the factory configuration successfully, \nplease restart to take effect", level=1)
+        GLib.timeout_add_seconds(10, self._screen.close_popup_message, "true")
 
     # def refresh_updates(self, widget=None):
     #     self.refresh.set_sensitive(False)
