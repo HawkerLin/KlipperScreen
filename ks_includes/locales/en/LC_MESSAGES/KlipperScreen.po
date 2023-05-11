@@ -794,5 +794,14 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-msgid "Finish"
+msgid "Machine Leveling"
+msgstr ""
+
+msgid "Led"
+msgstr ""
+
+msgid "LED Off"
+msgstr ""
+
+msgid "LED On"
 msgstr ""

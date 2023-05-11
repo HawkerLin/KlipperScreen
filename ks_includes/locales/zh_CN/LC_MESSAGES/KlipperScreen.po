@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2023-05-09 14:37+0800\n"
+"PO-Revision-Date: 2023-05-11 11:56+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -744,16 +744,16 @@ msgid "minutes"
 msgstr "分钟"
 
 msgid "mm"
-msgstr "毫米"
+msgstr "mm"
 
 msgid "mm/s"
-msgstr ""
+msgstr "mm/s"
 
 msgid "mm/s²"
-msgstr ""
+msgstr "mm/s²"
 
 msgid "mm³/s"
-msgstr ""
+msgstr "mm³/s"
 
 msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
 msgstr "机器连接到网络后，使用同一局域网的设备可以通过访问IP来控制机器"
@@ -777,7 +777,7 @@ msgid "Please follow the steps below to calibrate the machine, refer to the manu
 msgstr "请按照以下步骤来校准机器，详细情况请参考手册"
 
 msgid "1.Operation Z Calibration Setting Offset"
-msgstr ".操作Z轴校准设置偏移"
+msgstr "1.操作Z轴校准设置偏移"
 
 msgid "2.Operate Bed Level to adjust the flatness of the bed"
 msgstr "2.操作床身水平仪，调整床身的平整度"
@@ -786,13 +786,25 @@ msgid "3.Operate Bed Mesh automatic leveling"
 msgstr "3.操作床网自动调平"
 
 msgid "Your languages"
-msgstr "你的语言"
+msgstr "您的语言"
 
 msgid "IP"
 msgstr "IP"
 
 msgid "Back"
 msgstr "返回"
+
+msgid "Machine Leveling"
+msgstr "机器调平"
+
+msgid "Led"
+msgstr "灯"
+
+msgid "LED Off"
+msgstr "关灯"
+
+msgid "LED On"
+msgstr "开灯"
 
 #~ msgid "Sort:"
 #~ msgstr "排序:"

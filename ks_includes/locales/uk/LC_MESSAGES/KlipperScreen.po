@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 2022-09-04 14:53-0300\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2023-05-09 14:43+0800\n"
+"PO-Revision-Date: 2023-05-11 12:02+0800\n"
 "Last-Translator: Andrii Komarovskyi\n"
 "Language-Team: Andrii Komarovskyi\n"
 "Language: uk\n"
@@ -795,13 +795,13 @@ msgid "Please follow the steps below to calibrate the machine, refer to the manu
 msgstr "Будь ласка, виконайте наведені нижче дії, щоб відкалібрувати машину, докладніше див. у посібнику"
 
 msgid "1.Operation Z Calibration Setting Offset"
-msgstr "1. операція Z Зміщення налаштування калібрування"
+msgstr "1.операція Z Зміщення налаштування калібрування"
 
 msgid "2.Operate Bed Level to adjust the flatness of the bed"
-msgstr "2. використовуйте рівень ліжка, щоб відрегулювати рівність ліжка"
+msgstr "2.використовуйте рівень ліжка, щоб відрегулювати рівність ліжка"
 
 msgid "3.Operate Bed Mesh automatic leveling"
-msgstr "3. експлуатуйте автоматичне вирівнювання Bed Mesh"
+msgstr "3.експлуатуйте автоматичне вирівнювання Bed Mesh"
 
 msgid "Your languages"
 msgstr "Ваші мови"
@@ -811,6 +811,18 @@ msgstr "IP"
 
 msgid "Back"
 msgstr "Назад"
+
+msgid "Machine Leveling"
+msgstr "Машинне нівелювання"
+
+msgid "Led"
+msgstr "Під керівництвом"
+
+msgid "LED Off"
+msgstr "Світлодіод вимкнено"
+
+msgid "LED On"
+msgstr "Світлодіод увімкнено"
 
 #~ msgid "Sort:"
 #~ msgstr "Сортувати:"

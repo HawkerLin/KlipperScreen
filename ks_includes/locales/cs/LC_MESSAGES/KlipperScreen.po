@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Czech\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-29 09:28-0600\n"
-"PO-Revision-Date: 2023-05-09 16:14+0800\n"
+"PO-Revision-Date: 2023-05-11 14:35+0800\n"
 "Last-Translator: \n"
 "Language-Team: Jan Stanka (stanky@email.cz)\n"
 "Language: cs\n"
@@ -735,7 +735,7 @@ msgstr "Z offset:"
 
 msgid "commit"
 msgid_plural "commits"
-msgstr[0] "odevzdat"
+msgstr[0] "spáchat"
 msgstr[1] ""
 msgstr[2] ""
 
@@ -764,7 +764,7 @@ msgid "mm³/s"
 msgstr "mm³/s"
 
 msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
-msgstr "Po připojení stroje k síti mohou zařízení používající stejnou síť LAN ovládat stroj přístupem k IP adrese."
+msgstr "Po připojení stroje k síti mohou zařízení používající stejnou síť LAN ovládat stroj přístupem k IP adrese"
 
 msgid "Back"
 msgstr "Zpět"
@@ -782,13 +782,13 @@ msgid "Leveling Calibration"
 msgstr "Kalibrace nivelace"
 
 msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
-msgstr "Při kalibraci přístroje postupujte podle následujících kroků, podrobnosti naleznete v příručce."
+msgstr "Při kalibraci přístroje postupujte podle následujících kroků, podrobnosti naleznete v příručce"
 
 msgid "1.Operation Z Calibration Setting Offset"
 msgstr "1.Operace Nastavení posunu kalibrace Z"
 
 msgid "2.Operate Bed Level to adjust the flatness of the bed"
-msgstr "2.Ovládejte vodováhu lůžka, abyste nastavili rovinnost lůžka."
+msgstr "2.Ovládejte vodováhu lůžka, abyste nastavili rovinnost lůžka"
 
 msgid "3.Operate Bed Mesh automatic leveling"
 msgstr "3.Operate Bed Mesh automatické vyrovnávání"
@@ -801,6 +801,18 @@ msgstr "IP"
 
 msgid "Next"
 msgstr "Další"
+
+msgid "Machine Leveling"
+msgstr "Vyrovnávání strojů"
+
+msgid "Led"
+msgstr "LED"
+
+msgid "LED Off"
+msgstr "LED dioda nesvítí"
+
+msgid "LED On"
+msgstr "LED svítí"
 
 #~ msgid "Decrease"
 #~ msgstr "Snížit"

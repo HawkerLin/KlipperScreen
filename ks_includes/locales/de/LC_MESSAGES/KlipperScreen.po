@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2023-05-09 15:59+0800\n"
+"PO-Revision-Date: 2023-05-11 14:29+0800\n"
 "Last-Translator: livinhack\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -787,10 +787,10 @@ msgid "1.Operation Z Calibration Setting Offset"
 msgstr "1.Operation Z Kalibrierungseinstellung Offset"
 
 msgid "2.Operate Bed Level to adjust the flatness of the bed"
-msgstr "2. Bedienen Sie die Bettwaage, um die Ebenheit des Bettes einzustellen"
+msgstr "2.Bedienen Sie die Bettwaage, um die Ebenheit des Bettes einzustellen"
 
 msgid "3.Operate Bed Mesh automatic leveling"
-msgstr "3. Automatisches Nivellieren des Bettgitters betreiben"
+msgstr "3.Automatisches Nivellieren des Bettgitters betreiben"
 
 msgid "Your languages"
 msgstr "Ihre Sprachen"
@@ -800,6 +800,18 @@ msgstr "IP"
 
 msgid "Back"
 msgstr "Zurück"
+
+msgid "Machine Leveling"
+msgstr "Nivellierung der Maschine"
+
+msgid "Led"
+msgstr "Led"
+
+msgid "LED Off"
+msgstr "LED aus"
+
+msgid "LED On"
+msgstr "LED an"
 
 #~ msgid "Sort:"
 #~ msgstr "Sortieren:"

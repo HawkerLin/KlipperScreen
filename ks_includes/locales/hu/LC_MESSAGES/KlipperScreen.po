@@ -756,7 +756,7 @@ msgstr "mm³/s"
 msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
 msgstr ""
 "Miután a gépet a hálózathoz csatlakoztatták, az azonos LAN-t használó eszközök az IP-címhez való hozzáféréssel "
-"vezérelhetik a gépet."
+"vezérelhetik a gépet"
 
 msgid "Connect"
 msgstr "Csatlakozás"
@@ -774,7 +774,7 @@ msgid "Next"
 msgstr "Következő"
 
 msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
-msgstr "Kérjük, kövesse az alábbi lépéseket a gép kalibrálásához, a részletekért olvassa el a kézikönyvet."
+msgstr "Kérjük, kövesse az alábbi lépéseket a gép kalibrálásához, a részletekért olvassa el a kézikönyvet"
 
 msgid "1.Operation Z Calibration Setting Offset"
 msgstr "1.Művelet Z kalibrációs beállítási eltolás"
@@ -793,6 +793,18 @@ msgstr "IP"
 
 msgid "Back"
 msgstr "Vissza"
+
+msgid "Machine Leveling"
+msgstr "Gépi szintezés"
+
+msgid "Led"
+msgstr "Led"
+
+msgid "LED Off"
+msgstr "LED ki"
+
+msgid "LED On"
+msgstr "LED bekapcsolva"
 
 #~ msgid "Sort:"
 #~ msgstr "Fajta:"

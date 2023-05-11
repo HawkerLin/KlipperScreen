@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Klipperscreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2023-05-09 15:51+0800\n"
+"PO-Revision-Date: 2023-05-11 14:25+0800\n"
 "Last-Translator: Tal Rahav <talrhv1@gmail.com>\n"
 "Language-Team: \n"
 "Language: he\n"
@@ -803,6 +803,18 @@ msgstr "IP"
 
 msgid "Back"
 msgstr "גב"
+
+msgid "Machine Leveling"
+msgstr "פילוס מכונה"
+
+msgid "Led"
+msgstr "לד"
+
+msgid "LED Off"
+msgstr "LED כבוי"
+
+msgid "LED On"
+msgstr "נורית LED דולקת"
 
 #~ msgid "Sort:"
 #~ msgstr "מיין"

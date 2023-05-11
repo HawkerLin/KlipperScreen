@@ -774,13 +774,13 @@ msgid "Next"
 msgstr "Avanti"
 
 msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
-msgstr "Per calibrare la macchina, seguire la procedura descritta di seguito; per i dettagli, consultare il manuale."
+msgstr "Per calibrare la macchina, seguire la procedura descritta di seguito; per i dettagli, consultare il manuale"
 
 msgid "1.Operation Z Calibration Setting Offset"
 msgstr "1.Funzionamento Offset di impostazione della calibrazione Z"
 
 msgid "2.Operate Bed Level to adjust the flatness of the bed"
-msgstr "2. Azionare la livella del letto per regolare la planarità del letto."
+msgstr "2. Azionare la livella del letto per regolare la planarità del letto"
 
 msgid "3.Operate Bed Mesh automatic leveling"
 msgstr "3.Operate Bed Mesh livellamento automatico"
@@ -793,6 +793,18 @@ msgstr "IP"
 
 msgid "Back"
 msgstr "Indietro"
+
+msgid "Machine Leveling"
+msgstr "Livellamento della macchina"
+
+msgid "Led"
+msgstr "Led"
+
+msgid "LED Off"
+msgstr "LED spento"
+
+msgid "LED On"
+msgstr "LED acceso"
 
 #~ msgid "Sort:"
 #~ msgstr "Ordinare:"

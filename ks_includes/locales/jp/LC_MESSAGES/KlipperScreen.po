@@ -789,5 +789,17 @@ msgstr "IP"
 msgid "Back"
 msgstr "バック"
 
+msgid "Machine Leveling"
+msgstr "マシンレベリング"
+
+msgid "Led"
+msgstr "リード"
+
+msgid "LED Off"
+msgstr "LED消灯"
+
+msgid "LED On"
+msgstr "LEDオン"
+
 #~ msgid "Sort:"
 #~ msgstr "ソート順:"

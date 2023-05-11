@@ -754,8 +754,7 @@ msgid "mm³/s"
 msgstr "mm³/s"
 
 msgid "After the machine is connected to the network, devices using the same LAN can control the machine by accessing the IP"
-msgstr ""
-"Når maskinen er tilsluttet til netværket, kan enheder, der bruger det samme LAN, styre maskinen ved at få adgang til IP"
+msgstr "Når maskinen er tilsluttet til netværket, kan enheder, der bruger det samme LAN, styre maskinen ved at få adgang til IP"
 
 msgid "Connect"
 msgstr "Forbind"
@@ -792,6 +791,18 @@ msgstr "IP"
 
 msgid "Back"
 msgstr "Tilbage"
+
+msgid "Machine Leveling"
+msgstr "Maskine nivellering"
+
+msgid "Led"
+msgstr "LED"
+
+msgid "LED Off"
+msgstr "LED slukket"
+
+msgid "LED On"
+msgstr "LED tændt"
 
 #~ msgid "Sort:"
 #~ msgstr "Sortere: "
