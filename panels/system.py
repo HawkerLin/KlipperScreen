@@ -99,16 +99,18 @@ class SystemPanel(ScreenPanel):
         # self.get_updates()
     
     def restore_factory_setting(self, widget):
-        bakconf_dir_screen = "~/.Klipperscreen_bakconf/KlipperScreen.confbak"
-        bakconf_dir_printer = "~/.Klipperscreen_bakconf/printer.cfgbak"
+        bakconf_dir_screen = "/home/mks/.Klipperscreen_bakconf/KlipperScreen.confbak"
+        bakconf_dir_printer = "/home/mks/.Klipperscreen_bakconf/printer.cfgbak"
         current_conf_path = self._screen._config.config_path
         logging.info(f"{current_conf_path}")
         if os.path.isfile(bakconf_dir_printer) :
+            logging.info(f"printer.cfg")
             with open(bakconf_dir_printer, 'rb') as f:
                 data = f.read()
-            with open('~/printer_data/config/printer.cfg', 'wb') as f:
+            with open('/home/mks/printer_data/config/printer.cfg', 'wb') as f:
                 f.write(data)
         if os.path.isfile(bakconf_dir_screen) :
+            logging.info(f"KlipperScreen---")
             with open(bakconf_dir_screen, 'rb') as f:
                 data = f.read()
             with open(current_conf_path, 'wb') as f:
