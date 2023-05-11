@@ -52,7 +52,7 @@ class WizardPanel(ScreenPanel):
 
         self.first_nex = self._gtk.Button("arrow-right",_("Next"), f"color3")
         self.first_nex.connect("clicked", self.first_next)
-        self.first_nex.set_size_request(440, 40)
+        self.first_nex.set_size_request(440, 110)
         self.first_nex.set_halign(Gtk.Align.CENTER)
         self.first_nex.set_valign(Gtk.Align.CENTER)
         self.wizard_1_next = Gtk.Box()
@@ -60,7 +60,7 @@ class WizardPanel(ScreenPanel):
         #self.wizard_1_next.set_halign(Gtk.Align.CENTER)
         #self.wizard_1_next.set_valign(Gtk.Align.CENTER)
         #self.wizard_1_next.get_style_context().add_class('button_active')
-        self.wizard_1_next.set_size_request(480, 80)
+        self.wizard_1_next.set_size_request(480, 110)
         self.wizard_1_next.add(self.first_nex)
 
 
@@ -81,7 +81,7 @@ class WizardPanel(ScreenPanel):
         self.language = Gtk.Box()
         self.language.set_halign(Gtk.Align.CENTER)
         self.language.pack_start(self.language_menu, False, False, 15)
-        self.language.set_size_request(480, 540)
+        self.language.set_size_request(480, 530)
         self.language.add(self.language_menu)
 
         self.wizard_page_1 = Gtk.Grid()
