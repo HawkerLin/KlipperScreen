@@ -92,6 +92,9 @@ class WizardPanel(ScreenPanel):
         self.wizard_page_1.attach(self.wizard_1_next, 0, 3, 2, 1)
 
     def show_wizard_2(self):
+        self.blank = Gtk.Box()
+        self.blank.set_size_request(480, 60)
+
         self.wizard_2_lbl = Gtk.Label()
         self.wizard_2_lbl.set_hexpand(True)
         self.wizard_2_lbl.set_halign(Gtk.Align.CENTER)
