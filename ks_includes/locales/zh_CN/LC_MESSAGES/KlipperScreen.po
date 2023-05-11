@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2023-05-11 11:56+0800\n"
+"PO-Revision-Date: 2023-05-11 19:05+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -98,6 +98,9 @@ msgstr "热床网格"
 
 msgid "Bed screw configuration:"
 msgstr "床位螺钉配置："
+
+msgid "Bed"
+msgstr "热床"
 
 msgid "Calibrate"
 msgstr "校准"
@@ -210,6 +213,9 @@ msgid "Extra Large"
 msgstr "特大号"
 
 msgid "Extrude"
+msgstr "挤出机"
+
+msgid "Extruder"
 msgstr "挤出机"
 
 msgid "Extrusion +"
@@ -805,6 +811,15 @@ msgstr "关灯"
 
 msgid "LED On"
 msgstr "开灯"
+
+msgid "Restore factory"
+msgstr "恢复出厂设置"
+
+msgid "Reboot"
+msgstr "重新启动"
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr "点击确认将恢复出厂设置并重新启动，是否要恢复出厂设置？"
 
 #~ msgid "Sort:"
 #~ msgstr "排序:"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2023-05-11 12:05+0800\n"
+"PO-Revision-Date: 2023-05-11 19:17+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -808,6 +808,15 @@ msgstr "LED avstängd"
 
 msgid "LED On"
 msgstr "LED på"
+
+msgid "Restore factory"
+msgstr "Återställ fabriken"
+
+msgid "Reboot"
+msgstr "Omstart"
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr "Klicka på Bekräfta kommer att fabriksåterställas och startas om, vill du fabriksåterställa?"
 
 #~ msgid "Z+"
 #~ msgstr "Z+"

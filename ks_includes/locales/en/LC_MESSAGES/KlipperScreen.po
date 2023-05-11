@@ -805,3 +805,12 @@ msgstr ""
 
 msgid "LED On"
 msgstr ""
+
+msgid "Restore factory"
+msgstr ""
+
+msgid "Reboot"
+msgstr ""
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr ""

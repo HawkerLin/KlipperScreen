@@ -806,6 +806,15 @@ msgstr "LED ki"
 msgid "LED On"
 msgstr "LED bekapcsolva"
 
+msgid "Restore factory"
+msgstr "Gyári beállítások visszaállítása"
+
+msgid "Reboot"
+msgstr "Újraindít"
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr "Kattintson a Confirm will factory reset and reboot (Erősítse meg, hogy visszaállítja a gyári beállításokat) gombra?"
+
 #~ msgid "Sort:"
 #~ msgstr "Fajta:"
 

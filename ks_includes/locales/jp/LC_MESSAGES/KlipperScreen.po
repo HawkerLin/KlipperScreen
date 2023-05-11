@@ -801,5 +801,14 @@ msgstr "LED消灯"
 msgid "LED On"
 msgstr "LEDオン"
 
+msgid "Restore factory"
+msgstr "工場の復元"
+
+msgid "Reboot"
+msgstr "リブート"
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr "[工場出荷時の状態にリセットして再起動することを確認する]をクリックしますが、出荷時設定にリセットしますか?"
+
 #~ msgid "Sort:"
 #~ msgstr "ソート順:"

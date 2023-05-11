@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Czech\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-29 09:28-0600\n"
-"PO-Revision-Date: 2023-05-11 14:35+0800\n"
+"PO-Revision-Date: 2023-05-11 19:43+0800\n"
 "Last-Translator: \n"
 "Language-Team: Jan Stanka (stanky@email.cz)\n"
 "Language: cs\n"
@@ -813,6 +813,15 @@ msgstr "LED dioda nesvítí"
 
 msgid "LED On"
 msgstr "LED svítí"
+
+msgid "Restore factory"
+msgstr "Obnovit továrnu"
+
+msgid "Reboot"
+msgstr "Restartovat"
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr "Klikněte na Potvrdit obnovení továrního nastavení a restartování, chcete obnovit tovární nastavení?"
 
 #~ msgid "Decrease"
 #~ msgstr "Snížit"

@@ -804,6 +804,15 @@ msgstr "LED slukket"
 msgid "LED On"
 msgstr "LED tændt"
 
+msgid "Restore factory"
+msgstr "Gendan fabrik"
+
+msgid "Reboot"
+msgstr "Genstarte"
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr "Klik på Bekræft nulstilling og genstart af fabrikken, vil du nulstille fabrikken?"
+
 #~ msgid "Sort:"
 #~ msgstr "Sortere: "
 

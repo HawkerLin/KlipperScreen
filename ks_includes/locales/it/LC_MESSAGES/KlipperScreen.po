@@ -806,6 +806,15 @@ msgstr "LED spento"
 msgid "LED On"
 msgstr "LED acceso"
 
+msgid "Restore factory"
+msgstr "Ripristina fabbrica"
+
+msgid "Reboot"
+msgstr "Riavviare"
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr "Fare clic su Conferma verrà ripristinato e riavviato, si desidera ripristinare le impostazioni di fabbrica?"
+
 #~ msgid "Sort:"
 #~ msgstr "Ordinare:"
 

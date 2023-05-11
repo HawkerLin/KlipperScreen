@@ -801,6 +801,15 @@ msgstr "LED 꺼짐"
 msgid "LED On"
 msgstr "LED 켜짐"
 
+msgid "Restore factory"
+msgstr "공장 복원"
+
+msgid "Reboot"
+msgstr "재부팅"
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr "확인을 클릭하면 공장 초기화 및 다시 시작됩니다."
+
 #~ msgid "Sort:"
 #~ msgstr "종류:"
 

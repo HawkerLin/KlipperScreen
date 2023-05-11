@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-29 09:28-0600\n"
-"PO-Revision-Date: 2023-05-11 12:27+0800\n"
+"PO-Revision-Date: 2023-05-11 19:19+0800\n"
 "Last-Translator: Jakob Kais <schpuntik@freenet.de>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -784,7 +784,7 @@ msgid "Next"
 msgstr "Следующий"
 
 msgid "Please follow the steps below to calibrate the machine, refer to the manual for details"
-msgstr "Для калибровки машины выполните следующие действия, подробности см. в руководстве."
+msgstr "Для калибровки машины выполните следующие действия, подробности см. в руководстве"
 
 msgid "1.Operation Z Calibration Setting Offset"
 msgstr "1.Операция Смещение настройки калибровки Z"
@@ -815,6 +815,15 @@ msgstr "Светодиод выключен"
 
 msgid "LED On"
 msgstr "Светодиод включен"
+
+msgid "Restore factory"
+msgstr "Восстановить фабрику"
+
+msgid "Reboot"
+msgstr "Перезагрузить"
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr "Нажмите «Подтвердить», сбросит заводские настройки и перезагрузится, вы хотите восстановить заводские настройки?"
 
 #~ msgid "Decrease"
 #~ msgstr "Уменьшить"

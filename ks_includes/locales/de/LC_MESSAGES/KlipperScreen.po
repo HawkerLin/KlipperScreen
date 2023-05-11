@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 18:17-0300\n"
-"PO-Revision-Date: 2023-05-11 14:29+0800\n"
+"PO-Revision-Date: 2023-05-11 19:40+0800\n"
 "Last-Translator: livinhack\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -812,6 +812,17 @@ msgstr "LED aus"
 
 msgid "LED On"
 msgstr "LED an"
+
+msgid "Restore factory"
+msgstr "Fabrik wiederherstellen"
+
+msgid "Reboot"
+msgstr "Neustart"
+
+msgid "Click Confirm will factory reset and restart, do you want to factory reset?"
+msgstr ""
+"Klicken Sie auf Bestätigen, dass die Werkseinstellungen zurückgesetzt und neu gestartet werden, möchten Sie die "
+"Werkseinstellungen zurücksetzen?"
 
 #~ msgid "Sort:"
 #~ msgstr "Sortieren:"

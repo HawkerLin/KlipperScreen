@@ -39,7 +39,7 @@ class SystemPanel(ScreenPanel):
         update_all.connect("clicked", self.show_update_info, "full")
         update_all.set_vexpand(False)
         self.refresh = self._gtk.Button('refresh', 'reset_cfg', 'color2')
-        self.refresh.connect("clicked", self.restore_factory_setting)
+        self.refresh.connect("clicked", self.reset_cfg_button)
         self.refresh.set_vexpand(False)
 
         reboot = self._gtk.Button('refresh', _('Restart'), 'color3')
@@ -124,7 +124,23 @@ class SystemPanel(ScreenPanel):
         logging.info(f"do nothing")
         # self.get_updates()
     
-    def restore_factory_setting(self, widget):
+    def reset_cfg_button(self, widget):
+        scroll = self._gtk.ScrolledWindow()
+        scroll.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        vbox.set_halign(Gtk.Align.CENTER)
+        vbox.set_valign(Gtk.Align.CENTER)
+        label = Gtk.Label(label=_("Click Confirm will factory reset and restart, do you want to factory reset?"))
+        vbox.add(label)
+        scroll.add(vbox)
+        buttons = [
+            {"name": _("Accept"), "response": Gtk.ResponseType.OK},
+            {"name": _("Cancel"), "response": Gtk.ResponseType.CANCEL}
+        ]
+        dialog = self._gtk.Dialog(self._screen, buttons, scroll, self.reboot_poweroff_confirm, "reboot")
+        dialog.set_title(_("Reboot"))
+
+    def restore_factory_setting(self, dialog, response_id, method):
         bakconf_dir_screen = "/home/mks/.Klipperscreen_bakconf/KlipperScreen.confbak"
         bakconf_dir_printer = "/home/mks/.Klipperscreen_bakconf/printer.cfgbak"
         current_conf_path = self._screen._config.config_path
@@ -142,9 +158,18 @@ class SystemPanel(ScreenPanel):
             with open(current_conf_path, 'wb') as f:
                 f.write(data)
         self._screen.show_popup_message("Restoring factory settings, please wait...", level=1)
-        GLib.timeout_add_seconds(3, self._screen.close_popup_message, "true")
-        self._screen.show_popup_message("Restore the factory configuration successfully, \nplease restart to take effect", level=1)
-        GLib.timeout_add_seconds(10, self._screen.close_popup_message, "true")
+        GLib.timeout_add_seconds(5, self._screen.close_popup_message, "true")
+        self._gtk.remove_dialog(dialog)
+        if response_id == Gtk.ResponseType.OK:
+            if method == "reboot":
+                os.system("systemctl reboot")
+            else:
+                os.system("systemctl poweroff")
+        elif response_id == Gtk.ResponseType.APPLY:
+            if method == "reboot":
+                self._screen._ws.send_method("machine.reboot")
+            else:
+                self._screen._ws.send_method("machine.shutdown")
 
     # def refresh_updates(self, widget=None):
     #     self.refresh.set_sensitive(False)
