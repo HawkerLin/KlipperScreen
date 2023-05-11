@@ -137,7 +137,7 @@ class SystemPanel(ScreenPanel):
             {"name": _("Accept"), "response": Gtk.ResponseType.OK},
             {"name": _("Cancel"), "response": Gtk.ResponseType.CANCEL}
         ]
-        dialog = self._gtk.Dialog(self._screen, buttons, scroll, self.reboot_poweroff_confirm, "reboot")
+        dialog = self._gtk.Dialog(self._screen, buttons, scroll, self.restore_factory_setting, "reboot")
         dialog.set_title(_("Reboot"))
 
     def restore_factory_setting(self, dialog, response_id, method):
@@ -158,18 +158,10 @@ class SystemPanel(ScreenPanel):
             with open(current_conf_path, 'wb') as f:
                 f.write(data)
         self._screen.show_popup_message("Restoring factory settings, please wait...", level=1)
-        GLib.timeout_add_seconds(5, self._screen.close_popup_message, "true")
-        self._gtk.remove_dialog(dialog)
-        if response_id == Gtk.ResponseType.OK:
-            if method == "reboot":
-                os.system("systemctl reboot")
-            else:
-                os.system("systemctl poweroff")
-        elif response_id == Gtk.ResponseType.APPLY:
-            if method == "reboot":
-                self._screen._ws.send_method("machine.reboot")
-            else:
-                self._screen._ws.send_method("machine.shutdown")
+        GLib.timeout_add_seconds(5, self._screen.reset_cfg_reboot)
+    
+    def reset_cfg_reboot(self):
+        os.system("systemctl reboot")
 
     # def refresh_updates(self, widget=None):
     #     self.refresh.set_sensitive(False)
