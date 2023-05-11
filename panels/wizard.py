@@ -326,7 +326,7 @@ class WizardPanel(ScreenPanel):
 
     def final_next(self, widget):
         #self._screen.remove(self.wizard_page)#如果只是remove这个而没有再次add、show_all则是黑屏
-        self._config.set("main", "wizard_tag", "False")
+        self._screen._config.set("main", "wizard_tag", "False")
         self._screen.remove(self.wizard_page_3)
         self._screen.add(self._screen.base_panel.main_grid)
         self._screen.show_all()
