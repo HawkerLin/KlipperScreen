@@ -159,7 +159,7 @@ class WizardPanel(ScreenPanel):
 
         self.second_nex = self._gtk.Button("arrow-right",_("Next"), f"color2")
         self.second_nex.connect("clicked", self.second_next)
-        self.second_nex.set_size_request(210, 90)
+        self.second_nex.set_size_request(210, 110)
         # self.second_nex.set_halign(Gtk.Align.CENTER)
         # self.second_nex.set_valign(Gtk.Align.CENTER)
         self.wizard_2_next = Gtk.Box()
@@ -167,12 +167,12 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_next.set_valign(Gtk.Align.CENTER)
         self.wizard_2_next.pack_start(self.second_nex, False, False, 0)
         #self.wizard_2_next.get_style_context().add_class('button_active')
-        self.wizard_2_next.set_size_request(240, 90)
+        self.wizard_2_next.set_size_request(240, 110)
         self.wizard_2_next.add(self.second_nex)
 
         self.second_bac = self._gtk.Button("arrow-left",_("Back"), f"color1")
         self.second_bac.connect("clicked", self.second_back)
-        self.second_bac.set_size_request(210, 100)
+        self.second_bac.set_size_request(210, 110)
         # self.second_bac.set_halign(Gtk.Align.CENTER)
         # self.second_bac.set_valign(Gtk.Align.CENTER)
         self.wizard_2_back = Gtk.Box()
@@ -180,7 +180,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_back.set_valign(Gtk.Align.CENTER)
         self.wizard_2_back.pack_start(self.second_bac, False, False, 0)
         #self.wizard_2_back.get_style_context().add_class('button_active')
-        self.wizard_2_back.set_size_request(240, 100)
+        self.wizard_2_back.set_size_request(240, 110)
         self.wizard_2_back.add(self.second_bac)
 
         self.wizard_page_2 = Gtk.Grid()
