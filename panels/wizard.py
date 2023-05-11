@@ -264,7 +264,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_txt_box.add(self.wizard_3_text3)
         self.wizard_3_txt_box.add(self.wizard_3_text4)
 
-        self.third_nex = self._gtk.Button("",_("Finish"), f"color1")
+        self.third_nex = self._gtk.Button("complete",_("Finish"), f"color1")
         self.third_nex.connect("clicked", self.final_next)
         self.third_nex.set_size_request(210, 110)
         self.third_nex.set_halign(Gtk.Align.CENTER)
