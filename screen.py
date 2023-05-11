@@ -132,13 +132,14 @@ class KlipperScreen(Gtk.Window):
         self.vertical_mode = self.width < self.height
         logging.info(f"Screen resolution: {self.width}x{self.height}")
         self.theme = self._config.get_main_config().get('theme')
+        self.wizard_bool = self._config.get_main_config().get('wizard_bool')
         self.show_cursor = self._config.get_main_config().getboolean("show_cursor", fallback=False)
         self.gtk = KlippyGtk(self)
         self.init_style()
         self.set_icon_from_file(os.path.join(klipperscreendir, "styles", "icon.svg"))
 
 
-        self.wizard_bool = self._config.get_main_config().get("wizard_bool")
+        
         if self.wizard_bool == "True":
             self.wizard = WizardPanel(self, title="wizard")
             self.add(self.wizard.wizard_page_1)
