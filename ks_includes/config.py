@@ -273,6 +273,7 @@ class KlipperScreenConfig:
             {"move_speed_xy": {"section": "main", "name": _("XY Move Speed (mm/s)"), "type": None, "value": "50"}},
             {"move_speed_z": {"section": "main", "name": _("Z Move Speed (mm/s)"), "type": None, "value": "10"}},
             {"print_sort_dir": {"section": "main", "type": None, "value": "name_asc"}},
+            {"wizard_tag": {"section": "main", "type": None, "value": "False"}},
         ]
 
         self.configurable_options.extend(panel_options)
@@ -479,7 +480,10 @@ class KlipperScreenConfig:
                     if section not in save_config.sections():
                         save_config.add_section(section)
                     save_config.set(section, item, str(value))
-        
+        # save_config.add_section("wizard_tag")
+        # wizard_bool = self.config["wizard_tag"].get(item, fallback=True)
+        # save_config.set()
+
         save_output = self._build_config_string(save_config).split("\n")
         logging.info(f"看这里有没有{save_output}")
         for i in range(len(save_output)):
