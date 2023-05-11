@@ -103,16 +103,16 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_title = Gtk.Box()
         #self.wizard_2_title.get_style_contitle().add_class("title_bar")
         self.wizard_2_title.set_size_request(480, 80)
-        self.wizard_2_title.set_valign(Gtk.Align.START)
+        self.wizard_2_title.set_valign(Gtk.Align.END)
         self.wizard_2_title.add(self.wizard_2_lbl)
 
         image = self._gtk.Image("wifi", self._gtk.content_width * .3, self._gtk.content_height * .3)
         self.wifi_logo = Gtk.Box()
-        #self.wifi_logo.set_halign(Gtk.Align.CENTER)
-        #self.wifi_logo.set_valign(Gtk.Align.CENTER)
+        self.wifi_logo.set_halign(Gtk.Align.CENTER)
+        self.wifi_logo.set_valign(Gtk.Align.CENTER)
         self.wifi_logo.set_size_request(480, 160)
-        #self.wifi_logo.pack_end(image, True, True, 20)#将image添加到self.logo的起始位置
-        #self.logo.pack_end(image, False, False, 10)#将image添加到self.logo的末尾位置
+        #self.wifi_logo.pack_start(image, True, True, 20)#将image添加到self.logo的起始位置
+        self.wifi_logo.pack_end(image, True, True, 20)#将image添加到self.logo的末尾位置
 
         self.wizard_2_text = Gtk.Label()
         self.wizard_2_text.set_hexpand(True)
@@ -124,9 +124,9 @@ class WizardPanel(ScreenPanel):
         self.wizard_2_text.set_markup("<span font='DejaVu Sans 15'>{}</span>".format(text))
         self.wizard_2_txt_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.wizard_2_txt_box.set_size_request(480, 450)
-        self.wizard_2_txt_box.add(image)
-        self.wizard_2_txt_box.add(self.wizard_2_text)
-        #self.wizard_2_txt_box.pack_start(self.wizard_2_text, True, True, 20)
+        #self.wizard_2_txt_box.add(image)
+        #self.wizard_2_txt_box.add(self.wizard_2_text)
+        self.wizard_2_txt_box.pack_start(self.wizard_2_text, True, True, 20)
 
         gws = netifaces.gateways()
         logging.info("init:gws:" + str(gws))
