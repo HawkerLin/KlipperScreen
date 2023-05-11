@@ -212,7 +212,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_title.set_valign(Gtk.Align.START)
         self.wizard_3_title.add(self.wizard_3_lbl)
 
-        image = self._gtk.Image("level", self._gtk.content_width * .4, self._gtk.content_height * .4)
+        image = self._gtk.Image("level", self._gtk.content_width * .3, self._gtk.content_height * .3)
         #self.level_logo = Gtk.Box()
         #self.level_logo.set_halign(Gtk.Align.CENTER)
         #self.level_logo.set_valign(Gtk.Align.CENTER)
@@ -257,7 +257,7 @@ class WizardPanel(ScreenPanel):
         self.wizard_3_text4.set_markup("<span font='DejaVu Sans 20'>{}</span>".format(text4))
 
         self.wizard_3_txt_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        self.wizard_3_txt_box.set_size_request(480, 500)
+        self.wizard_3_txt_box.set_size_request(480, 530)
         self.wizard_3_txt_box.pack_start(image, False, False, 20)
         self.wizard_3_txt_box.add(self.wizard_3_text1)
         self.wizard_3_txt_box.add(self.wizard_3_text2)
