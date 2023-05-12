@@ -158,6 +158,7 @@ class SystemPanel(ScreenPanel):
             with open(current_conf_path, 'wb') as f:
                 f.write(data)
         self._screen.show_popup_message("Restoring factory settings, please wait...", level=1)
+        self._gtk.remove_dialog(dialog)
         GLib.timeout_add_seconds(5, self.reset_cfg_reboot)
     
     def reset_cfg_reboot(self):
