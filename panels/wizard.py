@@ -17,6 +17,7 @@ class WizardPanel(ScreenPanel):
     keyboard = None
     def __init__(self, screen, title):
         super().__init__(screen, title)
+        self.connect("key-press-event", self._key_press_event)
         self.show_wizard_1()
 
     def ini_language_dic(self):
@@ -790,15 +791,15 @@ class WizardPanel(ScreenPanel):
 
 
 #for key_board↓
-def show_keyboard(self, entry=None, event=None):
+    def show_keyboard(self, entry=None, event=None):
         if self.keyboard is not None:
             return
 
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         box.set_size_request(self.gtk.content_width, self.gtk.keyboard_height)
 
-        if self._config.get_main_config().getboolean("use-matchbox-keyboard", False):
-            return self._show_matchbox_keyboard(box)
+        if self._screen._config.get_main_config().getboolean("use-matchbox-keyboard", False):
+            return self._screen._show_matchbox_keyboard(box)
         if entry is None:
             logging.debug("Error: no entry provided for keyboard")
             return
@@ -808,10 +809,10 @@ def show_keyboard(self, entry=None, event=None):
         self.pack_end(box, False, False, 0)
         self.show_all()
 
-def remove_keyboard(self, widget=None, event=None):
-    if self.keyboard is None:
-        return
-    if 'process' in self.keyboard:
-        os.kill(self.keyboard['process'].pid, SIGTERM)
-    self.remove(self.keyboard['box'])
-    self.keyboard = None
+    def remove_keyboard(self, widget=None, event=None):
+        if self.keyboard is None:
+            return
+        if 'process' in self.keyboard:
+            os.kill(self.keyboard['process'].pid, SIGTERM)
+        self.remove(self.keyboard['box'])
+        self.keyboard = None
