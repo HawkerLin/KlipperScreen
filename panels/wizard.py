@@ -912,7 +912,7 @@ class WizardPanel(ScreenPanel):
         self.set_pallet(self.pallet_nr)
         box.add(self.keyboard)
         self.keyboard = {"box": box}
-        self._screen.pack_end(box, False, False, 0)
+        self.labels['add_network'].pack_end(box, False, False, 0)
         self._screen.show_all()
 
     def remove_keyboard(self, widget=None, event=None):
