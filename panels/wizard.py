@@ -911,7 +911,7 @@ class WizardPanel(ScreenPanel):
         self.pallet_nr = 0
         self.set_pallet(self.pallet_nr)
         box.add(self.keyboard)
-        self.keyboard = {"box": box}
+        #self.keyboard = {"box": box}
         self.labels['add_network'].pack_end(box, False, False, 0)
         self._screen.show_all()
 
