@@ -141,7 +141,8 @@ class SystemPanel(ScreenPanel):
         dialog.set_title(_("Restore factory"))
 
     def restore_factory_setting(self, dialog, response_id, method):
-        self._gtk.remove_dialog(dialog)
+        if response_id == Gtk.ResponseType.CANCEL:#默认没有这个判断，不管按什么都会remove，因为恢复出厂设置要等一下，等待过程应该停留在当前页面，不要remove比较稳妥
+            self._gtk.remove_dialog(dialog)
         if response_id == Gtk.ResponseType.OK:
             if method == "reset_cfg" :
                 bakconf_dir_screen = "/home/mks/.Klipperscreen_bakconf/KlipperScreen.confbak"
