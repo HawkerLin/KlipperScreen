@@ -39,7 +39,7 @@ class SystemPanel(ScreenPanel):
         update_all.connect("clicked", self.show_update_info, "full")
         update_all.set_vexpand(False)
         self.refresh = self._gtk.Button('refresh', _('Restore factory'), 'color2')
-        self.refresh.connect("clicked", self.reset_cfg_button)
+        self.refresh.connect("clicked", self.reset_cfg_button, "reset_cfg")
         self.refresh.set_vexpand(False)
 
         reboot = self._gtk.Button('refresh', _('Restart'), 'color3')
@@ -124,7 +124,7 @@ class SystemPanel(ScreenPanel):
         logging.info(f"do nothing")
         # self.get_updates()
     
-    def reset_cfg_button(self, widget):
+    def reset_cfg_button(self, widget, method):
         scroll = self._gtk.ScrolledWindow()
         scroll.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -137,29 +137,31 @@ class SystemPanel(ScreenPanel):
             {"name": _("Accept"), "response": Gtk.ResponseType.OK},
             {"name": _("Cancel"), "response": Gtk.ResponseType.CANCEL}
         ]
-        dialog = self._gtk.Dialog(self._screen, buttons, scroll, self.restore_factory_setting, "reboot")
-        dialog.set_title(_("Reboot"))
+        dialog = self._gtk.Dialog(self._screen, buttons, scroll, self.restore_factory_setting, method)
+        dialog.set_title(_("Restore factory"))
 
     def restore_factory_setting(self, dialog, response_id, method):
         self._gtk.remove_dialog(dialog)
-        bakconf_dir_screen = "/home/mks/.Klipperscreen_bakconf/KlipperScreen.confbak"
-        bakconf_dir_printer = "/home/mks/.Klipperscreen_bakconf/printer.cfgbak"
-        current_conf_path = self._screen._config.config_path
-        logging.info(f"{current_conf_path}")
-        if os.path.isfile(bakconf_dir_printer) :
-            logging.info(f"printer.cfg")
-            with open(bakconf_dir_printer, 'rb') as f:
-                data = f.read()
-            with open('/home/mks/printer_data/config/printer.cfg', 'wb') as f:
-                f.write(data)
-        if os.path.isfile(bakconf_dir_screen) :
-            logging.info(f"KlipperScreen---")
-            with open(bakconf_dir_screen, 'rb') as f:
-                data = f.read()
-            with open(current_conf_path, 'wb') as f:
-                f.write(data)
-        self._screen.show_popup_message("Restoring factory settings, please wait...", level=1)
-        GLib.timeout_add_seconds(5, self.reset_cfg_reboot)
+        if response_id == Gtk.ResponseType.OK:
+            if method == "reset_cfg" :
+                bakconf_dir_screen = "/home/mks/.Klipperscreen_bakconf/KlipperScreen.confbak"
+                bakconf_dir_printer = "/home/mks/.Klipperscreen_bakconf/printer.cfgbak"
+                current_conf_path = self._screen._config.config_path
+                logging.info(f"{current_conf_path}")
+                if os.path.isfile(bakconf_dir_printer) :
+                    logging.info(f"printer.cfg")
+                    with open(bakconf_dir_printer, 'rb') as f:
+                        data = f.read()
+                    with open('/home/mks/printer_data/config/printer.cfg', 'wb') as f:
+                        f.write(data)
+                if os.path.isfile(bakconf_dir_screen) :
+                    logging.info(f"KlipperScreen---")
+                    with open(bakconf_dir_screen, 'rb') as f:
+                        data = f.read()
+                    with open(current_conf_path, 'wb') as f:
+                        f.write(data)
+                self._screen.show_popup_message("Restoring factory settings, please wait...", level=1)
+                GLib.timeout_add_seconds(5, self.reset_cfg_reboot)
     
     def reset_cfg_reboot(self):
         os.system("systemctl reboot")
