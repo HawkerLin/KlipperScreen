@@ -795,7 +795,7 @@ class WizardPanel(ScreenPanel):
             return
 
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        box.set_size_request(self.gtk.content_width, self.gtk.keyboard_height)
+        box.set_size_request(self._gtk.content_width, self._gtk.keyboard_height)
 
         if self._screen._config.get_main_config().getboolean("use-matchbox-keyboard", False):
             return self._screen._show_matchbox_keyboard(box)
