@@ -115,7 +115,7 @@ class Keyboard(Gtk.Box):
                     self.buttons[p][r][k].connect('button-press-event', self.repeat, key)
                     self.buttons[p][r][k].connect('button-release-event', self.release)
                     self.buttons[p][r][k].get_style_context().add_class("keyboard_pad")
-
+        logging.debug(f"{self.buttons}")
         self.pallet_nr = 0
         self.set_pallet(self.pallet_nr)
         self.add(self.keyboard)
