@@ -17,7 +17,6 @@ class WizardPanel(ScreenPanel):
     keyboard = None
     def __init__(self, screen, title):
         super().__init__(screen, title)
-        self.connect("key-press-event", self._key_press_event)
         self.show_wizard_1()
 
     def ini_language_dic(self):
