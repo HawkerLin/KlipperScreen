@@ -14,7 +14,7 @@ from ks_includes.widgets.keyboard import Keyboard
 
 class WizardPanel(ScreenPanel):
     initialized = False
-    keyboard = None
+    keyboard_widget = None
     def __init__(self, screen, title):
         super().__init__(screen, title)
         self.show_wizard_1()
@@ -791,7 +791,7 @@ class WizardPanel(ScreenPanel):
 
 #for key_board↓
     def wizard_show_keyboard(self, entry=None, event=None):
-        if self.keyboard is not None:
+        if self.keyboard_widget is not None:
             return
 
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -911,17 +911,17 @@ class WizardPanel(ScreenPanel):
         self.pallet_nr = 0
         self.set_pallet(self.pallet_nr)
         box.add(self.keyboard)
-        #self.keyboard = {"box": box}
+        self.keyboard_widget = {"box": box}
         self.labels['add_network'].pack_end(box, False, False, 0)
         self._screen.show_all()
 
     def remove_keyboard(self, widget=None, event=None):
-        if self.keyboard is None:
+        if self.keyboard_widget is None:
             return
-        if 'process' in self.keyboard:
-            os.kill(self.keyboard['process'].pid, SIGTERM)
-        self._screen.remove(self.keyboard['box'])
-        self.keyboard = None
+        if 'process' in self.keyboard_widget:
+            os.kill(self.keyboard_widget['process'].pid, SIGTERM)
+        self._screen.remove(self.keyboard_widget['box'])
+        self.keyboard_widget = None
 
     #def ini_keyboard(self, screen, close_cb, entry=None):
 
