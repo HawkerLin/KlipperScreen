@@ -5,13 +5,16 @@ import netifaces
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import GLib, Gtk, Pango
+from signal import SIGTERM
 
 from ks_includes.screen_panel import ScreenPanel
+from ks_includes.widgets.keyboard import Keyboard
 
 
 
 class WizardPanel(ScreenPanel):
     initialized = False
+    keyboard = None
     def __init__(self, screen, title):
         super().__init__(screen, title)
         self.show_wizard_1()
@@ -540,7 +543,7 @@ class WizardPanel(ScreenPanel):
             self.labels['networklist'].show()
 
     def add_new_network(self, widget, ssid, connect=False):
-        self._screen.remove_keyboard()
+        self.remove_keyboard()
         psk = self.labels['network_psk'].get_text()
         logging.info("add new network:" + ssid)
         result = self.wifi.add_network(ssid, psk)
@@ -673,7 +676,7 @@ class WizardPanel(ScreenPanel):
         self.labels['network_psk'].set_text('')
         self.labels['network_psk'].set_hexpand(True)
         self.labels['network_psk'].connect("activate", self.add_new_network, ssid, True)
-        self.labels['network_psk'].connect("focus-in-event", self._screen.show_keyboard)
+        self.labels['network_psk'].connect("focus-in-event", self.show_keyboard)
 
         save = self._gtk.Button("sd", _("Save"), "color3")
         save.set_hexpand(False)
@@ -784,3 +787,31 @@ class WizardPanel(ScreenPanel):
         if self.update_timeout is not None:
             GLib.source_remove(self.update_timeout)
             self.update_timeout = None
+
+
+#for key_board↓
+def show_keyboard(self, entry=None, event=None):
+        if self.keyboard is not None:
+            return
+
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        box.set_size_request(self.gtk.content_width, self.gtk.keyboard_height)
+
+        if self._config.get_main_config().getboolean("use-matchbox-keyboard", False):
+            return self._show_matchbox_keyboard(box)
+        if entry is None:
+            logging.debug("Error: no entry provided for keyboard")
+            return
+        box.get_style_context().add_class("keyboard_box")
+        box.add(Keyboard(self, self.remove_keyboard, entry=entry))
+        self.keyboard = {"box": box}
+        self.pack_end(box, False, False, 0)
+        self.show_all()
+
+def remove_keyboard(self, widget=None, event=None):
+    if self.keyboard is None:
+        return
+    if 'process' in self.keyboard:
+        os.kill(self.keyboard['process'].pid, SIGTERM)
+    self.remove(self.keyboard['box'])
+    self.keyboard = None
