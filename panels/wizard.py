@@ -928,11 +928,12 @@ class WizardPanel(ScreenPanel):
 
 
     def detect_language(self, language):
+        langs = ["de", "en", "fr", "es"]
         if language is None or language == "system_lang":
-            for language in self.langs:
+            for language in langs:
                 if os.getenv('LANG').lower().startswith(language):
                     return language
-        for _ in self.langs:
+        for _ in langs:
             if language.startswith(_):
                 return _
         return "en"
