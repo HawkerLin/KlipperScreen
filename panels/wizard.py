@@ -806,12 +806,12 @@ class WizardPanel(ScreenPanel):
         box.add(Keyboard(self, self.remove_keyboard, entry=entry))
         self.keyboard = {"box": box}
         self.pack_end(box, False, False, 0)
-        self.show_all()
+        self._screen.show_all()
 
     def remove_keyboard(self, widget=None, event=None):
         if self.keyboard is None:
             return
         if 'process' in self.keyboard:
             os.kill(self.keyboard['process'].pid, SIGTERM)
-        self.remove(self.keyboard['box'])
+        self._screen.remove(self.keyboard['box'])
         self.keyboard = None
